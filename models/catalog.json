@@ -1,0 +1,2980 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-16",
+  "format": "glTF 2.0 binary / GLB",
+  "exporter": "Three.js GLTFExporter 0.180.0",
+  "modelNote": "사진과 제품 규격을 참고해 직접 작성한 근사 3D 모델입니다. 정밀 실측 CAD·제조사 제공 모델이 아닙니다.",
+  "units": "ORBIT 전시 장면의 임의 world unit. Y-up. 개별 GLB는 XZ 중심과 바닥 Y=0으로 정렬하며 원래 비율을 유지합니다.",
+  "textureNote": "Node CPU 내보내기에서는 DOM CanvasTexture 문자 라벨을 생략합니다. 지오메트리, PBR 재질, 부품 이름과 gearPart 메타데이터를 보존합니다.",
+  "colorNote": "PC 검은 P600S와 사진의 RGB는 사용자 사진 기준입니다. 입력장치 색상은 확인되지 않아 각 모델의 대표 제품색을 사용했습니다. 모니터 받침과 Jetson 외형은 제조사 제품 계열을 참고한 전시용 형상입니다.",
+  "assets": [
+    {
+      "file": "workstation.glb",
+      "name": "Phanteks P600S Research Workstation",
+      "category": "workstation",
+      "bytes": 964384,
+      "sha256": "d4b090f3c78a04d9526b4f1eb355f5abf8a967f59eaf8eb1928cd5bccccb5b1d",
+      "colorNote": "사용자 사진의 검은 P600S·RGB 메모리·원형 Kraken 링을 참고",
+      "meshes": 334,
+      "triangles": 15352,
+      "vertices": 18950,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -2.395575000871718,
+          0,
+          -1.1515875008769334
+        ],
+        "max": [
+          2.395575000871718,
+          5.05831479460001,
+          1.1515875008769334
+        ],
+        "size": [
+          4.791150001743436,
+          5.05831479460001,
+          2.303175001753867
+        ]
+      },
+      "parts": [
+        {
+          "id": "case",
+          "name": "Phanteks Eclipse P600S",
+          "description": "사용자가 확인한 케이스입니다. 공식 치수 240 × 520 × 510mm. 실제 사진의 상단 패브릭 메쉬 노출, 양쪽 긴 전면 흡기구와 강화유리 측면을 반영했습니다.",
+          "productUrl": "https://phanteks.com/product/eclipse-p600s-tg-black/"
+        },
+        {
+          "id": "motherboard",
+          "name": "MSI MAG Z690 TOMAHAWK WIFI DDR4",
+          "description": "Windows 장치 조회로 확인한 ATX 메인보드입니다. 검은 PCB, 금속 방열판, DDR4 슬롯과 M.2 장착부를 분리해 표현했습니다.",
+          "productUrl": "https://www.msi.com/Motherboard/MAG-Z690-TOMAHAWK-WIFI-DDR4"
+        },
+        {
+          "id": "cpu",
+          "name": "Intel Core i7-12700KF",
+          "description": "12코어 · 20스레드. CPU 위에 실제 사진과 같은 원형 수랭 펌프가 장착됩니다.",
+          "productUrl": "https://www.intel.com/content/www/us/en/products/sku/134595/intel-core-i712700kf-processor-25m-cache-up-to-5-00-ghz/specifications.html"
+        },
+        {
+          "id": "cooler",
+          "name": "NZXT Kraken 수랭 쿨러",
+          "description": "사용자가 NZXT Kraken 제품군으로 확인했습니다. 사진의 원형 발광 링과 냉각 튜브를 반영했으며 정확한 세부 SKU는 미확인입니다.",
+          "productUrl": "https://support.nzxt.com/hc/en-us/articles/37948576723355-Kraken-X3-Series-Specs"
+        },
+        {
+          "id": "ram",
+          "name": "G.SKILL Trident Z RGB · 32GB",
+          "description": "16GB 모듈 2개 · DDR4-3200. 장치 조회 부품 번호 F4-3200C16-16GTZR와 사진의 두 RGB 메모리를 반영했습니다.",
+          "productUrl": "https://www.gskill.com/product/165/166/1536654621/F4-3200C16D-32GTZR"
+        },
+        {
+          "id": "gpu",
+          "name": "GIGABYTE GeForce RTX 3090 Ti · 24GB",
+          "description": "GPU와 24GB VRAM은 장치 조회로 확인했습니다. 사진의 GIGABYTE 표기와 PCI 서브벤더가 일치합니다. GAMING/OC 세부 SKU는 미확인입니다. 공식 링크는 같은 계열 외형 참고 제품입니다.",
+          "productUrl": "https://www.gigabyte.com/Graphics-Card/GV-N309TGAMING-OC-24GD"
+        },
+        {
+          "id": "storage",
+          "name": "Samsung NVMe SSD × 4 + HDD",
+          "description": "Samsung 980 250GB·1TB, 990 PRO 1TB·2TB, ST2000DM008 2TB. 총 명목 용량 6.25TB. 실제로 가려지는 저장장치는 전시를 위해 일부 보이게 표현했습니다.",
+          "productUrl": "https://semiconductor.samsung.com/consumer-storage/internal-ssd/990-pro/"
+        },
+        {
+          "id": "fans",
+          "name": "메쉬 흡기 · 내부 냉각 팬",
+          "description": "사진의 전면 흡기, 후면 팬과 상단 통풍구를 분리 제작했습니다. 팬 제조사와 모델은 미확인입니다.",
+          "productUrl": null
+        },
+        {
+          "id": "power",
+          "name": "하단 전원 공급 구역",
+          "description": "사진에서 하단 덮개로 가려진 전원 공급 구역입니다. 파워 제품명과 정격 출력은 미확인입니다.",
+          "productUrl": null
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 361,
+        "jsonMeshes": 292,
+        "accessors": 1161,
+        "binaryBytes": 542776
+      }
+    },
+    {
+      "file": "pc-case.glb",
+      "name": "Phanteks Eclipse P600S",
+      "category": "pc-part",
+      "bytes": 237224,
+      "sha256": "121f7066330cfc1b82f25b41790a8075214620971c9a7d6ac05f99153e18b561",
+      "colorNote": "사용자 사진과 부품 제품 계열을 참고",
+      "meshes": 101,
+      "triangles": 1712,
+      "vertices": 2806,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -2.395575000871718,
+          0,
+          -1.1515875008769334
+        ],
+        "max": [
+          2.395575000871718,
+          5.05831479460001,
+          1.1515875008769334
+        ],
+        "size": [
+          4.791150001743436,
+          5.05831479460001,
+          2.303175001753867
+        ]
+      },
+      "parts": [
+        {
+          "id": "case",
+          "name": "Phanteks Eclipse P600S",
+          "description": "사용자가 확인한 케이스입니다. 공식 치수 240 × 520 × 510mm. 실제 사진의 상단 패브릭 메쉬 노출, 양쪽 긴 전면 흡기구와 강화유리 측면을 반영했습니다.",
+          "productUrl": "https://phanteks.com/product/eclipse-p600s-tg-black/"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 103,
+        "jsonMeshes": 101,
+        "accessors": 404,
+        "binaryBytes": 100064
+      }
+    },
+    {
+      "file": "pc-motherboard.glb",
+      "name": "MSI MAG Z690 TOMAHAWK WIFI DDR4",
+      "category": "pc-part",
+      "bytes": 86524,
+      "sha256": "4c35f951820116aaf980373db66a32fad38b43405c395cf50552abc9e883a385",
+      "colorNote": "사용자 사진과 부품 제품 계열을 참고",
+      "meshes": 35,
+      "triangles": 600,
+      "vertices": 1092,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -1.655549955368042,
+          0,
+          -0.2126625
+        ],
+        "max": [
+          1.655549955368042,
+          3.549999952316284,
+          0.21266250000000003
+        ],
+        "size": [
+          3.311099910736084,
+          3.549999952316284,
+          0.42532500000000006
+        ]
+      },
+      "parts": [
+        {
+          "id": "motherboard",
+          "name": "MSI MAG Z690 TOMAHAWK WIFI DDR4",
+          "description": "Windows 장치 조회로 확인한 ATX 메인보드입니다. 검은 PCB, 금속 방열판, DDR4 슬롯과 M.2 장착부를 분리해 표현했습니다.",
+          "productUrl": "https://www.msi.com/Motherboard/MAG-Z690-TOMAHAWK-WIFI-DDR4"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 37,
+        "jsonMeshes": 35,
+        "accessors": 140,
+        "binaryBytes": 38544
+      }
+    },
+    {
+      "file": "pc-cpu.glb",
+      "name": "Intel Core i7-12700KF",
+      "category": "pc-part",
+      "bytes": 5572,
+      "sha256": "f8f9076c751b63c5770ecc2f1261f0027e5f14dddfb8c4206ddc801d9c2e8cf1",
+      "colorNote": "사용자 사진과 부품 제품 계열을 참고",
+      "meshes": 2,
+      "triangles": 24,
+      "vertices": 48,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -0.4329000055789947,
+          0,
+          -0.07757499972097573
+        ],
+        "max": [
+          0.4329000055789947,
+          0.8299999833106995,
+          0.07757499972097578
+        ],
+        "size": [
+          0.8658000111579894,
+          0.8299999833106995,
+          0.1551499994419515
+        ]
+      },
+      "parts": [
+        {
+          "id": "cpu",
+          "name": "Intel Core i7-12700KF",
+          "description": "12코어 · 20스레드. CPU 위에 실제 사진과 같은 원형 수랭 펌프가 장착됩니다.",
+          "productUrl": "https://www.intel.com/content/www/us/en/products/sku/134595/intel-core-i712700kf-processor-25m-cache-up-to-5-00-ghz/specifications.html"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 4,
+        "jsonMeshes": 2,
+        "accessors": 8,
+        "binaryBytes": 1680
+      }
+    },
+    {
+      "file": "pc-cooler.glb",
+      "name": "NZXT Kraken 수랭 쿨러",
+      "category": "pc-part",
+      "bytes": 134164,
+      "sha256": "d0b3d2503949da8c36f1ee1448148196c813c535db7bd03a8e102699e12da575",
+      "colorNote": "사용자 사진과 부품 제품 계열을 참고",
+      "meshes": 29,
+      "triangles": 2844,
+      "vertices": 2376,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -1.4390999905854462,
+          0,
+          -0.8667000025510788
+        ],
+        "max": [
+          1.4390999905854462,
+          3.5199999809265137,
+          0.8667000025510788
+        ],
+        "size": [
+          2.8781999811708925,
+          3.5199999809265137,
+          1.7334000051021576
+        ]
+      },
+      "parts": [
+        {
+          "id": "cooler",
+          "name": "NZXT Kraken 수랭 쿨러",
+          "description": "사용자가 NZXT Kraken 제품군으로 확인했습니다. 사진의 원형 발광 링과 냉각 튜브를 반영했으며 정확한 세부 SKU는 미확인입니다.",
+          "productUrl": "https://support.nzxt.com/hc/en-us/articles/37948576723355-Kraken-X3-Series-Specs"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 31,
+        "jsonMeshes": 29,
+        "accessors": 116,
+        "binaryBytes": 93096
+      }
+    },
+    {
+      "file": "pc-ram.glb",
+      "name": "G.SKILL Trident Z RGB · 32GB",
+      "category": "pc-part",
+      "bytes": 44448,
+      "sha256": "aea77ac8b34bf819fd2589eb17698e0de029e05f297edbde628db69ef4a08537",
+      "colorNote": "사용자 사진과 부품 제품 계열을 참고",
+      "meshes": 20,
+      "triangles": 240,
+      "vertices": 480,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -0.2866500017434359,
+          0,
+          -0.2568000028699637
+        ],
+        "max": [
+          0.2866500017434358,
+          1.8200000014901163,
+          0.2568000028699637
+        ],
+        "size": [
+          0.5733000034868717,
+          1.8200000014901163,
+          0.5136000057399274
+        ]
+      },
+      "parts": [
+        {
+          "id": "ram",
+          "name": "G.SKILL Trident Z RGB · 32GB",
+          "description": "16GB 모듈 2개 · DDR4-3200. 장치 조회 부품 번호 F4-3200C16-16GTZR와 사진의 두 RGB 메모리를 반영했습니다.",
+          "productUrl": "https://www.gskill.com/product/165/166/1536654621/F4-3200C16D-32GTZR"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 22,
+        "jsonMeshes": 20,
+        "accessors": 80,
+        "binaryBytes": 16800
+      }
+    },
+    {
+      "file": "pc-gpu.glb",
+      "name": "GIGABYTE GeForce RTX 3090 Ti · 24GB",
+      "category": "pc-part",
+      "bytes": 263028,
+      "sha256": "b1aa11ac9b3fa8f56e604a666952663e236e540430bd4321f407ce0af74bdd83",
+      "colorNote": "사용자 사진과 부품 제품 계열을 참고",
+      "meshes": 85,
+      "triangles": 5076,
+      "vertices": 6036,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -1.8503971507063175,
+          0,
+          -0.6755432460427285
+        ],
+        "max": [
+          1.8503971507063175,
+          1.670267520695925,
+          0.6755432460427284
+        ],
+        "size": [
+          3.700794301412635,
+          1.670267520695925,
+          1.3510864920854568
+        ]
+      },
+      "parts": [
+        {
+          "id": "gpu",
+          "name": "GIGABYTE GeForce RTX 3090 Ti · 24GB",
+          "description": "GPU와 24GB VRAM은 장치 조회로 확인했습니다. 사진의 GIGABYTE 표기와 PCI 서브벤더가 일치합니다. GAMING/OC 세부 SKU는 미확인입니다. 공식 링크는 같은 계열 외형 참고 제품입니다.",
+          "productUrl": "https://www.gigabyte.com/Graphics-Card/GV-N309TGAMING-OC-24GD"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 94,
+        "jsonMeshes": 67,
+        "accessors": 265,
+        "binaryBytes": 156864
+      }
+    },
+    {
+      "file": "pc-storage.glb",
+      "name": "Samsung NVMe SSD × 4 + HDD",
+      "category": "pc-part",
+      "bytes": 12292,
+      "sha256": "27ea706cb6c741b41ffbb81a90d2f3c54f9668ff6dc8ee3dfc7cb60307a3fc75",
+      "colorNote": "사용자 사진과 부품 제품 계열을 참고",
+      "meshes": 5,
+      "triangles": 60,
+      "vertices": 120,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -1.3162500097632406,
+          0,
+          -0.481499987244606
+        ],
+        "max": [
+          1.3162500097632406,
+          0.894999997317791,
+          0.481499987244606
+        ],
+        "size": [
+          2.632500019526481,
+          0.894999997317791,
+          0.962999974489212
+        ]
+      },
+      "parts": [
+        {
+          "id": "storage",
+          "name": "Samsung NVMe SSD × 4 + HDD",
+          "description": "Samsung 980 250GB·1TB, 990 PRO 1TB·2TB, ST2000DM008 2TB. 총 명목 용량 6.25TB. 실제로 가려지는 저장장치는 전시를 위해 일부 보이게 표현했습니다.",
+          "productUrl": "https://semiconductor.samsung.com/consumer-storage/internal-ssd/990-pro/"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 7,
+        "jsonMeshes": 5,
+        "accessors": 20,
+        "binaryBytes": 4200
+      }
+    },
+    {
+      "file": "pc-fans.glb",
+      "name": "메쉬 흡기 · 내부 냉각 팬",
+      "category": "pc-part",
+      "bytes": 182272,
+      "sha256": "a633c48c63a9dc84394def663322c15ddf4673e8999b94394e33d84589052e28",
+      "colorNote": "사용자 사진과 부품 제품 계열을 참고",
+      "meshes": 56,
+      "triangles": 4784,
+      "vertices": 5968,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -2.065050001263991,
+          0,
+          -0.7450410318374634
+        ],
+        "max": [
+          2.065050001263991,
+          4.115450010299682,
+          0.7450410318374634
+        ],
+        "size": [
+          4.130100002527982,
+          4.115450010299682,
+          1.4900820636749268
+        ]
+      },
+      "parts": [
+        {
+          "id": "fans",
+          "name": "메쉬 흡기 · 내부 냉각 팬",
+          "description": "사진의 전면 흡기, 후면 팬과 상단 통풍구를 분리 제작했습니다. 팬 제조사와 모델은 미확인입니다.",
+          "productUrl": null
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 66,
+        "jsonMeshes": 32,
+        "accessors": 124,
+        "binaryBytes": 130688
+      }
+    },
+    {
+      "file": "pc-power.glb",
+      "name": "하단 전원 공급 구역",
+      "category": "pc-part",
+      "bytes": 3056,
+      "sha256": "bfebd696920c19c76e8fa62bc3c1b71e667fbc414d42c75e5ea8f7e67263d097",
+      "colorNote": "사용자 사진과 부품 제품 계열을 참고",
+      "meshes": 1,
+      "triangles": 12,
+      "vertices": 24,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -2.0475,
+          0,
+          -0.93625
+        ],
+        "max": [
+          2.0475,
+          0.6499999761581421,
+          0.93625
+        ],
+        "size": [
+          4.095,
+          0.6499999761581421,
+          1.8725
+        ]
+      },
+      "parts": [
+        {
+          "id": "power",
+          "name": "하단 전원 공급 구역",
+          "description": "사진에서 하단 덮개로 가려진 전원 공급 구역입니다. 파워 제품명과 정격 출력은 미확인입니다.",
+          "productUrl": null
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 3,
+        "jsonMeshes": 1,
+        "accessors": 4,
+        "binaryBytes": 840
+      }
+    },
+    {
+      "file": "jetson.glb",
+      "name": "NVIDIA Jetson AGX Orin",
+      "category": "edge-computer",
+      "bytes": 312636,
+      "sha256": "55b9402f625743bf696ef4735c92747f1f65ba18e278bcfae9d70256eb8fedd2",
+      "colorNote": "NVIDIA 공식 개발 키트의 은색·검은색 대표 외형",
+      "meshes": 124,
+      "triangles": 2996,
+      "vertices": 4836,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -1.1387499989010395,
+          0,
+          -1.1324999991618097
+        ],
+        "max": [
+          1.1387499989010395,
+          1.0699999988079072,
+          1.1324999991618097
+        ],
+        "size": [
+          2.277499997802079,
+          1.0699999988079072,
+          2.2649999983236193
+        ]
+      },
+      "parts": [
+        {
+          "id": "jetson-case",
+          "name": "NVIDIA Jetson AGX Orin",
+          "description": "NVIDIA 공식 개발 키트 사진의 은색 슬롯 커버, 정사각 본체와 하단 포트를 재현했습니다. 장치 기록 기준 64GB급 통합 메모리 · L4T 36.4.7.",
+          "productUrl": "https://docs.nvidia.com/jetson/agx-orin-devkit/user-guide/1.0/hardware-layout.html"
+        },
+        {
+          "id": "jetson-cooling",
+          "name": "상단 팬 · 슬릿형 방열 커버",
+          "description": "공식 실물 사진처럼 상단 팬 위에 일정한 간격의 은색 슬릿을 배치했습니다.",
+          "productUrl": "https://docs.nvidia.com/jetson/agx-orin-devkit/user-guide/1.0/hardware-layout.html"
+        },
+        {
+          "id": "jetson-io",
+          "name": "USB · DisplayPort · Ethernet · 40핀",
+          "description": "공식 Hardware Layout의 양쪽 I/O 구성을 참고했습니다. 네트워크 주소와 장치 식별자는 공개하지 않습니다.",
+          "productUrl": "https://docs.nvidia.com/jetson/agx-orin-devkit/user-guide/1.0/hardware-layout.html"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 128,
+        "jsonMeshes": 118,
+        "accessors": 471,
+        "binaryBytes": 150480
+      }
+    },
+    {
+      "file": "monitor-aoc.glb",
+      "name": "AOC Q27G4S",
+      "category": "monitor",
+      "bytes": 29556,
+      "sha256": "eb429c36688c6f6491039675aaa49157d2753bd056dc76f68d49b351d499207a",
+      "colorNote": "검은 제품 계열 대표색. EDID로 모델명 확인, 실제 좌우 배치·받침은 미확인",
+      "meshes": 11,
+      "triangles": 206,
+      "vertices": 368,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -2.25,
+          0,
+          -0.6057466134434528
+        ],
+        "max": [
+          2.25,
+          3.372500000447035,
+          0.6057466134434528
+        ],
+        "size": [
+          4.5,
+          3.372500000447035,
+          1.2114932268869056
+        ]
+      },
+      "parts": [
+        {
+          "id": "monitor-AOC Q27G4S",
+          "name": "AOC Q27G4S",
+          "description": "연결된 장치의 EDID에서 확인한 27형급 디스플레이입니다. 얇은 베젤과 실제 제품 계열의 받침 형태를 참고했습니다.",
+          "productUrl": "https://www.aoc.com/nz/gaming/monitors/q27g4s"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 14,
+        "jsonMeshes": 11,
+        "accessors": 44,
+        "binaryBytes": 13012
+      }
+    },
+    {
+      "file": "monitor-samsung.glb",
+      "name": "Samsung LS27B61x · S61B 계열",
+      "category": "monitor",
+      "bytes": 26500,
+      "sha256": "be6ddfc422a305957f79f12bafaba1866abba5fb8550eb73db2be7477dfdde81",
+      "colorNote": "검은 제품 계열 대표색. EDID로 모델명 확인, 실제 좌우 배치·받침은 미확인",
+      "meshes": 9,
+      "triangles": 182,
+      "vertices": 320,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -2.25,
+          0,
+          -0.48500001430511475
+        ],
+        "max": [
+          2.25,
+          3.367500001490116,
+          0.48500001430511475
+        ],
+        "size": [
+          4.5,
+          3.367500001490116,
+          0.9700000286102295
+        ]
+      },
+      "parts": [
+        {
+          "id": "monitor-Samsung LS27B61x · S61B 계열",
+          "name": "Samsung LS27B61x · S61B 계열",
+          "description": "연결된 장치의 EDID에서 확인한 27형급 디스플레이입니다. 얇은 베젤과 실제 제품 계열의 받침 형태를 참고했습니다.",
+          "productUrl": "https://www.samsung.com/au/business/monitors/high-resolution/s61b-27-inch-ips-qhd-1440p-ls27b610eqexxy/"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 12,
+        "jsonMeshes": 9,
+        "accessors": 36,
+        "binaryBytes": 11332
+      }
+    },
+    {
+      "file": "monitor-q2775ce.glb",
+      "name": "Q2775CE",
+      "category": "monitor",
+      "bytes": 30520,
+      "sha256": "41008a59e5f120e96638874b69aa360f30401947b48ba8e6b5abfe9b0b37663f",
+      "colorNote": "검은 제품 계열 대표색. EDID로 모델명 확인, 실제 좌우 배치·받침은 미확인",
+      "meshes": 8,
+      "triangles": 318,
+      "vertices": 516,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -2.25,
+          0,
+          -0.48190001308917996
+        ],
+        "max": [
+          2.25,
+          3.3650000001490117,
+          0.48190001308917996
+        ],
+        "size": [
+          4.5,
+          3.3650000001490117,
+          0.9638000261783599
+        ]
+      },
+      "parts": [
+        {
+          "id": "monitor-Q2775CE",
+          "name": "Q2775CE",
+          "description": "연결된 장치의 EDID에서 확인한 27형급 디스플레이입니다. 얇은 베젤과 실제 제품 계열의 받침 형태를 참고했습니다.",
+          "productUrl": "https://www.raeantech.co.kr/raeantech"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 11,
+        "jsonMeshes": 8,
+        "accessors": 32,
+        "binaryBytes": 18420
+      }
+    },
+    {
+      "file": "mouse-infinity.glb",
+      "name": "Angry Miao AM INFINITY MOUSE .97",
+      "category": "mouse",
+      "bytes": 989320,
+      "sha256": "a51063ed6b37741948a9d6a2b6c6852eaee988689ae82cda2a66b2aa5296b2b3",
+      "colorNote": "대표 제품색: Cloud White를 바탕으로 한 밝은 금속 프레임. 실제 소유 제품의 색상은 확인되지 않았습니다.",
+      "meshes": 45,
+      "triangles": 14084,
+      "vertices": 28714,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -0.8710997274518013,
+          0,
+          -1.5131945610046387
+        ],
+        "max": [
+          0.8710997274518013,
+          0.9909262429434804,
+          1.5131945610046387
+        ],
+        "size": [
+          1.7421994549036026,
+          0.9909262429434804,
+          3.0263891220092773
+        ]
+      },
+      "parts": [
+        {
+          "name": "Angry Miao AM INFINITY MOUSE .97",
+          "description": "실제 제품 사진의 윤곽·버튼·휠을 참고해 만든 주변기기 모델",
+          "productUrl": "https://store.angrymiao.com/products/am-infinity-97-wireless-gaming-mouse"
+        },
+        {
+          "name": "마그네슘 알루미늄 외골격",
+          "description": "큰 개구부와 곡선 리브로 구성된 금속 오픈 프레임. 대표 Cloud White 계열을 표현했습니다.",
+          "productUrl": "https://store.angrymiao.com/products/am-infinity-97-wireless-gaming-mouse"
+        },
+        {
+          "name": "왼쪽 클릭판",
+          "description": "금속 외골격과 분리된 곡면 클릭 패널",
+          "productUrl": "https://store.angrymiao.com/products/am-infinity-97-wireless-gaming-mouse"
+        },
+        {
+          "name": "오른쪽 클릭판",
+          "description": "금속 외골격과 분리된 곡면 클릭 패널",
+          "productUrl": "https://store.angrymiao.com/products/am-infinity-97-wireless-gaming-mouse"
+        },
+        {
+          "name": "노출 하부·교체형 배터리",
+          "description": "개구부 아래의 회로 공간과 자석으로 교체하는 배터리를 표시했습니다.",
+          "productUrl": "https://store.angrymiao.com/products/am-infinity-97-wireless-gaming-mouse"
+        },
+        {
+          "name": "스크롤 휠",
+          "description": "클릭과 스크롤 입력을 위한 고무 표면의 휠",
+          "productUrl": "https://store.angrymiao.com/products/am-infinity-97-wireless-gaming-mouse"
+        },
+        {
+          "name": "측면 전진·뒤로 버튼",
+          "description": "엄지 쪽에 배치된 두 개의 측면 버튼",
+          "productUrl": "https://store.angrymiao.com/products/am-infinity-97-wireless-gaming-mouse"
+        },
+        {
+          "name": "하부 센서·슬라이드 피트",
+          "description": "책상 표면을 읽는 광학 센서와 마찰을 줄이는 하부 피트",
+          "productUrl": "https://store.angrymiao.com/products/am-infinity-97-wireless-gaming-mouse"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 49,
+        "jsonMeshes": 45,
+        "accessors": 139,
+        "binaryBytes": 932536
+      }
+    },
+    {
+      "file": "mouse-scyrox.glb",
+      "name": "SCYROX V8",
+      "category": "mouse",
+      "bytes": 927180,
+      "sha256": "d10b8f83a97712d344f837457d8f48de1ad3465083163e697bfd44a2b8ef91ff",
+      "colorNote": "대표 제품색: Black. 실제 소유 제품의 색상은 확인되지 않았습니다.",
+      "meshes": 36,
+      "triangles": 12616,
+      "vertices": 27254,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -0.7975757718086243,
+          0,
+          -1.5067499995976688
+        ],
+        "max": [
+          0.7975757718086243,
+          0.9776515294983983,
+          1.5067499995976688
+        ],
+        "size": [
+          1.5951515436172485,
+          0.9776515294983983,
+          3.0134999991953375
+        ]
+      },
+      "parts": [
+        {
+          "name": "SCYROX V8",
+          "description": "실제 제품 사진의 윤곽·버튼·휠을 참고해 만든 주변기기 모델",
+          "productUrl": "https://scyrox.com/products/scyrox-v8"
+        },
+        {
+          "name": "V8 비천공 쉘",
+          "description": "매끈한 좌우 대칭 쉘과 뒤쪽으로 솟은 팜 부분을 사진에 맞춰 구성했습니다.",
+          "productUrl": "https://scyrox.com/products/scyrox-v8"
+        },
+        {
+          "name": "왼쪽 클릭판",
+          "description": "중앙 분할선과 뒤쪽 경계가 드러나는 곡면 클릭 패널",
+          "productUrl": "https://scyrox.com/products/scyrox-v8"
+        },
+        {
+          "name": "오른쪽 클릭판",
+          "description": "중앙 분할선과 뒤쪽 경계가 드러나는 곡면 클릭 패널",
+          "productUrl": "https://scyrox.com/products/scyrox-v8"
+        },
+        {
+          "name": "스크롤 휠",
+          "description": "클릭과 스크롤 입력을 위한 고무 표면의 휠",
+          "productUrl": "https://scyrox.com/products/scyrox-v8"
+        },
+        {
+          "name": "측면 버튼",
+          "description": "왼쪽 측면에 나란히 놓인 두 개의 전진·뒤로 버튼",
+          "productUrl": "https://scyrox.com/products/scyrox-v8"
+        },
+        {
+          "name": "USB-C 포트",
+          "description": "앞면의 유선 연결·충전용 단자",
+          "productUrl": "https://scyrox.com/products/scyrox-v8"
+        },
+        {
+          "name": "하부 센서·슬라이드 피트",
+          "description": "책상 표면을 읽는 광학 센서와 마찰을 줄이는 하부 피트",
+          "productUrl": "https://scyrox.com/products/scyrox-v8"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 39,
+        "jsonMeshes": 36,
+        "accessors": 112,
+        "binaryBytes": 883576
+      }
+    },
+    {
+      "file": "mouse-lift.glb",
+      "name": "Logitech Lift",
+      "category": "mouse",
+      "bytes": 1076580,
+      "sha256": "03dc262859047f88d1d5ebc328dfd0d31f2f1ad1c3bc5602d2a6d08fd766b5d1",
+      "colorNote": "대표 제품색: Graphite · 오른손용. 실제 소유 제품의 색상은 확인되지 않았습니다.",
+      "meshes": 51,
+      "triangles": 18500,
+      "vertices": 30120,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -1.041363639831543,
+          0,
+          -1.5
+        ],
+        "max": [
+          1.041363639831543,
+          1.9586234194897116,
+          1.5
+        ],
+        "size": [
+          2.082727279663086,
+          1.9586234194897116,
+          3
+        ]
+      },
+      "parts": [
+        {
+          "name": "Logitech Lift",
+          "description": "실제 제품 사진의 윤곽·버튼·휠을 참고해 만든 주변기기 모델",
+          "productUrl": "https://www.logitech.com/en-us/shop/p/lift-vertical-ergonomic-mouse"
+        },
+        {
+          "name": "Lift 비대칭 버티컬 바디",
+          "description": "57° 손잡기 자세를 위한 높은 오른쪽 능선과 낮은 엄지 받침을 분리한 오른손용 비대칭 실루엣입니다.",
+          "productUrl": "https://www.logitech.com/en-us/shop/p/lift-vertical-ergonomic-mouse"
+        },
+        {
+          "name": "엄지 받침과 고무 그립",
+          "description": "낮게 뻗은 엄지 선반과 그립의 동심 곡선 리브",
+          "productUrl": "https://www.logitech.com/en-us/shop/p/lift-vertical-ergonomic-mouse"
+        },
+        {
+          "name": "왼쪽 클릭판",
+          "description": "버티컬 쉘의 경사면을 따라 배치된 곡면 클릭 패널",
+          "productUrl": "https://www.logitech.com/en-us/shop/p/lift-vertical-ergonomic-mouse"
+        },
+        {
+          "name": "오른쪽 클릭판",
+          "description": "버티컬 쉘의 경사면을 따라 배치된 곡면 클릭 패널",
+          "productUrl": "https://www.logitech.com/en-us/shop/p/lift-vertical-ergonomic-mouse"
+        },
+        {
+          "name": "스크롤 휠",
+          "description": "클릭과 스크롤 입력을 위한 고무 표면의 휠",
+          "productUrl": "https://www.logitech.com/en-us/shop/p/lift-vertical-ergonomic-mouse"
+        },
+        {
+          "name": "엄지 측면 버튼",
+          "description": "엄지 받침 위의 전진·뒤로 입력",
+          "productUrl": "https://www.logitech.com/en-us/shop/p/lift-vertical-ergonomic-mouse"
+        },
+        {
+          "name": "휠 아래 버튼",
+          "description": "휠 아래에 놓인 사용자 지정 버튼",
+          "productUrl": "https://www.logitech.com/en-us/shop/p/lift-vertical-ergonomic-mouse"
+        },
+        {
+          "name": "하부 센서·슬라이드 피트",
+          "description": "책상 표면을 읽는 광학 센서와 마찰을 줄이는 하부 피트",
+          "productUrl": "https://www.logitech.com/en-us/shop/p/lift-vertical-ergonomic-mouse"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 54,
+        "jsonMeshes": 51,
+        "accessors": 173,
+        "binaryBytes": 1012296
+      }
+    },
+    {
+      "file": "keyboard-loomi.glb",
+      "name": "SPM PN06 LOOMI",
+      "category": "keyboard",
+      "bytes": 2912032,
+      "sha256": "1abc5ab659ee978b326e4f2cb82f7fe7860916a9fc9c83e78e67d27d539e5677",
+      "colorNote": "대표 제품색: Navy Gold · 밝은 키캡. 실제 소유 제품의 색상은 확인되지 않았습니다.",
+      "meshes": 102,
+      "triangles": 28968,
+      "vertices": 86904,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -3.5260000228881836,
+          0,
+          -1.410000008754432
+        ],
+        "max": [
+          3.5260000228881836,
+          0.7358695698740041,
+          1.410000008754432
+        ],
+        "size": [
+          7.052000045776367,
+          0.7358695698740041,
+          2.820000017508864
+        ]
+      },
+      "parts": [
+        {
+          "name": "SPM PN06 LOOMI",
+          "description": "독립된 기능열·편집키·방향키를 갖춘 텐키리스 배열",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "하우징",
+          "description": "네이비 상부·금속 하부의 이중색 CNC 알루미늄 하우징",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "Esc 키",
+          "description": "실물 배열에 놓인 Esc 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "F1 키",
+          "description": "실물 배열에 놓인 F1 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "F2 키",
+          "description": "실물 배열에 놓인 F2 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "F3 키",
+          "description": "실물 배열에 놓인 F3 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "F4 키",
+          "description": "실물 배열에 놓인 F4 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "F5 키",
+          "description": "실물 배열에 놓인 F5 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "F6 키",
+          "description": "실물 배열에 놓인 F6 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "F7 키",
+          "description": "실물 배열에 놓인 F7 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "F8 키",
+          "description": "실물 배열에 놓인 F8 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "F9 키",
+          "description": "실물 배열에 놓인 F9 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "F10 키",
+          "description": "실물 배열에 놓인 F10 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "F11 키",
+          "description": "실물 배열에 놓인 F11 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "F12 키",
+          "description": "실물 배열에 놓인 F12 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "◆ 키",
+          "description": "실물 배열에 놓인 ◆ 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "Prt 키",
+          "description": "실물 배열에 놓인 Prt 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "Scr 키",
+          "description": "실물 배열에 놓인 Scr 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "Pause 키",
+          "description": "실물 배열에 놓인 Pause 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "` 키",
+          "description": "실물 배열에 놓인 ` 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "1 키",
+          "description": "실물 배열에 놓인 1 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "2 키",
+          "description": "실물 배열에 놓인 2 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "3 키",
+          "description": "실물 배열에 놓인 3 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "4 키",
+          "description": "실물 배열에 놓인 4 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "5 키",
+          "description": "실물 배열에 놓인 5 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "6 키",
+          "description": "실물 배열에 놓인 6 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "7 키",
+          "description": "실물 배열에 놓인 7 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "8 키",
+          "description": "실물 배열에 놓인 8 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "9 키",
+          "description": "실물 배열에 놓인 9 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "0 키",
+          "description": "실물 배열에 놓인 0 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "- 키",
+          "description": "실물 배열에 놓인 - 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "= 키",
+          "description": "실물 배열에 놓인 = 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "Back 키",
+          "description": "실물 배열에 놓인 Back 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "Tab 키",
+          "description": "실물 배열에 놓인 Tab 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "Q 키",
+          "description": "실물 배열에 놓인 Q 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "W 키",
+          "description": "실물 배열에 놓인 W 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "E 키",
+          "description": "실물 배열에 놓인 E 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "R 키",
+          "description": "실물 배열에 놓인 R 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "T 키",
+          "description": "실물 배열에 놓인 T 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "Y 키",
+          "description": "실물 배열에 놓인 Y 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "U 키",
+          "description": "실물 배열에 놓인 U 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "I 키",
+          "description": "실물 배열에 놓인 I 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "O 키",
+          "description": "실물 배열에 놓인 O 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "P 키",
+          "description": "실물 배열에 놓인 P 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "[ 키",
+          "description": "실물 배열에 놓인 [ 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "] 키",
+          "description": "실물 배열에 놓인 ] 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "\\ 키",
+          "description": "실물 배열에 놓인 \\ 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "Caps 키",
+          "description": "실물 배열에 놓인 Caps 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "A 키",
+          "description": "실물 배열에 놓인 A 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "S 키",
+          "description": "실물 배열에 놓인 S 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "D 키",
+          "description": "실물 배열에 놓인 D 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "F 키",
+          "description": "실물 배열에 놓인 F 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "G 키",
+          "description": "실물 배열에 놓인 G 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "H 키",
+          "description": "실물 배열에 놓인 H 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "J 키",
+          "description": "실물 배열에 놓인 J 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "K 키",
+          "description": "실물 배열에 놓인 K 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "L 키",
+          "description": "실물 배열에 놓인 L 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "; 키",
+          "description": "실물 배열에 놓인 ; 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "' 키",
+          "description": "실물 배열에 놓인 ' 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "Enter 키",
+          "description": "실물 배열에 놓인 Enter 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "Shift 키",
+          "description": "실물 배열에 놓인 Shift 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "Z 키",
+          "description": "실물 배열에 놓인 Z 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "X 키",
+          "description": "실물 배열에 놓인 X 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "C 키",
+          "description": "실물 배열에 놓인 C 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "V 키",
+          "description": "실물 배열에 놓인 V 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "B 키",
+          "description": "실물 배열에 놓인 B 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "N 키",
+          "description": "실물 배열에 놓인 N 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "M 키",
+          "description": "실물 배열에 놓인 M 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": ", 키",
+          "description": "실물 배열에 놓인 , 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": ". 키",
+          "description": "실물 배열에 놓인 . 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "/ 키",
+          "description": "실물 배열에 놓인 / 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "Ctrl 키",
+          "description": "실물 배열에 놓인 Ctrl 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "Win 키",
+          "description": "실물 배열에 놓인 Win 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "Alt 키",
+          "description": "실물 배열에 놓인 Alt 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "Space 키",
+          "description": "길게 이어진 스페이스바",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "Fn 키",
+          "description": "실물 배열에 놓인 Fn 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "Menu 키",
+          "description": "실물 배열에 놓인 Menu 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "Ins 키",
+          "description": "실물 배열에 놓인 Ins 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "Home 키",
+          "description": "실물 배열에 놓인 Home 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "PgUp 키",
+          "description": "실물 배열에 놓인 PgUp 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "Del 키",
+          "description": "실물 배열에 놓인 Del 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "End 키",
+          "description": "실물 배열에 놓인 End 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "PgDn 키",
+          "description": "실물 배열에 놓인 PgDn 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "↑ 키",
+          "description": "실물 배열에 놓인 ↑ 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "← 키",
+          "description": "실물 배열에 놓인 ← 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "↓ 키",
+          "description": "실물 배열에 놓인 ↓ 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "→ 키",
+          "description": "실물 배열에 놓인 → 키",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "하부 미끄럼 방지 패드",
+          "description": "바닥면을 지지하는 고무 패드",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "하부 가공 라인",
+          "description": "제품 뒷면 금속 웨이트의 평행 가공선을 표현한 디테일",
+          "productUrl": "https://www.spm.works/"
+        },
+        {
+          "name": "측면 연결·모드 스위치",
+          "description": "하우징 측면의 연결·모드 전환부",
+          "productUrl": "https://www.spm.works/"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 192,
+        "jsonMeshes": 102,
+        "accessors": 306,
+        "binaryBytes": 2780928
+      }
+    },
+    {
+      "file": "keyboard-vm87.glb",
+      "name": "VARO VM87 HE",
+      "category": "keyboard",
+      "bytes": 4146928,
+      "sha256": "b72a40a9a59674a3fa960830069ddbadad89b3e7d12b06485e0c70438f6750aa",
+      "colorNote": "대표 제품색: 검정 하우징 · 회색 키캡. 실제 소유 제품의 색상은 확인되지 않았습니다.",
+      "meshes": 146,
+      "triangles": 41181,
+      "vertices": 123543,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -3.5260000228881836,
+          0,
+          -1.406000018119812
+        ],
+        "max": [
+          3.5260000228881836,
+          0.7358695698740041,
+          1.406000018119812
+        ],
+        "size": [
+          7.052000045776367,
+          0.7358695698740041,
+          2.812000036239624
+        ]
+      },
+      "parts": [
+        {
+          "name": "VARO VM87 HE",
+          "description": "독립된 기능열·편집키·방향키를 갖춘 텐키리스 배열",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "하우징",
+          "description": "모서리를 둥글린 TKL 하우징과 분리된 편집키 구역",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "Esc 키",
+          "description": "실물 배열에 놓인 Esc 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "F1 키",
+          "description": "실물 배열에 놓인 F1 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "F2 키",
+          "description": "실물 배열에 놓인 F2 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "F3 키",
+          "description": "실물 배열에 놓인 F3 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "F4 키",
+          "description": "실물 배열에 놓인 F4 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "F5 키",
+          "description": "실물 배열에 놓인 F5 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "F6 키",
+          "description": "실물 배열에 놓인 F6 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "F7 키",
+          "description": "실물 배열에 놓인 F7 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "F8 키",
+          "description": "실물 배열에 놓인 F8 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "F9 키",
+          "description": "실물 배열에 놓인 F9 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "F10 키",
+          "description": "실물 배열에 놓인 F10 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "F11 키",
+          "description": "실물 배열에 놓인 F11 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "F12 키",
+          "description": "실물 배열에 놓인 F12 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "Prt 키",
+          "description": "실물 배열에 놓인 Prt 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "Scr 키",
+          "description": "실물 배열에 놓인 Scr 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "Pause 키",
+          "description": "실물 배열에 놓인 Pause 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "` 키",
+          "description": "실물 배열에 놓인 ` 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "키 하부 RGB",
+          "description": "자석축 키 아래의 은은한 RGB 백라이트",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "1 키",
+          "description": "실물 배열에 놓인 1 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "2 키",
+          "description": "실물 배열에 놓인 2 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "3 키",
+          "description": "실물 배열에 놓인 3 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "4 키",
+          "description": "실물 배열에 놓인 4 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "5 키",
+          "description": "실물 배열에 놓인 5 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "6 키",
+          "description": "실물 배열에 놓인 6 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "7 키",
+          "description": "실물 배열에 놓인 7 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "8 키",
+          "description": "실물 배열에 놓인 8 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "9 키",
+          "description": "실물 배열에 놓인 9 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "0 키",
+          "description": "실물 배열에 놓인 0 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "- 키",
+          "description": "실물 배열에 놓인 - 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "= 키",
+          "description": "실물 배열에 놓인 = 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "Back 키",
+          "description": "실물 배열에 놓인 Back 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "Tab 키",
+          "description": "실물 배열에 놓인 Tab 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "Q 키",
+          "description": "실물 배열에 놓인 Q 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "W 키",
+          "description": "실물 배열에 놓인 W 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "E 키",
+          "description": "실물 배열에 놓인 E 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "R 키",
+          "description": "실물 배열에 놓인 R 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "T 키",
+          "description": "실물 배열에 놓인 T 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "Y 키",
+          "description": "실물 배열에 놓인 Y 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "U 키",
+          "description": "실물 배열에 놓인 U 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "I 키",
+          "description": "실물 배열에 놓인 I 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "O 키",
+          "description": "실물 배열에 놓인 O 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "P 키",
+          "description": "실물 배열에 놓인 P 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "[ 키",
+          "description": "실물 배열에 놓인 [ 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "] 키",
+          "description": "실물 배열에 놓인 ] 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "\\ 키",
+          "description": "실물 배열에 놓인 \\ 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "Caps 키",
+          "description": "실물 배열에 놓인 Caps 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "A 키",
+          "description": "실물 배열에 놓인 A 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "S 키",
+          "description": "실물 배열에 놓인 S 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "D 키",
+          "description": "실물 배열에 놓인 D 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "F 키",
+          "description": "실물 배열에 놓인 F 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "G 키",
+          "description": "실물 배열에 놓인 G 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "H 키",
+          "description": "실물 배열에 놓인 H 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "J 키",
+          "description": "실물 배열에 놓인 J 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "K 키",
+          "description": "실물 배열에 놓인 K 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "L 키",
+          "description": "실물 배열에 놓인 L 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "; 키",
+          "description": "실물 배열에 놓인 ; 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "' 키",
+          "description": "실물 배열에 놓인 ' 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "Enter 키",
+          "description": "실물 배열에 놓인 Enter 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "Shift 키",
+          "description": "실물 배열에 놓인 Shift 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "Z 키",
+          "description": "실물 배열에 놓인 Z 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "X 키",
+          "description": "실물 배열에 놓인 X 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "C 키",
+          "description": "실물 배열에 놓인 C 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "V 키",
+          "description": "실물 배열에 놓인 V 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "B 키",
+          "description": "실물 배열에 놓인 B 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "N 키",
+          "description": "실물 배열에 놓인 N 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "M 키",
+          "description": "실물 배열에 놓인 M 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": ", 키",
+          "description": "실물 배열에 놓인 , 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": ". 키",
+          "description": "실물 배열에 놓인 . 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "/ 키",
+          "description": "실물 배열에 놓인 / 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "Ctrl 키",
+          "description": "실물 배열에 놓인 Ctrl 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "Win 키",
+          "description": "실물 배열에 놓인 Win 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "Alt 키",
+          "description": "실물 배열에 놓인 Alt 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "Space 키",
+          "description": "길게 이어진 스페이스바",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "Fn 키",
+          "description": "실물 배열에 놓인 Fn 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "Menu 키",
+          "description": "실물 배열에 놓인 Menu 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "Ins 키",
+          "description": "실물 배열에 놓인 Ins 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "Home 키",
+          "description": "실물 배열에 놓인 Home 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "PgUp 키",
+          "description": "실물 배열에 놓인 PgUp 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "Del 키",
+          "description": "실물 배열에 놓인 Del 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "End 키",
+          "description": "실물 배열에 놓인 End 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "PgDn 키",
+          "description": "실물 배열에 놓인 PgDn 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "↑ 키",
+          "description": "실물 배열에 놓인 ↑ 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "← 키",
+          "description": "실물 배열에 놓인 ← 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "↓ 키",
+          "description": "실물 배열에 놓인 ↓ 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "→ 키",
+          "description": "실물 배열에 놓인 → 키",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "하부 미끄럼 방지 패드",
+          "description": "바닥면을 지지하는 고무 패드",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "VARO 로고 배지",
+          "description": "F12와 우측 편집 영역 사이에 있는 로고 배지",
+          "productUrl": "https://varoworks.com/vm87he"
+        },
+        {
+          "name": "VARO 표시",
+          "description": "방향키 위 제품의 작은 브랜드 표시",
+          "productUrl": "https://varoworks.com/vm87he"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 235,
+        "jsonMeshes": 146,
+        "accessors": 439,
+        "binaryBytes": 3953384
+      }
+    },
+    {
+      "file": "keyboard-hyzen.glb",
+      "name": "LOFREE Hyzen",
+      "category": "keyboard",
+      "bytes": 2534692,
+      "sha256": "3872bdfd3231a18f95aa8b243ba04633df44db3bc4070fa24869450cf7a06bf8",
+      "colorNote": "대표 제품색: Silver · 어두운 키캡. 실제 소유 제품의 색상은 확인되지 않았습니다.",
+      "meshes": 91,
+      "triangles": 25328,
+      "vertices": 75492,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -3.5260000228881836,
+          0,
+          -1.3512999807298183
+        ],
+        "max": [
+          3.5260000228881836,
+          0.8659999998286366,
+          1.3512999807298183
+        ],
+        "size": [
+          7.052000045776367,
+          0.8659999998286366,
+          2.7025999614596365
+        ]
+      },
+      "parts": [
+        {
+          "name": "LOFREE Hyzen",
+          "description": "65% 배열과 우측 상단의 두 물리 컨트롤",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "하우징",
+          "description": "넓은 상단 컨트롤 띠와 경사진 알루미늄 하우징",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "` 키",
+          "description": "실물 배열에 놓인 ` 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "1 키",
+          "description": "실물 배열에 놓인 1 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "2 키",
+          "description": "실물 배열에 놓인 2 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "3 키",
+          "description": "실물 배열에 놓인 3 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "4 키",
+          "description": "실물 배열에 놓인 4 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "5 키",
+          "description": "실물 배열에 놓인 5 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "6 키",
+          "description": "실물 배열에 놓인 6 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "7 키",
+          "description": "실물 배열에 놓인 7 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "8 키",
+          "description": "실물 배열에 놓인 8 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "9 키",
+          "description": "실물 배열에 놓인 9 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "0 키",
+          "description": "실물 배열에 놓인 0 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "- 키",
+          "description": "실물 배열에 놓인 - 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "= 키",
+          "description": "실물 배열에 놓인 = 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "Back 키",
+          "description": "실물 배열에 놓인 Back 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "Tab 키",
+          "description": "실물 배열에 놓인 Tab 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "Q 키",
+          "description": "실물 배열에 놓인 Q 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "W 키",
+          "description": "실물 배열에 놓인 W 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "E 키",
+          "description": "실물 배열에 놓인 E 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "R 키",
+          "description": "실물 배열에 놓인 R 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "T 키",
+          "description": "실물 배열에 놓인 T 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "Y 키",
+          "description": "실물 배열에 놓인 Y 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "U 키",
+          "description": "실물 배열에 놓인 U 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "I 키",
+          "description": "실물 배열에 놓인 I 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "O 키",
+          "description": "실물 배열에 놓인 O 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "P 키",
+          "description": "실물 배열에 놓인 P 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "[ 키",
+          "description": "실물 배열에 놓인 [ 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "] 키",
+          "description": "실물 배열에 놓인 ] 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "\\ 키",
+          "description": "실물 배열에 놓인 \\ 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "Caps 키",
+          "description": "실물 배열에 놓인 Caps 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "A 키",
+          "description": "실물 배열에 놓인 A 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "S 키",
+          "description": "실물 배열에 놓인 S 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "D 키",
+          "description": "실물 배열에 놓인 D 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "F 키",
+          "description": "실물 배열에 놓인 F 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "G 키",
+          "description": "실물 배열에 놓인 G 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "H 키",
+          "description": "실물 배열에 놓인 H 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "J 키",
+          "description": "실물 배열에 놓인 J 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "K 키",
+          "description": "실물 배열에 놓인 K 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "L 키",
+          "description": "실물 배열에 놓인 L 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "; 키",
+          "description": "실물 배열에 놓인 ; 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "' 키",
+          "description": "실물 배열에 놓인 ' 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "Enter 키",
+          "description": "실물 배열에 놓인 Enter 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "Shift 키",
+          "description": "실물 배열에 놓인 Shift 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "Z 키",
+          "description": "실물 배열에 놓인 Z 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "X 키",
+          "description": "실물 배열에 놓인 X 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "C 키",
+          "description": "실물 배열에 놓인 C 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "V 키",
+          "description": "실물 배열에 놓인 V 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "B 키",
+          "description": "실물 배열에 놓인 B 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "N 키",
+          "description": "실물 배열에 놓인 N 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "M 키",
+          "description": "실물 배열에 놓인 M 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": ", 키",
+          "description": "실물 배열에 놓인 , 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": ". 키",
+          "description": "실물 배열에 놓인 . 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "/ 키",
+          "description": "실물 배열에 놓인 / 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "↑ 키",
+          "description": "실물 배열에 놓인 ↑ 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "Ctrl 키",
+          "description": "실물 배열에 놓인 Ctrl 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "Win 키",
+          "description": "실물 배열에 놓인 Win 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "Alt 키",
+          "description": "실물 배열에 놓인 Alt 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "Space 키",
+          "description": "길게 이어진 스페이스바",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "Fn 키",
+          "description": "실물 배열에 놓인 Fn 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "← 키",
+          "description": "실물 배열에 놓인 ← 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "↓ 키",
+          "description": "실물 배열에 놓인 ↓ 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "→ 키",
+          "description": "실물 배열에 놓인 → 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "Del 키",
+          "description": "실물 배열에 놓인 Del 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "PgUp 키",
+          "description": "실물 배열에 놓인 PgUp 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "PgDn 키",
+          "description": "실물 배열에 놓인 PgDn 키",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "하부 미끄럼 방지 패드",
+          "description": "바닥면을 지지하는 고무 패드",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "상단 컨트롤 띠",
+          "description": "키 배열 위로 넓게 확장된 금속 컨트롤 영역",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "볼륨 다이얼",
+          "description": "오른쪽 상단의 큰 원형 볼륨 조절 노브",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "연결·기능 모드 다이얼",
+          "description": "볼륨 노브 왼쪽의 작은 레버형 모드 셀렉터",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "하단 LED 라이트바",
+          "description": "하부 전체 폭을 가로지르는 확산 LED 스트립",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "F-row 모드 표시",
+          "description": "숫자열을 기능열로 바꾸었을 때의 표시 위치",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 160,
+        "jsonMeshes": 91,
+        "accessors": 276,
+        "binaryBytes": 2417760
+      }
+    },
+    {
+      "file": "rift-kit.glb",
+      "name": "Oculus Rift CV1 + Touch 세트",
+      "category": "vr-kit",
+      "bytes": 626036,
+      "sha256": "02e98684e8c69d8e8ee8fe13c66b6147f1bff07b1246c18a93e0f3afe3f0e859",
+      "colorNote": "대표 제품색: Black · CV1 세대. 실제 소유 제품의 색상은 확인되지 않았습니다.",
+      "meshes": 48,
+      "triangles": 12932,
+      "vertices": 16010,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -3.9626800615977946,
+          0,
+          -2.4870601513858475
+        ],
+        "max": [
+          3.962680061597795,
+          2.8855730087962,
+          2.4870601513858475
+        ],
+        "size": [
+          7.92536012319559,
+          2.8855730087962,
+          4.974120302771695
+        ]
+      },
+      "parts": [
+        {
+          "name": "Oculus Rift CV1 + Touch",
+          "description": "Rift CV1 헤드셋, 외부 스탠드 센서 두 개, 좌우 Touch 컨트롤러의 구성",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "Oculus Rift CV1 헤드셋",
+          "description": "검정 전면 패널과 머리를 둘러싸는 스트랩, 일체형 이어폰을 가진 PC 연결 VR 헤드셋",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "헤드셋 패브릭 하우징",
+          "description": "전면에서 측면으로 이어지는 곡면 사각 실루엣과 패브릭 둘레",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "CV1 전면 패널",
+          "description": "외부 카메라 구멍이 없는 CV1의 매끈한 검정 전면",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "Oculus 전면 마크",
+          "description": "전면 위쪽의 작은 타원형 브랜드 마크",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "얼굴 접촉 폼",
+          "description": "눈 주위를 감싸는 검정 폼 인터페이스",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "왼쪽 렌즈",
+          "description": "헤드셋 안쪽의 좌우 렌즈",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "측면 헤드밴드",
+          "description": "좌우에서 머리 뒤쪽으로 이어지는 조절식 헤드밴드",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "audio-left",
+          "description": "헤드밴드에 달린 회전형 온이어 이어폰",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "이어폰 지지 암",
+          "description": "CV1 일체형 이어폰을 받치는 짧은 암",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "왼쪽 이어폰",
+          "description": "헤드셋 양옆에 달린 원형 온이어 오디오",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "이어폰 쿠션",
+          "description": "귀에 닿는 원형 이어폰 쿠션",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "오른쪽 렌즈",
+          "description": "헤드셋 안쪽의 좌우 렌즈",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "audio-right",
+          "description": "헤드밴드에 달린 회전형 온이어 이어폰",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "오른쪽 이어폰",
+          "description": "헤드셋 양옆에 달린 원형 온이어 오디오",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "상단 스트랩",
+          "description": "정수리를 지나 뒤쪽 밴드에 연결되는 넓은 상단 스트랩",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "PC 연결 케이블",
+          "description": "헤드셋 뒤에서 PC로 이어지는 CV1의 유선 케이블",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "왼쪽 스탠드 센서",
+          "description": "Rift CV1과 Touch의 위치를 추적하기 위한 외부 센서. 세트에 두 개를 배치했습니다.",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "센서 스탠드",
+          "description": "원형 베이스에서 센서를 들어 올리는 얇은 기둥",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "sensor-head",
+          "description": "앞쪽을 바라보는 원통형 센서 헤드",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "센서 전면",
+          "description": "적외선 추적용 외부 센서의 원형 전면",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "센서 USB 케이블",
+          "description": "센서에서 PC로 연결되는 유선 케이블",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "오른쪽 스탠드 센서",
+          "description": "Rift CV1과 Touch의 위치를 추적하기 위한 외부 센서. 세트에 두 개를 배치했습니다.",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "왼손 Oculus Touch",
+          "description": "CV1 세대의 Touch. 아날로그 스틱, 두 버튼, 트리거와 아래쪽으로 감기는 추적 링을 갖춥니다.",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "Touch 그립",
+          "description": "한 손으로 잡는 곡선형 배터리 그립",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "Touch 버튼판",
+          "description": "엄지로 조작하는 원형 상단 버튼 영역",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "Touch 추적 링",
+          "description": "원래 Rift Touch의 손 아래·바깥쪽을 감싸는 링. Quest 후속 세대의 위쪽 링과 구분한 형태입니다.",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "아날로그 스틱",
+          "description": "엄지 위치의 아날로그 스틱",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "스틱 캡",
+          "description": "오목한 고무 스틱 상단",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "Touch X 버튼",
+          "description": "엄지로 누르는 액션 버튼",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "Touch Y 버튼",
+          "description": "엄지로 누르는 액션 버튼",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "메뉴 버튼",
+          "description": "홈 또는 메뉴를 여는 작은 버튼",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "검지 트리거",
+          "description": "버튼판 아래 검지로 누르는 트리거",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "그립 트리거",
+          "description": "그립 안쪽의 손가락 입력",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "손목 스트랩",
+          "description": "손에서 컨트롤러가 빠지는 것을 줄이는 얇은 스트랩",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "오른손 Oculus Touch",
+          "description": "CV1 세대의 Touch. 아날로그 스틱, 두 버튼, 트리거와 아래쪽으로 감기는 추적 링을 갖춥니다.",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "Touch A 버튼",
+          "description": "엄지로 누르는 액션 버튼",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "Touch B 버튼",
+          "description": "엄지로 누르는 액션 버튼",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "Oculus 버튼",
+          "description": "홈 또는 메뉴를 여는 작은 버튼",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 59,
+        "jsonMeshes": 48,
+        "accessors": 181,
+        "binaryBytes": 561944
+      }
+    },
+    {
+      "file": "rift-headset.glb",
+      "name": "Oculus Rift CV1 헤드셋",
+      "category": "vr-part",
+      "bytes": 330228,
+      "sha256": "05d9dc951db90fcb3ad8e74a7b2eeb47058ab652d9972dd843ebc2d7eba52fc5",
+      "colorNote": "CV1 세대의 검은색 대표 제품 외형",
+      "meshes": 16,
+      "triangles": 6924,
+      "vertices": 9012,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -2.6862776279449463,
+          0,
+          -2.1664583349227904
+        ],
+        "max": [
+          2.6862776279449463,
+          2.8746649837121367,
+          2.1664583349227904
+        ],
+        "size": [
+          5.372555255889893,
+          2.8746649837121367,
+          4.332916669845581
+        ]
+      },
+      "parts": [
+        {
+          "name": "Oculus Rift CV1 헤드셋",
+          "description": "검정 전면 패널과 머리를 둘러싸는 스트랩, 일체형 이어폰을 가진 PC 연결 VR 헤드셋",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "헤드셋 패브릭 하우징",
+          "description": "전면에서 측면으로 이어지는 곡면 사각 실루엣과 패브릭 둘레",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "CV1 전면 패널",
+          "description": "외부 카메라 구멍이 없는 CV1의 매끈한 검정 전면",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "Oculus 전면 마크",
+          "description": "전면 위쪽의 작은 타원형 브랜드 마크",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "얼굴 접촉 폼",
+          "description": "눈 주위를 감싸는 검정 폼 인터페이스",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "왼쪽 렌즈",
+          "description": "헤드셋 안쪽의 좌우 렌즈",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "측면 헤드밴드",
+          "description": "좌우에서 머리 뒤쪽으로 이어지는 조절식 헤드밴드",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "audio-left",
+          "description": "헤드밴드에 달린 회전형 온이어 이어폰",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "이어폰 지지 암",
+          "description": "CV1 일체형 이어폰을 받치는 짧은 암",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "왼쪽 이어폰",
+          "description": "헤드셋 양옆에 달린 원형 온이어 오디오",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "이어폰 쿠션",
+          "description": "귀에 닿는 원형 이어폰 쿠션",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "오른쪽 렌즈",
+          "description": "헤드셋 안쪽의 좌우 렌즈",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "audio-right",
+          "description": "헤드밴드에 달린 회전형 온이어 이어폰",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "오른쪽 이어폰",
+          "description": "헤드셋 양옆에 달린 원형 온이어 오디오",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "상단 스트랩",
+          "description": "정수리를 지나 뒤쪽 밴드에 연결되는 넓은 상단 스트랩",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "PC 연결 케이블",
+          "description": "헤드셋 뒤에서 PC로 이어지는 CV1의 유선 케이블",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 20,
+        "jsonMeshes": 16,
+        "accessors": 57,
+        "binaryBytes": 309080
+      }
+    },
+    {
+      "file": "rift-sensor-left.glb",
+      "name": "왼쪽 스탠드 센서",
+      "category": "vr-part",
+      "bytes": 38336,
+      "sha256": "fe533f59f42bbfd63cf1aaf0d8384d7d8ab7af092cbbc90aadc46d1fce326759",
+      "colorNote": "CV1 세대의 검은색 대표 제품 외형",
+      "meshes": 5,
+      "triangles": 664,
+      "vertices": 821,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -0.7077296300108853,
+          0,
+          -0.6758266731144156
+        ],
+        "max": [
+          0.7077296300108852,
+          2.7581119280130615,
+          0.6758266731144157
+        ],
+        "size": [
+          1.4154592600217706,
+          2.7581119280130615,
+          1.3516533462288312
+        ]
+      },
+      "parts": [
+        {
+          "name": "왼쪽 스탠드 센서",
+          "description": "Rift CV1과 Touch의 위치를 추적하기 위한 외부 센서. 세트에 두 개를 배치했습니다.",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "센서 스탠드",
+          "description": "원형 베이스에서 센서를 들어 올리는 얇은 기둥",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "sensor-head",
+          "description": "앞쪽을 바라보는 원통형 센서 헤드",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "센서 전면",
+          "description": "적외선 추적용 외부 센서의 원형 전면",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "센서 USB 케이블",
+          "description": "센서에서 PC로 연결되는 유선 케이블",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 8,
+        "jsonMeshes": 5,
+        "accessors": 20,
+        "binaryBytes": 30256
+      }
+    },
+    {
+      "file": "rift-sensor-right.glb",
+      "name": "오른쪽 스탠드 센서",
+      "category": "vr-part",
+      "bytes": 38356,
+      "sha256": "c90e343dfe32020959c63e1e5c663f3129e9b46c3d800a870e37e28a27899d2f",
+      "colorNote": "CV1 세대의 검은색 대표 제품 외형",
+      "meshes": 5,
+      "triangles": 664,
+      "vertices": 821,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -0.7626800615977944,
+          0,
+          -0.6105202148371206
+        ],
+        "max": [
+          0.7626800615977949,
+          2.7581119280130615,
+          0.6105202148371208
+        ],
+        "size": [
+          1.5253601231955893,
+          2.7581119280130615,
+          1.2210404296742414
+        ]
+      },
+      "parts": [
+        {
+          "name": "오른쪽 스탠드 센서",
+          "description": "Rift CV1과 Touch의 위치를 추적하기 위한 외부 센서. 세트에 두 개를 배치했습니다.",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "센서 스탠드",
+          "description": "원형 베이스에서 센서를 들어 올리는 얇은 기둥",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "sensor-head",
+          "description": "앞쪽을 바라보는 원통형 센서 헤드",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "센서 전면",
+          "description": "적외선 추적용 외부 센서의 원형 전면",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "센서 USB 케이블",
+          "description": "센서에서 PC로 연결되는 유선 케이블",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 8,
+        "jsonMeshes": 5,
+        "accessors": 20,
+        "binaryBytes": 30256
+      }
+    },
+    {
+      "file": "rift-touch-left.glb",
+      "name": "왼손 Oculus Touch",
+      "category": "vr-part",
+      "bytes": 111040,
+      "sha256": "ffb0e5ac46f9cc54c7ddfe3983512335a9a1c8d0dcbca65df9304413ffbc46d1",
+      "colorNote": "CV1 세대의 검은색 대표 제품 외형",
+      "meshes": 11,
+      "triangles": 2340,
+      "vertices": 2678,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -0.7997100223110793,
+          0,
+          -0.7687384418156131
+        ],
+        "max": [
+          0.7997100223110797,
+          1.4230348284728824,
+          0.7687384418156128
+        ],
+        "size": [
+          1.5994200446221591,
+          1.4230348284728824,
+          1.5374768836312258
+        ]
+      },
+      "parts": [
+        {
+          "name": "왼손 Oculus Touch",
+          "description": "CV1 세대의 Touch. 아날로그 스틱, 두 버튼, 트리거와 아래쪽으로 감기는 추적 링을 갖춥니다.",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "Touch 그립",
+          "description": "한 손으로 잡는 곡선형 배터리 그립",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "Touch 버튼판",
+          "description": "엄지로 조작하는 원형 상단 버튼 영역",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "Touch 추적 링",
+          "description": "원래 Rift Touch의 손 아래·바깥쪽을 감싸는 링. Quest 후속 세대의 위쪽 링과 구분한 형태입니다.",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "아날로그 스틱",
+          "description": "엄지 위치의 아날로그 스틱",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "스틱 캡",
+          "description": "오목한 고무 스틱 상단",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "Touch X 버튼",
+          "description": "엄지로 누르는 액션 버튼",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "Touch Y 버튼",
+          "description": "엄지로 누르는 액션 버튼",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "메뉴 버튼",
+          "description": "홈 또는 메뉴를 여는 작은 버튼",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "검지 트리거",
+          "description": "버튼판 아래 검지로 누르는 트리거",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "그립 트리거",
+          "description": "그립 안쪽의 손가락 입력",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "손목 스트랩",
+          "description": "손에서 컨트롤러가 빠지는 것을 줄이는 얇은 스트랩",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 13,
+        "jsonMeshes": 11,
+        "accessors": 42,
+        "binaryBytes": 96176
+      }
+    },
+    {
+      "file": "rift-touch-right.glb",
+      "name": "오른손 Oculus Touch",
+      "category": "vr-part",
+      "bytes": 111048,
+      "sha256": "cdb2f26f23e4c2e73f0fddf0d7a66a081731bfc91fed612e0925e88162868ecf",
+      "colorNote": "CV1 세대의 검은색 대표 제품 외형",
+      "meshes": 11,
+      "triangles": 2340,
+      "vertices": 2678,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -0.7997100223110797,
+          0,
+          -0.7687384418156131
+        ],
+        "max": [
+          0.7997100223110793,
+          1.4230348284728824,
+          0.7687384418156128
+        ],
+        "size": [
+          1.5994200446221591,
+          1.4230348284728824,
+          1.5374768836312258
+        ]
+      },
+      "parts": [
+        {
+          "name": "오른손 Oculus Touch",
+          "description": "CV1 세대의 Touch. 아날로그 스틱, 두 버튼, 트리거와 아래쪽으로 감기는 추적 링을 갖춥니다.",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "Touch 그립",
+          "description": "한 손으로 잡는 곡선형 배터리 그립",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "Touch 버튼판",
+          "description": "엄지로 조작하는 원형 상단 버튼 영역",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "Touch 추적 링",
+          "description": "원래 Rift Touch의 손 아래·바깥쪽을 감싸는 링. Quest 후속 세대의 위쪽 링과 구분한 형태입니다.",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "아날로그 스틱",
+          "description": "엄지 위치의 아날로그 스틱",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "스틱 캡",
+          "description": "오목한 고무 스틱 상단",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "Touch A 버튼",
+          "description": "엄지로 누르는 액션 버튼",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "Touch B 버튼",
+          "description": "엄지로 누르는 액션 버튼",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "Oculus 버튼",
+          "description": "홈 또는 메뉴를 여는 작은 버튼",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "검지 트리거",
+          "description": "버튼판 아래 검지로 누르는 트리거",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "그립 트리거",
+          "description": "그립 안쪽의 손가락 입력",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        },
+        {
+          "name": "손목 스트랩",
+          "description": "손에서 컨트롤러가 빠지는 것을 줄이는 얇은 스트랩",
+          "productUrl": "https://developers.meta.com/vr/blog/new-hardware-bundle-now-available/"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 13,
+        "jsonMeshes": 11,
+        "accessors": 42,
+        "binaryBytes": 96176
+      }
+    }
+  ],
+  "failures": [],
+  "totals": {
+    "files": 26,
+    "bytes": 16173952,
+    "failed": 0
+  }
+}
