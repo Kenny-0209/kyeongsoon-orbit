@@ -1,0 +1,432 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "jamsil-sfm",
+      "site": "잠실",
+      "siteId": "jamsil",
+      "method": "SfM",
+      "methodId": "sfm",
+      "file": "clouds/jamsil-sfm.bin",
+      "count": 18808,
+      "format": "xyz-f32le-rgb-u8-planar",
+      "positionByteOffset": 0,
+      "colorByteOffset": 225696,
+      "bytes": 282120,
+      "sha256": "f52e9c667dc54f5d3d27449f008d1232e2c4bc833f5318c00bebaf3daca4e5b0",
+      "sourcePointCount": 18808,
+      "colorMode": "source-rgb",
+      "colorNote": "원본 RGB",
+      "normalized": true,
+      "upAxis": "y",
+      "units": "normalized",
+      "bounds": {
+        "min": [
+          -2.836029529571533,
+          -1.8443512916564941,
+          -3.0
+        ],
+        "max": [
+          2.836029529571533,
+          1.8443512916564941,
+          3.0
+        ]
+      },
+      "note": "실제 연구 결과의 웹 표시용 표본 · 원본 전체 점수와 구분",
+      "coordinateSystem": "right-handed-y-up",
+      "displayBounds": {
+        "min": [
+          1.2735346555709839,
+          1.2004989051818848,
+          1.930827832221985
+        ],
+        "max": [
+          2.532123327255249,
+          1.4514292991161346,
+          2.9132882499694825
+        ],
+        "kind": "per-axis 1%-99% camera-fit only; no points removed"
+      },
+      "sourceCountUnit": "points"
+    },
+    {
+      "id": "jamsil-mvs",
+      "site": "잠실",
+      "siteId": "jamsil",
+      "method": "MVS",
+      "methodId": "mvs",
+      "file": "clouds/jamsil-mvs.bin",
+      "count": 50000,
+      "format": "xyz-f32le-rgb-u8-planar",
+      "positionByteOffset": 0,
+      "colorByteOffset": 600000,
+      "bytes": 750000,
+      "sha256": "9fec88ca61751efd63acf25560c8bfbb1fb728bc01190f6ad42e4092df92a3b6",
+      "sourcePointCount": 23238078,
+      "colorMode": "source-rgb",
+      "colorNote": "원본 RGB",
+      "normalized": true,
+      "upAxis": "y",
+      "units": "normalized",
+      "bounds": {
+        "min": [
+          -2.8896074295043945,
+          -0.6073155403137207,
+          -2.462498426437378
+        ],
+        "max": [
+          2.980743169784546,
+          0.4643443524837494,
+          2.198129892349243
+        ]
+      },
+      "note": "실제 연구 결과의 웹 표시용 표본 · 원본 전체 점수와 구분",
+      "coordinateSystem": "right-handed-y-up",
+      "displayBounds": {
+        "min": [
+          -2.508882613182068,
+          -0.5636592209339142,
+          -1.9830996549129487
+        ],
+        "max": [
+          2.1211950564384474,
+          0.42953122347593314,
+          1.702934892177582
+        ],
+        "kind": "per-axis 1%-99% camera-fit only; no points removed"
+      },
+      "sourceCountUnit": "points"
+    },
+    {
+      "id": "jamsil-voxel",
+      "site": "잠실",
+      "siteId": "jamsil",
+      "method": "복셀",
+      "methodId": "voxel",
+      "file": "clouds/jamsil-voxel.bin",
+      "count": 50000,
+      "format": "xyz-f32le-rgb-u8-planar",
+      "positionByteOffset": 0,
+      "colorByteOffset": 600000,
+      "bytes": 750000,
+      "sha256": "c24ab5a8c8790079374a19a9c17463db5c635d84129832ea80f6862f83436951",
+      "sourcePointCount": 5021328,
+      "colorMode": "height-color",
+      "colorNote": "원본 RGB 없음 · 높이 기준 색상",
+      "normalized": true,
+      "upAxis": "y",
+      "units": "normalized",
+      "bounds": {
+        "min": [
+          -2.901960849761963,
+          -0.8098039031028748,
+          -2.4882352352142334
+        ],
+        "max": [
+          2.9450981616973877,
+          0.6098039150238037,
+          2.5039215087890625
+        ]
+      },
+      "note": "실제 복셀 중심의 웹 표시용 표본 · 정육면체 표시는 일부 중심만 사용",
+      "voxelCubeSample": {
+        "file": "clouds/jamsil-voxel-cubes.bin",
+        "count": 6000,
+        "format": "xyz-f32le-rgb-u8-planar",
+        "positionByteOffset": 0,
+        "colorByteOffset": 72000,
+        "bytes": 90000,
+        "sha256": "61948d3f3b9e202edb528a00612125afae08e52038a741059e4ba59e4894e8d2",
+        "colorMode": "height-color",
+        "cellSizeNormalized": 0.003921568644821939,
+        "coordinateSystem": "right-handed-y-up"
+      },
+      "coordinateSystem": "right-handed-y-up",
+      "displayBounds": {
+        "min": [
+          -2.5098037719726562,
+          -0.5627450942993164,
+          -2.1000001430511475
+        ],
+        "max": [
+          2.2666666507720947,
+          0.4176470637321472,
+          1.7039216756820679
+        ],
+        "kind": "per-axis 1%-99% camera-fit only; no points removed"
+      },
+      "sourceCountUnit": "voxels"
+    },
+    {
+      "id": "magok1-sfm",
+      "site": "마곡1",
+      "siteId": "magok1",
+      "method": "SfM",
+      "methodId": "sfm",
+      "file": "clouds/magok1-sfm.bin",
+      "count": 50000,
+      "format": "xyz-f32le-rgb-u8-planar",
+      "positionByteOffset": 0,
+      "colorByteOffset": 600000,
+      "bytes": 750000,
+      "sha256": "ffc5f4d1d1b04c1cb9039e9ae67a3f44883bd13fb544f9fc5bd3406727a9b01b",
+      "sourcePointCount": 69103,
+      "colorMode": "source-rgb",
+      "colorNote": "원본 RGB",
+      "normalized": true,
+      "upAxis": "y",
+      "units": "normalized",
+      "bounds": {
+        "min": [
+          -1.8603160381317139,
+          -3.0,
+          -1.4226843118667603
+        ],
+        "max": [
+          1.8603160381317139,
+          3.0,
+          1.4226843118667603
+        ]
+      },
+      "note": "실제 연구 결과의 웹 표시용 표본 · 원본 전체 점수와 구분",
+      "coordinateSystem": "right-handed-y-up",
+      "displayBounds": {
+        "min": [
+          -0.435831595659256,
+          -0.015726232212036846,
+          0.6472942233085632
+        ],
+        "max": [
+          0.35979463219642677,
+          0.12071718946099283,
+          0.9391167598962785
+        ],
+        "kind": "per-axis 1%-99% camera-fit only; no points removed"
+      },
+      "sourceCountUnit": "points"
+    },
+    {
+      "id": "magok1-mvs",
+      "site": "마곡1",
+      "siteId": "magok1",
+      "method": "MVS",
+      "methodId": "mvs",
+      "file": "clouds/magok1-mvs.bin",
+      "count": 50000,
+      "format": "xyz-f32le-rgb-u8-planar",
+      "positionByteOffset": 0,
+      "colorByteOffset": 600000,
+      "bytes": 750000,
+      "sha256": "ca1dfd582965e6238b74a2449401cf67fec2e2aeb8d2d15063bca84aa34e1390",
+      "sourcePointCount": 18937747,
+      "colorMode": "source-rgb",
+      "colorNote": "원본 RGB",
+      "normalized": true,
+      "upAxis": "y",
+      "units": "normalized",
+      "bounds": {
+        "min": [
+          -0.9896237254142761,
+          -0.3874453604221344,
+          -1.3371412754058838
+        ],
+        "max": [
+          2.787175178527832,
+          1.7321319580078125,
+          1.0085262060165405
+        ]
+      },
+      "note": "실제 연구 결과의 웹 표시용 표본 · 원본 전체 점수와 구분",
+      "coordinateSystem": "right-handed-y-up",
+      "displayBounds": {
+        "min": [
+          -0.6685009288787842,
+          -0.22824277117848396,
+          -0.34254261493682864
+        ],
+        "max": [
+          0.5407580286264421,
+          0.01157449115067734,
+          0.349487470984459
+        ],
+        "kind": "per-axis 1%-99% camera-fit only; no points removed"
+      },
+      "sourceCountUnit": "points"
+    },
+    {
+      "id": "magok1-voxel",
+      "site": "마곡1",
+      "siteId": "magok1",
+      "method": "복셀",
+      "methodId": "voxel",
+      "file": "clouds/magok1-voxel.bin",
+      "count": 50000,
+      "format": "xyz-f32le-rgb-u8-planar",
+      "positionByteOffset": 0,
+      "colorByteOffset": 600000,
+      "bytes": 750000,
+      "sha256": "ccf09e0cf5288c3b6ac7caa6bd66a5f244009d5f05f24d50d252c3cd984fde51",
+      "sourcePointCount": 2567163,
+      "colorMode": "source-rgb",
+      "colorNote": "원본 복셀 평균 RGB",
+      "normalized": true,
+      "upAxis": "y",
+      "units": "normalized",
+      "bounds": {
+        "min": [
+          -1.3166104555130005,
+          -1.7687606811523438,
+          -1.9268548488616943
+        ],
+        "max": [
+          2.859611988067627,
+          2.0014755725860596,
+          2.3366355895996094
+        ]
+      },
+      "note": "실제 복셀 중심의 웹 표시용 표본 · 정육면체 표시는 일부 중심만 사용",
+      "voxelCubeSample": {
+        "file": "clouds/magok1-voxel-cubes.bin",
+        "count": 6000,
+        "format": "xyz-f32le-rgb-u8-planar",
+        "positionByteOffset": 0,
+        "colorByteOffset": 72000,
+        "bytes": 90000,
+        "sha256": "307e0aea9c22f5060e4e8997c0b7e6517b5b662903acd2233025d0a34005d2e5",
+        "colorMode": "source-rgb",
+        "coordinateSystem": "right-handed-y-up",
+        "cellSizeNormalized": 0.0012647554607040298
+      },
+      "coordinateSystem": "right-handed-y-up",
+      "displayBounds": {
+        "min": [
+          -0.6766442060470581,
+          -0.26749587059020996,
+          -0.3408516049385071
+        ],
+        "max": [
+          1.4468802213668823,
+          0.04363398626446724,
+          0.396500825881958
+        ],
+        "kind": "per-axis 1%-99% camera-fit only; no points removed"
+      },
+      "sourceCountUnit": "voxels"
+    },
+    {
+      "id": "magok2-mvs",
+      "site": "마곡2",
+      "siteId": "magok2",
+      "method": "MVS",
+      "methodId": "mvs",
+      "file": "clouds/magok2-mvs.bin",
+      "count": 50000,
+      "format": "xyz-f32le-rgb-u8-planar",
+      "positionByteOffset": 0,
+      "colorByteOffset": 600000,
+      "bytes": 750000,
+      "sha256": "dce2fee3e9e6752050e8076eb23ffcec120ac837aff62377762ef404a63fc438",
+      "sourcePointCount": 23567854,
+      "colorMode": "source-rgb",
+      "colorNote": "원본 RGB",
+      "normalized": true,
+      "upAxis": "y",
+      "units": "normalized",
+      "bounds": {
+        "min": [
+          -2.9949963092803955,
+          -0.7756643295288086,
+          -2.744023323059082
+        ],
+        "max": [
+          2.965604305267334,
+          0.7525940537452698,
+          2.7691330909729004
+        ]
+      },
+      "note": "실제 연구 결과의 웹 표시용 표본 · 원본 전체 점수와 구분",
+      "coordinateSystem": "right-handed-y-up",
+      "displayBounds": {
+        "min": [
+          -2.946096293926239,
+          -0.758884556889534,
+          -2.639486472606659
+        ],
+        "max": [
+          2.8331516098976137,
+          0.7095892554521561,
+          2.559461076259613
+        ],
+        "kind": "per-axis 1%-99% camera-fit only; no points removed"
+      },
+      "sourceCountUnit": "points"
+    },
+    {
+      "id": "magok2-voxel",
+      "site": "마곡2",
+      "siteId": "magok2",
+      "method": "복셀",
+      "methodId": "voxel",
+      "file": "clouds/magok2-voxel.bin",
+      "count": 50000,
+      "format": "xyz-f32le-rgb-u8-planar",
+      "positionByteOffset": 0,
+      "colorByteOffset": 600000,
+      "bytes": 750000,
+      "sha256": "4d8f84f477e9687bdb647754a5ba8f4f3b79a82962a79e18a3b216180873db9d",
+      "sourcePointCount": 3685580,
+      "colorMode": "height-color",
+      "colorNote": "원본 RGB 없음 · 높이 기준 색상",
+      "normalized": true,
+      "upAxis": "y",
+      "units": "normalized",
+      "bounds": {
+        "min": [
+          -3.0,
+          -0.7870129346847534,
+          -2.758441209793091
+        ],
+        "max": [
+          2.9922080039978027,
+          0.7870129942893982,
+          2.7740259170532227
+        ]
+      },
+      "note": "실제 복셀 중심의 웹 표시용 표본 · 정육면체 표시는 일부 중심만 사용",
+      "voxelCubeSample": {
+        "file": "clouds/magok2-voxel-cubes.bin",
+        "count": 6000,
+        "format": "xyz-f32le-rgb-u8-planar",
+        "positionByteOffset": 0,
+        "colorByteOffset": 72000,
+        "bytes": 90000,
+        "sha256": "6588d55cb01a1a5fba2b86f8b955b73565b219eb7c64c7ef0146ee9fe56e43c7",
+        "colorMode": "height-color",
+        "cellSizeNormalized": 0.007792207671062816,
+        "coordinateSystem": "right-handed-y-up"
+      },
+      "coordinateSystem": "right-handed-y-up",
+      "displayBounds": {
+        "min": [
+          -2.9064934253692627,
+          -0.7558441162109375,
+          -2.6571426391601562
+        ],
+        "max": [
+          2.84415602684021,
+          0.7090909481048584,
+          2.6337664127349854
+        ],
+        "kind": "per-axis 1%-99% camera-fit only; no points removed"
+      },
+      "sourceCountUnit": "voxels"
+    }
+  ],
+  "unavailable": [
+    {
+      "site": "마곡2",
+      "method": "SfM",
+      "reason": "대응하는 SfM 원본을 확인하지 못하여 표시하지 않음"
+    }
+  ]
+}
