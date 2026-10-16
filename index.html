@@ -6,29 +6,34 @@
  <meta name="description" content="연구하고, 세계를 만들고, 도구를 완성합니다. 김경순의 연구·게임·소프트웨어를 탐색하는 3D 작업석.">
  <meta name="theme-color" content="#060910">
  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23060910'/%3E%3Cellipse cx='32' cy='32' rx='24' ry='12' transform='rotate(-35 32 32)' fill='none' stroke='%2358f6f1' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='6' fill='%239b78ff'/%3E%3C/svg%3E">
- <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="refine.css">
+ <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="spatial.css">
  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
  <script src="vendor/d3.min.js" defer></script>
- <script type="module" src="app.js"></script>
+ <script type="module" src="entry.js"></script>
 </head>
 <body>
  <div id="scene" aria-hidden="true"></div><div class="scene-vignette" aria-hidden="true"></div>
  <header class="topbar">
   <a class="brand" href="#" aria-label="ORBIT 홈"><span class="brand-orbit" aria-hidden="true"></span><span>ORBIT<span class="brand-sub">KYEONGSOON KIM</span></span></a>
-  <nav class="categories" aria-label="작업 분류"><button data-filter="all" class="selected" aria-pressed="true">전체</button><button data-filter="research" aria-pressed="false">연구</button><button data-filter="build" aria-pressed="false">게임 & 도구</button><button data-filter="record" aria-pressed="false">기록 & 성과</button><button data-filter="hardware" aria-pressed="false">하드웨어</button></nav>
-  <button id="index-button" class="index-button"><span class="grid-icon" aria-hidden="true"></span><span>전체 작업</span></button>
+  <nav class="theme-nav" aria-label="세 가지 테마"><button data-theme="lab" aria-pressed="false">연구실 활동</button><button data-theme="research" aria-pressed="false">연구 활동</button><button data-theme="personal" aria-pressed="false">개인 작업</button></nav>
+  <button id="index-button" class="index-button"><span class="grid-icon" aria-hidden="true"></span><span>전체 기록</span></button>
  </header>
  <main id="main">
-  <div class="hero-note"><span class="eyebrow"><span class="status-dot"></span> THE MAESTRO'S DESK</span><h1>아이디어를<br><em>현실의 궤도로.</em></h1><p>김경순 · 연구자이자 만드는 사람<br>현장에서 시작해, 코드로 연결하는 작업들.</p></div>
-  <div id="panel-layer" aria-label="공중 작업 패널"></div>
+  <div class="stage-heading"><span class="eyebrow"><span class="status-dot"></span> THE MAESTRO'S DESK</span><h1 id="stage-title">당신 앞에 펼쳐지는 <em>나의 궤도.</em></h1><p id="stage-subtitle">세 개의 테마에서, 내가 만들고 경험한 것들을 만나보세요.</p></div>
+  <div id="theme-labels"><button class="theme-label" data-theme="lab"><span class="theme-code">01 / TOGETHER</span><strong>연구실 활동</strong><small>함께 보낸 계절과 현장 밖의 기록</small><span class="theme-enter">이 궤도 열기 ↗</span></button><button class="theme-label" data-theme="research"><span class="theme-code">02 / DISCOVERY</span><strong>연구 활동</strong><small>실제 점군, 공간 복원, 현장과 성과</small><span class="theme-enter">이 궤도 열기 ↗</span></button><button class="theme-label" data-theme="personal"><span class="theme-code">03 / CREATION</span><strong>개인 작업</strong><small>만든 세계와 도구, 그리고 나의 장비</small><span class="theme-enter">이 궤도 열기 ↗</span></button></div>
+  <div id="collection-bar" aria-label="테마 안의 분류" hidden></div>
+  <div id="floating-labels" aria-hidden="true"></div>
   <aside class="orbit-side"><span>RESEARCH / PLAY / BUILD</span><span class="side-line"></span><span>SEOUL, KR</span></aside>
-  <section class="orbit-controls" aria-label="작업 탐색">
-   <div class="current-info"><span id="current-category" class="eyebrow">RESEARCH</span><button id="open-current" class="current-title">파노라마로 기록한 현장 <span>↗</span></button></div>
+  <section class="orbit-controls" aria-label="3D 모형 탐색" hidden>
+   <div class="current-info"><span id="current-category" class="eyebrow">RESEARCH</span><button id="open-current" class="current-title">작업의 궤도 <span>↗</span></button><p id="current-description"></p></div>
    <div class="carousel-navigation"><button id="prev" class="round-button" aria-label="이전 작업">←</button><div class="position"><span id="current-number">01</span><span class="position-line"></span><span id="total-number">16</span></div><button id="next" class="round-button" aria-label="다음 작업">→</button></div>
   </section>
-  <div class="gesture-hint"><span class="drag-icon" aria-hidden="true">↔</span><span>드래그해서 넘기기 <i>·</i> 클릭해서 들어가기</span></div>
+  <div class="model-actions" hidden><button id="home-button">테마 선택</button><button id="auto-rotate" aria-pressed="true">자동 회전</button><button id="explode-button" aria-pressed="false" hidden>부품 분해</button><button id="reset-model">시점 초기화</button></div>
+  <div class="gesture-hint"><span class="drag-icon" aria-hidden="true">↔</span><span id="gesture-text">테마 패널을 선택해 궤도를 여세요</span></div>
   <div class="desk-label"><span class="tiny-square"></span> PERSONAL WORKSPACE <span class="muted">/ RESEARCH · PLAY · BUILD</span></div>
   <button id="motion-toggle" class="motion-toggle" aria-pressed="false" aria-label="배경 움직임 줄이기">움직임 줄이기</button>
+  <aside id="part-inspector" hidden aria-labelledby="part-title"><div class="part-top"><span class="eyebrow">A CLOSER LOOK</span><button id="part-close" aria-label="부품 설명 닫기">×</button></div><h2 id="part-title"></h2><p id="part-description"></p><div id="part-specs"></div><a id="part-link" target="_blank" rel="noopener" hidden>제품 정보 ↗</a></aside>
+  <div id="part-tooltip" hidden></div><div id="model-loading" role="status" hidden><span class="loading-orbit"></span><span>궤도로 가져오는 중</span></div>
  </main>
  <dialog id="detail" aria-labelledby="detail-title"><div class="detail-top"><button id="detail-back" class="back-button">← 작업석으로</button><span id="detail-meta" class="eyebrow"></span><button id="detail-close" class="close-button" aria-label="상세 닫기">×</button></div><div id="detail-scroll"><div id="detail-body"></div></div></dialog>
  <dialog id="work-index" aria-labelledby="index-title"><div class="detail-top"><div><span class="eyebrow">THE COMPLETE ORBIT</span><h2 id="index-title">나의 작업들</h2></div><button id="index-close" class="close-button" aria-label="전체 작업 닫기">×</button></div><div class="index-scroll"><div id="index-filters" class="index-filters" aria-label="목록 분류"></div><div id="index-grid" class="index-grid"></div></div></dialog>
