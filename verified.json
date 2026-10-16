@@ -1,0 +1,143 @@
+{
+  "awards": [
+    {
+      "id": "award-1",
+      "title": "영상 정보를 이용한 안전 거리 분석 감리 모델",
+      "award": "우수학술상",
+      "date": "2025-05-16",
+      "organization": "한국건축시공학회",
+      "event": "2025 봄학술발표대회",
+      "authors": [
+        "김경순",
+        "허재준",
+        "정건우",
+        "이광호",
+        "김태훈",
+        "차민승"
+      ],
+      "thumbnail": "assets/award-1.jpg"
+    },
+    {
+      "id": "award-2",
+      "title": "Barrier-Free 건축 법규 × CV 기술 매핑",
+      "award": "우수상",
+      "date": "2025-11-14",
+      "organization": "한국건축시공학회",
+      "event": "제20회 건축시공기술대전",
+      "authors": [
+        "정건우",
+        "김경순",
+        "김태훈"
+      ],
+      "thumbnail": "assets/award-2.jpg"
+    },
+    {
+      "id": "award-3",
+      "title": "360도 파노라마 기반 시공 현장 As Built BIM 생성 기술에 관한 기초 연구",
+      "award": "최우수상",
+      "date": "2025-11-14",
+      "organization": "한국건축시공학회",
+      "event": "제20회 건축시공기술대전",
+      "authors": [
+        "김경순",
+        "정건우",
+        "김태훈"
+      ],
+      "thumbnail": "assets/award-3.jpg"
+    },
+    {
+      "id": "award-4",
+      "title": "다중 파노라마 이미지 기반 실내 평면 기하 정보 복원 프레임워크",
+      "award": "우수논문상",
+      "date": "2026-05-15",
+      "organization": "한국건축시공학회",
+      "event": "2026 봄학술발표대회",
+      "authors": [
+        "김경순",
+        "정건우",
+        "허재준",
+        "이성민",
+        "윤세빈",
+        "김태훈"
+      ],
+      "thumbnail": "assets/award-4.jpg"
+    }
+  ],
+  "patent": {
+    "title": "컴퓨터 비전을 이용한 작업자 추락 방지용 영상 기반 거리 측정 방법",
+    "filingDate": "2025-08-22",
+    "applicationNumber": "10-2025-0117612",
+    "status": "특허 출원",
+    "applicant": "서울과학기술대학교 산학협력단",
+    "inventors": [
+      "김태훈",
+      "이광호",
+      "정건우",
+      "허재준",
+      "김경순",
+      "차민승"
+    ],
+    "thumbnail": "assets/patent.jpg"
+  },
+  "workstation": {
+    "cpu": {
+      "name": "Intel Core i7-12700KF",
+      "reportedName": "12th Gen Intel(R) Core(TM) i7-12700KF",
+      "cores": 12,
+      "logicalProcessors": 20
+    },
+    "ram": {
+      "installedBytes": 34359738368,
+      "installedGiB": 32,
+      "moduleCount": 2,
+      "moduleCapacityGiB": 16,
+      "manufacturer": "G Skill Intl",
+      "partNumber": "F4-3200C16-16GTZR",
+      "type": "DDR4",
+      "configuredSpeedMtps": 3200
+    },
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 3090 Ti",
+      "nominalVramGB": 24,
+      "reportedVramMiB": 24564
+    },
+    "motherboard": {
+      "manufacturer": "MSI",
+      "model": "MAG Z690 TOMAHAWK WIFI DDR4 (MS-7D32)"
+    },
+    "storage": [
+      {
+        "model": "Samsung SSD 980 250GB",
+        "nominalCapacity": "250GB"
+      },
+      {
+        "model": "Samsung SSD 980 1TB",
+        "nominalCapacity": "1TB"
+      },
+      {
+        "model": "ST2000DM008-2FR102",
+        "nominalCapacity": "2TB"
+      },
+      {
+        "model": "Samsung SSD 990 PRO 1TB",
+        "nominalCapacity": "1TB"
+      },
+      {
+        "model": "Samsung SSD 990 PRO 2TB",
+        "nominalCapacity": "2TB"
+      }
+    ],
+    "nominalTotalStorage": "6.25TB",
+    "os": {
+      "name": "Microsoft Windows 11 Enterprise",
+      "build": "26200"
+    }
+  },
+  "jetson": {
+    "displayName": "Jetson AGX Orin",
+    "memoryDisplay": "64GB급 통합 메모리 · 운영체제 보고 약 61.37GiB",
+    "jetsonLinuxL4T": "36.4.7",
+    "recordDate": "2026.10",
+    "cuda": "12.6"
+  }
+}

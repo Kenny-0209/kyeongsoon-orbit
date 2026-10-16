@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <title>ORBIT — 김경순의 작업석</title>
+ <meta name="description" content="연구하고, 세계를 만들고, 도구를 완성합니다. 김경순의 연구·게임·소프트웨어를 탐색하는 3D 작업석.">
+ <meta name="theme-color" content="#060910">
+ <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23060910'/%3E%3Cellipse cx='32' cy='32' rx='24' ry='12' transform='rotate(-35 32 32)' fill='none' stroke='%2358f6f1' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='6' fill='%239b78ff'/%3E%3C/svg%3E">
+ <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="refine.css">
+ <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+ <script src="vendor/d3.min.js" defer></script>
+ <script type="module" src="app.js"></script>
+</head>
+<body>
+ <div id="scene" aria-hidden="true"></div><div class="scene-vignette" aria-hidden="true"></div>
+ <header class="topbar">
+  <a class="brand" href="#" aria-label="ORBIT 홈"><span class="brand-orbit" aria-hidden="true"></span><span>ORBIT<span class="brand-sub">KYEONGSOON KIM</span></span></a>
+  <nav class="categories" aria-label="작업 분류"><button data-filter="all" class="selected" aria-pressed="true">전체</button><button data-filter="research" aria-pressed="false">연구</button><button data-filter="build" aria-pressed="false">게임 & 도구</button><button data-filter="record" aria-pressed="false">기록 & 성과</button><button data-filter="hardware" aria-pressed="false">하드웨어</button></nav>
+  <button id="index-button" class="index-button"><span class="grid-icon" aria-hidden="true"></span><span>전체 작업</span></button>
+ </header>
+ <main id="main">
+  <div class="hero-note"><span class="eyebrow"><span class="status-dot"></span> THE MAESTRO'S DESK</span><h1>아이디어를<br><em>현실의 궤도로.</em></h1><p>김경순 · 연구자이자 만드는 사람<br>현장에서 시작해, 코드로 연결하는 작업들.</p></div>
+  <div id="panel-layer" aria-label="공중 작업 패널"></div>
+  <aside class="orbit-side"><span>RESEARCH / PLAY / BUILD</span><span class="side-line"></span><span>SEOUL, KR</span></aside>
+  <section class="orbit-controls" aria-label="작업 탐색">
+   <div class="current-info"><span id="current-category" class="eyebrow">RESEARCH</span><button id="open-current" class="current-title">파노라마로 기록한 현장 <span>↗</span></button></div>
+   <div class="carousel-navigation"><button id="prev" class="round-button" aria-label="이전 작업">←</button><div class="position"><span id="current-number">01</span><span class="position-line"></span><span id="total-number">16</span></div><button id="next" class="round-button" aria-label="다음 작업">→</button></div>
+  </section>
+  <div class="gesture-hint"><span class="drag-icon" aria-hidden="true">↔</span><span>드래그해서 넘기기 <i>·</i> 클릭해서 들어가기</span></div>
+  <div class="desk-label"><span class="tiny-square"></span> PERSONAL WORKSPACE <span class="muted">/ RESEARCH · PLAY · BUILD</span></div>
+  <button id="motion-toggle" class="motion-toggle" aria-pressed="false" aria-label="배경 움직임 줄이기">움직임 줄이기</button>
+ </main>
+ <dialog id="detail" aria-labelledby="detail-title"><div class="detail-top"><button id="detail-back" class="back-button">← 작업석으로</button><span id="detail-meta" class="eyebrow"></span><button id="detail-close" class="close-button" aria-label="상세 닫기">×</button></div><div id="detail-scroll"><div id="detail-body"></div></div></dialog>
+ <dialog id="work-index" aria-labelledby="index-title"><div class="detail-top"><div><span class="eyebrow">THE COMPLETE ORBIT</span><h2 id="index-title">나의 작업들</h2></div><button id="index-close" class="close-button" aria-label="전체 작업 닫기">×</button></div><div class="index-scroll"><div id="index-filters" class="index-filters" aria-label="목록 분류"></div><div id="index-grid" class="index-grid"></div></div></dialog>
+ <div id="announcement" class="sr-only" role="status" aria-live="polite"></div>
+ <noscript><div class="no-script">ORBIT는 자바스크립트로 공중 패널을 표시합니다. 연구·게임·소프트웨어를 탐색하려면 자바스크립트를 활성화해 주세요.</div></noscript>
+</body></html>
