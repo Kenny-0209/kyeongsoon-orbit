@@ -1,0 +1,560 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-17",
+  "format": "glTF 2.0 binary / GLB",
+  "exporter": "Three.js GLTFExporter 0.180.0",
+  "modelNote": "제품 사진과 공개 치수를 참고해 직접 작성한 근사 전시 모델입니다. 정밀 실측 CAD 또는 제조사 제공 원본 모델이 아닙니다.",
+  "units": "ORBIT 전시 장면의 임의 world unit. Y-up, XZ 중심, 바닥 Y=0. 균일 확대 없이 원본 비율과 크기를 유지합니다.",
+  "colorNote": "사용자 확인: 데스크 전체 화이트, 의자 블랙, Hyzen 팜레스트 스페이스 그레이, ARTISAN 패드 블랙. 버니언스 거치대의 소유 색상·판본은 미확인이므로 원목형 참고색이며 SUPERMIX 4는 공식 유통 제품 사진의 대표색입니다.",
+  "textureNote": "CPU 내보내기에서는 DOM CanvasTexture 글자 라벨을 생략합니다. 지오메트리·PBR 재질·부품별 gearPart extras와 출처 설명은 유지합니다.",
+  "metadataNote": "furnitureSpec의 공개 제품 치수는 참고 자료이며 소유 제품의 실측값이 아닙니다. 중첩 source node의 supportSurface·supports 등 앵커는 그 source node의 로컬 좌표입니다. 루트 wrapper는 XZ 중심과 바닥을 맞추는 이동만 추가합니다.",
+  "assets": [
+    {
+      "file": "motion-desk.glb",
+      "name": "퍼시스 M302+ 모션데스크 · FKD016 / FKD016N",
+      "category": "furniture",
+      "sourceModule": "gear-desk.js",
+      "sourceFactory": "createMotionDesk",
+      "bytes": 298376,
+      "sha256": "23f0ae63df71719a4b299bcdd6d3f245c47642392687de39941372a7ac5697d0",
+      "colorNote": "사용자 확인 색상: 전체 화이트.",
+      "colorSource": "user-confirmed",
+      "colorConfirmedOn": "2026-10-17",
+      "productUrl": "https://fursys-store.com/product/detail.html?product_no=4426&cate_no=118&display_group=1",
+      "referenceDimensionsMm": {
+        "width": 1590,
+        "depth": 770,
+        "heightMin": 680,
+        "heightMax": 1145,
+        "topThickness": 22.5
+      },
+      "dimensionNote": "지정 판매 페이지 제목은 FKD016 1600이며 상세 도표는 FKD016N, 폭 1600→1590 변경을 명시합니다.",
+      "meshes": 26,
+      "triangles": 2936,
+      "vertices": 8068,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -9,
+          0,
+          -4.25
+        ],
+        "max": [
+          9,
+          8.259999993890524,
+          4.25
+        ],
+        "size": [
+          18,
+          8.259999993890524,
+          8.5
+        ]
+      },
+      "parts": [
+        {
+          "id": "desk-top",
+          "name": "화이트 상판 · M302+",
+          "description": "사용자가 확인한 전체 화이트 구성입니다. 상세 도표의 1590×770mm 상판, 앞쪽의 얕은 몸맞춤 곡선과 뒤쪽 케이블 여유 홈을 반영했습니다.",
+          "productUrl": "https://fursys-store.com/product/detail.html?product_no=4426&cate_no=118&display_group=1"
+        },
+        {
+          "id": "desk-frame",
+          "name": "화이트 전동 높이조절 프레임",
+          "description": "T자 받침과 각형 텔레스코픽 다리 두 개를 갖춘 모션데스크 프레임입니다. 공개 높이 범위는 680~1145mm입니다.",
+          "productUrl": "https://fursys-store.com/product/detail.html?product_no=4426&cate_no=118&display_group=1"
+        },
+        {
+          "id": "desk-tray",
+          "name": "상판 아래 케이블 트레이",
+          "description": "제품 사진의 상판 아래 중앙 케이블 수납부와 다리 사이 지지 구조를 재현했습니다.",
+          "productUrl": "https://fursys-store.com/product/detail.html?product_no=4426&cate_no=118&display_group=1"
+        },
+        {
+          "id": "desk-control",
+          "name": "높이조절 컨트롤러",
+          "description": "실제 제품 사진의 오른쪽 앞 모서리 아래에 달린 작은 높이조절 버튼부를 표현했습니다.",
+          "productUrl": "https://fursys-store.com/product/detail.html?product_no=4426&cate_no=118&display_group=1"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 28,
+        "jsonMeshes": 26,
+        "meshNodes": 26,
+        "meshMetadataComplete": true,
+        "accessors": 97,
+        "binaryBytes": 261560,
+        "finiteFloatValues": 64544
+      }
+    },
+    {
+      "file": "desk-chair.glb",
+      "name": "퍼시스 어라운드 · CH6200AH / 리뉴얼 CHN6200AH",
+      "category": "furniture",
+      "sourceModule": "gear-desk.js",
+      "sourceFactory": "createDeskChair",
+      "bytes": 472896,
+      "sha256": "c519e64013db93b1a194d58f843d61bfecddd0b3d743af466ed9f953d7b70e11",
+      "colorNote": "사용자 확인 색상: 블랙.",
+      "colorSource": "user-confirmed",
+      "colorConfirmedOn": "2026-10-17",
+      "productUrl": "https://fursys-store.com/product/detail.html?product_no=2580&cate_no=204&display_group=1",
+      "referenceDimensionsMm": {
+        "width": 675,
+        "depth": 560,
+        "heightMin": 1175,
+        "heightMax": 1285
+      },
+      "dimensionNote": "지정 페이지 제목 CH6200AH, 상세 이미지 CHN6200AH. 상세 표는 H1175~1285, 같은 이미지 측면 도면은 H1170~1285로 5mm 차이가 있어 표의 값을 기록합니다.",
+      "meshes": 43,
+      "triangles": 9448,
+      "vertices": 13214,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -3.6841284468922506,
+          0,
+          -3.503814366285219
+        ],
+        "max": [
+          3.6841284468922506,
+          12.822143041565118,
+          3.503814366285219
+        ],
+        "size": [
+          7.368256893784501,
+          12.822143041565118,
+          7.007628732570438
+        ]
+      },
+      "parts": [
+        {
+          "id": "chair-seat",
+          "name": "블랙 패브릭 좌판",
+          "description": "사용자가 확인한 블랙 색상입니다. 앞쪽을 둥글게 마감한 두툼한 패브릭 좌판을 제품 사진에 맞춰 구성했습니다.",
+          "productUrl": "https://fursys-store.com/product/detail.html?product_no=2580&cate_no=204&display_group=1"
+        },
+        {
+          "id": "chair-tilt",
+          "name": "스마트 틸팅 하부",
+          "description": "좌판 아래의 틸팅 메커니즘과 좌우 조절 레버를 제품 사진을 참고해 단순화했습니다.",
+          "productUrl": "https://fursys-store.com/product/detail.html?product_no=2580&cate_no=204&display_group=1"
+        },
+        {
+          "id": "chair-base",
+          "name": "5발 베이스 · 캐스터",
+          "description": "중앙 가스 리프트, 다섯 갈래 베이스와 다섯 개의 쌍륜 캐스터를 표현했습니다.",
+          "productUrl": "https://fursys-store.com/product/detail.html?product_no=2580&cate_no=204&display_group=1"
+        },
+        {
+          "id": "chair-back",
+          "name": "곡면 메쉬 등판",
+          "description": "어라운드 제품 사진의 위쪽이 조금 좁아지는 긴 메쉬 등판과 허리 쪽 곡면 프레임을 반영했습니다.",
+          "productUrl": "https://fursys-store.com/product/detail.html?product_no=2580&cate_no=204&display_group=1"
+        },
+        {
+          "id": "chair-lumbar",
+          "name": "조절형 럼버서포트",
+          "description": "등판 하단을 가로지르는 넓은 요추 지지부와 뒤쪽 등판 지지 구조입니다.",
+          "productUrl": "https://fursys-store.com/product/detail.html?product_no=2580&cate_no=204&display_group=1"
+        },
+        {
+          "id": "chair-headrest",
+          "name": "조절형 헤드레스트",
+          "description": "메쉬 등판 위에 독립적으로 달린 둥근 사각 헤드레스트입니다.",
+          "productUrl": "https://fursys-store.com/product/detail.html?product_no=2580&cate_no=204&display_group=1"
+        },
+        {
+          "id": "chair-arms",
+          "name": "조절형 팔걸이",
+          "description": "제품 사진의 위로 갈수록 완만히 휘는 팔걸이 지지대와 긴 패드를 분리했습니다.",
+          "productUrl": "https://fursys-store.com/product/detail.html?product_no=2580&cate_no=204&display_group=1"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 50,
+        "jsonMeshes": 39,
+        "meshNodes": 43,
+        "meshMetadataComplete": true,
+        "accessors": 144,
+        "binaryBytes": 415536,
+        "finiteFloatValues": 95688
+      }
+    },
+    {
+      "file": "keyboard-stand.glb",
+      "name": "버니언스 X 브레스밋 · 키보드 거치대 2단",
+      "category": "furniture",
+      "sourceModule": "gear-desk.js",
+      "sourceFactory": "createKeyboardStand",
+      "bytes": 52648,
+      "sha256": "fb4806bd83745cefc31d5c56e21704006402073b7bd3281aeab56743561923cb",
+      "colorNote": "소유 색상·판본 미확인. 사진을 확인한 원목형을 대표로 표현",
+      "colorSource": "reference-unconfirmed-owner-color",
+      "productUrl": "https://futureterior.com/product/detail.html?product_no=584",
+      "referenceDimensionsMm": {
+        "width": 148,
+        "depth": 170,
+        "height": 390
+      },
+      "dimensionNote": "원목형 상세 도표 기준입니다. 중앙 세로판과 앞뒤 두 단의 거치부로 총 4개 키보드를 받치는 구조이며, 장면에서는 앞쪽 두 단을 사용합니다.",
+      "meshes": 22,
+      "triangles": 264,
+      "vertices": 528,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -0.8377358317375183,
+          0,
+          -0.9622641801834106
+        ],
+        "max": [
+          0.8377358317375183,
+          4.415094375610352,
+          0.9622641801834106
+        ],
+        "size": [
+          1.6754716634750366,
+          4.415094375610352,
+          1.9245283603668213
+        ]
+      },
+      "parts": [
+        {
+          "id": "stand-spine",
+          "name": "버니언스 X 브레스밋 · 중앙 세로판",
+          "description": "정식 브랜드명은 버니언스입니다. 원목형 제품 사진의 중앙 세로판과 가공 홈을 반영했습니다. 소유 판본과 색상은 아직 확인하지 않아 대표 원목형으로 표현합니다.",
+          "productUrl": "https://futureterior.com/product/detail.html?product_no=584"
+        },
+        {
+          "id": "stand-shelves",
+          "name": "앞뒤 2단 키보드 거치부",
+          "description": "공개 제품 사진은 앞뒤 각각 두 단, 총 4개 키보드 거치 구조입니다. 이 장면에서는 정면 두 단에 위쪽 LOOMI, 아래쪽 VM87을 올립니다.",
+          "productUrl": "https://futureterior.com/product/detail.html?product_no=584"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 24,
+        "jsonMeshes": 22,
+        "meshNodes": 22,
+        "meshMetadataComplete": true,
+        "accessors": 88,
+        "binaryBytes": 18480,
+        "finiteFloatValues": 4224
+      }
+    },
+    {
+      "file": "hyzen-palm-rest.glb",
+      "name": "LOFREE Hyzen Palm Rest",
+      "category": "accessory",
+      "sourceModule": "gear-extra.js",
+      "sourceFactory": "createWristRest",
+      "bytes": 141324,
+      "sha256": "ef9ef1b8cb636b0e2521822921fcf5cf01132dc256d125404cc5c30863f3b6d0",
+      "colorNote": "사용자 확인 색상: Hyzen과 같은 스페이스 그레이 (Space Gray).",
+      "colorSource": "user-confirmed",
+      "colorConfirmedOn": "2026-10-17",
+      "productUrl": "https://www.lofree.co/pages/hyzen",
+      "sizeNote": "표시 폭 약7, 깊이0.9 world units. 실측 치수가 아닌 키보드 폭에 맞춘 배치용 비율입니다.",
+      "meshes": 6,
+      "triangles": 1384,
+      "vertices": 4152,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -3.51200008392334,
+          0,
+          -0.4620000123977661
+        ],
+        "max": [
+          3.51200008392334,
+          0.32699998617172243,
+          0.4620000123977661
+        ],
+        "size": [
+          7.02400016784668,
+          0.32699998617172243,
+          0.9240000247955322
+        ]
+      },
+      "parts": [
+        {
+          "name": "LOFREE Hyzen Palm Rest",
+          "description": "사용자가 소유한 Hyzen과 같은 스페이스 그레이 색의 전용 팜레스트",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "경사진 알루미늄 상판",
+          "description": "공식 컬러 사진의 넓고 낮은 경사면과 곧게 뻗은 전면 윤곽을 참고했습니다.",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "하부 테두리",
+          "description": "상판 아래의 어두운 얇은 테두리",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        },
+        {
+          "name": "미끄럼 방지 패드",
+          "description": "바닥과 닿는 고무 발은 배치를 위한 단순 표현입니다.",
+          "productUrl": "https://www.lofree.co/pages/hyzen"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 8,
+        "jsonMeshes": 6,
+        "meshNodes": 6,
+        "meshMetadataComplete": true,
+        "accessors": 18,
+        "binaryBytes": 132864,
+        "finiteFloatValues": 33216
+      }
+    },
+    {
+      "file": "artisan-zero-pad.glb",
+      "name": "ARTISAN NINJA FX ZERO",
+      "category": "accessory",
+      "sourceModule": "gear-extra.js",
+      "sourceFactory": "createMousePad",
+      "bytes": 85324,
+      "sha256": "49bc5fd895c12250ead2f75783d6bf7f5fda3316ef65eed7010016c9577497ff",
+      "colorNote": "사용자 확인 색상: 블랙 (Black).",
+      "colorSource": "user-confirmed",
+      "colorConfirmedOn": "2026-10-17",
+      "productUrl": "https://artisan-jp.com/global/fx-zero",
+      "sizeNote": "표시 크기 약 5×4 world units. 실제 소유 제품의 S/M/L/XL/XXL 크기와 XSOFT/SOFT/MID 경도는 확인되지 않았습니다.",
+      "meshes": 3,
+      "triangles": 1944,
+      "vertices": 1998,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -2.5,
+          0,
+          -2
+        ],
+        "max": [
+          2.5,
+          0.0549999997019769,
+          2
+        ],
+        "size": [
+          5,
+          0.0549999997019769,
+          4
+        ]
+      },
+      "parts": [
+        {
+          "name": "ARTISAN NINJA FX ZERO",
+          "description": "검정 폴리에스터 천 표면과 가장자리 스티칭이 있는 FX ZERO 마우스패드",
+          "productUrl": "https://artisan-jp.com/global/fx-zero"
+        },
+        {
+          "name": "논슬립 베이스",
+          "description": "마우스패드 바닥의 얇은 고무 베이스",
+          "productUrl": "https://artisan-jp.com/global/fx-zero"
+        },
+        {
+          "name": "ZERO 직물 표면",
+          "description": "공식 설명의 폴리에스터 100% 천 표면. 실제 표면 감촉과 경도는 시각 모델에서 재현하지 않았습니다.",
+          "productUrl": "https://artisan-jp.com/global/fx-zero"
+        },
+        {
+          "name": "FX 스티치 테두리",
+          "description": "FX 제품의 둥근 모서리와 연속된 봉제 가장자리",
+          "productUrl": "https://artisan-jp.com/global/fx-zero"
+        },
+        {
+          "name": "봉제선",
+          "description": "가장자리 스티칭의 반복 간격을 단순화했습니다.",
+          "productUrl": "https://artisan-jp.com/global/fx-zero"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 6,
+        "jsonMeshes": 4,
+        "meshNodes": 4,
+        "meshMetadataComplete": true,
+        "accessors": 11,
+        "binaryBytes": 79296,
+        "finiteFloatValues": 17424
+      }
+    },
+    {
+      "file": "supermix4-earphones.glb",
+      "name": "SIMGOT SUPERMIX 4",
+      "category": "accessory",
+      "sourceModule": "gear-extra.js",
+      "sourceFactory": "createEarphones",
+      "bytes": 587008,
+      "sha256": "1a40790cad74f34a70024c2b87b018dd0066293dbee4a3436b3cc5dbc7fb3d11",
+      "colorNote": "공식 유통 제품 사진의 검정 레진·무광 금속 쉘, 회색 이어팁, 은색 케이블을 참고했습니다.",
+      "colorSource": "authorized-retailer-reference",
+      "productUrl": "https://www.linsoul.com/products/simgot-supermix-4",
+      "sizeNote": "외형 실측 치수는 확인되지 않았습니다. 이어피스 두 개와 케이블 배치 비율은 표시용 근사입니다.",
+      "setContents": {
+        "earpieces": 2,
+        "cable": 1,
+        "plug": 1
+      },
+      "meshes": 34,
+      "triangles": 13368,
+      "vertices": 14710,
+      "missingPartMetadata": 0,
+      "bbox": {
+        "min": [
+          -1.9843270182609558,
+          0,
+          -1.8717803238416955
+        ],
+        "max": [
+          1.9843270182609558,
+          0.5256408589391806,
+          1.8717803238416955
+        ],
+        "size": [
+          3.9686540365219116,
+          0.5256408589391806,
+          3.743560647683391
+        ]
+      },
+      "parts": [
+        {
+          "name": "SIMGOT SUPERMIX 4",
+          "description": "좌우 검정 레진 이어피스와 실버 브레이드 케이블, 3.5mm 플러그의 외형",
+          "productUrl": "https://www.linsoul.com/products/simgot-supermix-4"
+        },
+        {
+          "name": "earpiece-left",
+          "description": "왼쪽 SUPERMIX 4 이어피스",
+          "productUrl": "https://www.linsoul.com/products/simgot-supermix-4"
+        },
+        {
+          "name": "블랙 레진 하우징",
+          "description": "접사의 둥근 삼각형 외곽과 불룩한 안쪽 레진 쉘을 참고했습니다.",
+          "productUrl": "https://www.linsoul.com/products/simgot-supermix-4"
+        },
+        {
+          "name": "무광 금속 페이스플레이트",
+          "description": "검정 레진 본체 위의 어두운 무광 금속 페이스플레이트",
+          "productUrl": "https://www.linsoul.com/products/simgot-supermix-4"
+        },
+        {
+          "name": "금색 원환 디테일",
+          "description": "실제 접사의 얇은 금색 원환과 작은 검정 포트. 드라이버 단면을 뜻하지 않습니다.",
+          "productUrl": "https://www.linsoul.com/products/simgot-supermix-4"
+        },
+        {
+          "name": "페이스플레이트 포트",
+          "description": "금색 원환 한쪽 끝의 작은 검정 포트",
+          "productUrl": "https://www.linsoul.com/products/simgot-supermix-4"
+        },
+        {
+          "name": "nozzle",
+          "description": "귀 안쪽으로 기울어진 노즐과 회색 실리콘 이어팁",
+          "productUrl": "https://www.linsoul.com/products/simgot-supermix-4"
+        },
+        {
+          "name": "노즐",
+          "description": "레진 쉘 안쪽에서 이어팁으로 연결되는 짧은 노즐",
+          "productUrl": "https://www.linsoul.com/products/simgot-supermix-4"
+        },
+        {
+          "name": "회색 실리콘 이어팁",
+          "description": "제공 사진의 회색 반투명 실리콘 팁을 불투명 외형으로 단순화했습니다.",
+          "productUrl": "https://www.linsoul.com/products/simgot-supermix-4"
+        },
+        {
+          "name": "이어팁 개구",
+          "description": "이어팁 중앙 소리 구멍의 테두리",
+          "productUrl": "https://www.linsoul.com/products/simgot-supermix-4"
+        },
+        {
+          "name": "0.78mm 2핀 커넥터",
+          "description": "공식 유통 제품정보에 명시된 탈착식 0.78mm 2핀 접점. 표시 모델에서 핀 간격은 실측 비례가 아닙니다.",
+          "productUrl": "https://www.linsoul.com/products/simgot-supermix-4"
+        },
+        {
+          "name": "2핀 단자 구멍",
+          "description": "케이블이 꽂히는 두 접점의 외형",
+          "productUrl": "https://www.linsoul.com/products/simgot-supermix-4"
+        },
+        {
+          "name": "earpiece-right",
+          "description": "오른쪽 SUPERMIX 4 이어피스",
+          "productUrl": "https://www.linsoul.com/products/simgot-supermix-4"
+        },
+        {
+          "name": "cable",
+          "description": "은도금 무산소 구리 브레이드 케이블의 가벼운 외형 표현",
+          "productUrl": "https://www.linsoul.com/products/simgot-supermix-4"
+        },
+        {
+          "name": "왼쪽 이어훅 케이블",
+          "description": "귓바퀴를 둘러가는 이어훅과 Y 분기까지 이어지는 은색 꼬임선. 케이블의 놓인 모양은 배치용 구성입니다.",
+          "productUrl": "https://www.linsoul.com/products/simgot-supermix-4"
+        },
+        {
+          "name": "2핀 케이블 하우징",
+          "description": "레진 쉘 윗면으로 들어가는 케이블 커넥터",
+          "productUrl": "https://www.linsoul.com/products/simgot-supermix-4"
+        },
+        {
+          "name": "오른쪽 이어훅 케이블",
+          "description": "귓바퀴를 둘러가는 이어훅과 Y 분기까지 이어지는 은색 꼬임선. 케이블의 놓인 모양은 배치용 구성입니다.",
+          "productUrl": "https://www.linsoul.com/products/simgot-supermix-4"
+        },
+        {
+          "name": "Y 스플리터",
+          "description": "좌우 케이블을 모으는 짧은 검정 금속 분기부",
+          "productUrl": "https://www.linsoul.com/products/simgot-supermix-4"
+        },
+        {
+          "name": "실버 브레이드 주 케이블",
+          "description": "은도금 OFC 케이블의 외형을 두 가닥의 가벼운 기하로 근사했습니다.",
+          "productUrl": "https://www.linsoul.com/products/simgot-supermix-4"
+        },
+        {
+          "name": "plug",
+          "description": "유선 오디오용 3.5mm 직선형 플러그",
+          "productUrl": "https://www.linsoul.com/products/simgot-supermix-4"
+        },
+        {
+          "name": "플러그 배럴",
+          "description": "검정 금속 직선 플러그 하우징",
+          "productUrl": "https://www.linsoul.com/products/simgot-supermix-4"
+        },
+        {
+          "name": "3.5mm 오디오 플러그",
+          "description": "제품정보의 3.5mm 플러그. 실제 전기 접점 규격을 재현한 도면이 아닙니다.",
+          "productUrl": "https://www.linsoul.com/products/simgot-supermix-4"
+        },
+        {
+          "name": "플러그 절연 링",
+          "description": "금색 접점 사이의 얇은 검정 절연 띠",
+          "productUrl": "https://www.linsoul.com/products/simgot-supermix-4"
+        }
+      ],
+      "validation": {
+        "valid": true,
+        "jsonNodes": 42,
+        "jsonMeshes": 34,
+        "meshNodes": 34,
+        "meshMetadataComplete": true,
+        "accessors": 130,
+        "binaryBytes": 537440,
+        "finiteFloatValues": 117680
+      }
+    }
+  ],
+  "failures": [],
+  "totals": {
+    "files": 6,
+    "bytes": 1637576,
+    "failed": 0
+  }
+}

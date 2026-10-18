@@ -47,7 +47,27 @@
         ],
         "kind": "per-axis 1%-99% camera-fit only; no points removed"
       },
-      "sourceCountUnit": "points"
+      "sourceCountUnit": "points",
+      "alignment": {
+        "scale": 3.8080972706549234,
+        "translation": [
+          -7.4082492009489895,
+          -5.152110784106737,
+          -9.41244389403169
+        ],
+        "fitBounds": {
+          "min": [
+            -2.508882613182068,
+            -0.5636592209339142,
+            -1.9830996549129487
+          ],
+          "max": [
+            2.1211950564384474,
+            0.42953122347593314,
+            1.702934892177582
+          ]
+        }
+      }
     },
     {
       "id": "jamsil-mvs",
@@ -95,7 +115,27 @@
         ],
         "kind": "per-axis 1%-99% camera-fit only; no points removed"
       },
-      "sourceCountUnit": "points"
+      "sourceCountUnit": "points",
+      "alignment": {
+        "scale": 1.0,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "fitBounds": {
+          "min": [
+            -2.508882613182068,
+            -0.5636592209339142,
+            -1.9830996549129487
+          ],
+          "max": [
+            2.1211950564384474,
+            0.42953122347593314,
+            1.702934892177582
+          ]
+        }
+      }
     },
     {
       "id": "jamsil-voxel",
@@ -155,7 +195,27 @@
         ],
         "kind": "per-axis 1%-99% camera-fit only; no points removed"
       },
-      "sourceCountUnit": "voxels"
+      "sourceCountUnit": "voxels",
+      "alignment": {
+        "scale": 0.9996446248085323,
+        "translation": [
+          -0.00021178925552109177,
+          3.0086921446684982e-05,
+          -0.0001337616350659527
+        ],
+        "fitBounds": {
+          "min": [
+            -2.508882613182068,
+            -0.5636592209339142,
+            -1.9830996549129487
+          ],
+          "max": [
+            2.1211950564384474,
+            0.42953122347593314,
+            1.702934892177582
+          ]
+        }
+      }
     },
     {
       "id": "magok1-sfm",
@@ -203,7 +263,27 @@
         ],
         "kind": "per-axis 1%-99% camera-fit only; no points removed"
       },
-      "sourceCountUnit": "points"
+      "sourceCountUnit": "points",
+      "alignment": {
+        "scale": 2.501368936102788,
+        "translation": [
+          0.41014591426197894,
+          -0.24905761830773354,
+          -1.9663964709662907
+        ],
+        "fitBounds": {
+          "min": [
+            -0.6685009288787842,
+            -0.22824277117848396,
+            -0.34254261493682864
+          ],
+          "max": [
+            0.5407580286264421,
+            0.01157449115067734,
+            0.349487470984459
+          ]
+        }
+      }
     },
     {
       "id": "magok1-mvs",
@@ -251,7 +331,27 @@
         ],
         "kind": "per-axis 1%-99% camera-fit only; no points removed"
       },
-      "sourceCountUnit": "points"
+      "sourceCountUnit": "points",
+      "alignment": {
+        "scale": 1.0,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "fitBounds": {
+          "min": [
+            -0.6685009288787842,
+            -0.22824277117848396,
+            -0.34254261493682864
+          ],
+          "max": [
+            0.5407580286264421,
+            0.01157449115067734,
+            0.349487470984459
+          ]
+        }
+      }
     },
     {
       "id": "magok1-voxel",
@@ -311,7 +411,27 @@
         ],
         "kind": "per-axis 1%-99% camera-fit only; no points removed"
       },
-      "sourceCountUnit": "voxels"
+      "sourceCountUnit": "voxels",
+      "alignment": {
+        "scale": 1.000030427563965,
+        "translation": [
+          -0.000286147217330413,
+          -4.919656657930539e-05,
+          0.0003242937738381947
+        ],
+        "fitBounds": {
+          "min": [
+            -0.6685009288787842,
+            -0.22824277117848396,
+            -0.34254261493682864
+          ],
+          "max": [
+            0.5407580286264421,
+            0.01157449115067734,
+            0.349487470984459
+          ]
+        }
+      }
     },
     {
       "id": "magok2-mvs",
@@ -359,7 +479,27 @@
         ],
         "kind": "per-axis 1%-99% camera-fit only; no points removed"
       },
-      "sourceCountUnit": "points"
+      "sourceCountUnit": "points",
+      "alignment": {
+        "scale": 1.0,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "fitBounds": {
+          "min": [
+            -2.946096293926239,
+            -0.758884556889534,
+            -2.639486472606659
+          ],
+          "max": [
+            2.8331516098976137,
+            0.7095892554521561,
+            2.559461076259613
+          ]
+        }
+      }
     },
     {
       "id": "magok2-voxel",
@@ -419,7 +559,27 @@
         ],
         "kind": "per-axis 1%-99% camera-fit only; no points removed"
       },
-      "sourceCountUnit": "voxels"
+      "sourceCountUnit": "voxels",
+      "alignment": {
+        "scale": 0.9995195639046766,
+        "translation": [
+          0.0023082606384335893,
+          -0.002818572524542388,
+          -0.0012997426486692969
+        ],
+        "fitBounds": {
+          "min": [
+            -2.946096293926239,
+            -0.758884556889534,
+            -2.639486472606659
+          ],
+          "max": [
+            2.8331516098976137,
+            0.7095892554521561,
+            2.559461076259613
+          ]
+        }
+      }
     }
   ],
   "unavailable": [

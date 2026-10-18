@@ -1,0 +1,1334 @@
+{
+  "updated": "2026-10-18",
+  "products": [
+    {
+      "id": "desk",
+      "name": "퍼시스 M302+ FKD016N 모션데스크 · 흰색",
+      "url": "https://fursys-store.com/product/detail.html?product_no=4426&cate_no=118&display_group=1",
+      "instances": 1,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/desk.glb",
+          "bytes": 3710904,
+          "sha256": "9ece85cc0fc8971f9cf1b81decab815d1a0c48633a2db8257c5d7eb1a5c7bf1f",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.5004903078079224,
+                -0.2437998354434967,
+                -0.2744496464729309
+              ],
+              [
+                0.5003820657730103,
+                0.24557730555534363,
+                0.2685592770576477
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "2eb0b710af587899a7d8e56c2368eccc29804ae0c37e6aed92a4942dc781571a",
+          "source_bytes": 3710892,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "chair",
+      "name": "퍼시스 AROUND CHN6200AH 의자 · 검정",
+      "url": "https://fursys-store.com/product/detail.html?product_no=2580&cate_no=204&display_group=1",
+      "instances": 1,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/chair.glb",
+          "bytes": 4547844,
+          "sha256": "afbc7c659717c3924dc983cc87a51fe50d211a4992b3f548d7b20bad96c36b0a",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.6074492335319519,
+                -0.9990915060043335,
+                -0.5662251710891724
+              ],
+              [
+                0.568534791469574,
+                0.9505003690719604,
+                0.5276299715042114
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "be6d4f755d3d9d0032beccea4660567a453d8fe79b98966c267faa3321935ac6",
+          "source_bytes": 4547832,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "stand",
+      "name": "버니언스×브레스밋 2단 키보드 거치대 · 검정",
+      "url": "https://futureterior.com/product/detail.html?product_no=3608",
+      "instances": 1,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/stand.glb",
+          "bytes": 3419316,
+          "sha256": "889c1024b5f4c7f39114261a006c247006a4d8bb930a39a82ee64281496b43ce",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.39281296730041504,
+                -0.9911997318267822,
+                -0.46985581517219543
+              ],
+              [
+                0.3588968515396118,
+                0.9486510753631592,
+                0.43358781933784485
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "4ca09ddfeafd2d761d12e949a9beaafb1f30153e429aa4df65fc9d57a3e97cdc",
+          "source_bytes": 3419304,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "loomi",
+      "name": "SPM PN06 LOOMI · 네이비 실버",
+      "url": "https://smartstore.naver.com/spmshop/products/12906788507",
+      "instances": 1,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/loomi.glb",
+          "bytes": 5208504,
+          "sha256": "2fef2fc24ec48d16160791dd4a92afdc283f880181878ee5fffb8d5d76914cb7",
+          "side": null,
+          "faces": 80000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.3557763695716858,
+                -0.15614190697669983,
+                -0.9934853315353394
+              ],
+              [
+                0.3125126361846924,
+                0.11048982292413712,
+                0.9503257274627686
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "12866b82e688528ad408aec60c8b9aaf8e24b78600bd39530b822f9b066182fa",
+          "source_bytes": 5208492,
+          "web_faces": 80000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "사용자 지정 UltraShape 정제본 · AI PBR 초안 · 키캡 경계·문자 보정 필요",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "cover",
+      "name": "갤럭시팩토리 루미용 키보드 루프 · 검정",
+      "url": "https://www.galaxy-factory.com/goods/goods_view.php?goodsNo=1000000000",
+      "instances": 1,
+      "source_kind": "hunyuan_pbr_selected_base",
+      "files": [
+        {
+          "file": "products/cover.glb",
+          "bytes": 3745828,
+          "sha256": "51075c5dd300d91edba0b751051a63d11cbec7996ea8db09b37298d513b79b1e",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.9987760782241821,
+                -0.08953939378261566,
+                -0.3847147226333618
+              ],
+              [
+                0.9637535810470581,
+                0.04867008328437805,
+                0.3530656099319458
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "51075c5dd300d91edba0b751051a63d11cbec7996ea8db09b37298d513b79b1e",
+          "source_bytes": 3745828,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": false
+        }
+      ],
+      "source_note": "사용자 선택 Hunyuan 기본 형상 · 검정 반투명 재질 · 불투명도 78%",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님",
+      "opacity": 0.78
+    },
+    {
+      "id": "vm87",
+      "name": "VARO VM87 HE",
+      "url": null,
+      "instances": 1,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/vm87.glb",
+          "bytes": 4417820,
+          "sha256": "83154a1d5c908a202e116e68080a26d5b7f19c820c1c57a331cabc61bed65cf4",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.9992088675498962,
+                -0.17200326919555664,
+                -0.4915024936199188
+              ],
+              [
+                0.9639849066734314,
+                0.12797969579696655,
+                0.45480915904045105
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "34e8cb5f5e465089a1993f0013c8442da9e95c745144700cade1ef5043f0f4be",
+          "source_bytes": 4417808,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "hyzen",
+      "name": "LOFREE Hyzen67 · 스페이스 그레이",
+      "url": "https://www.lofree.com.au/products/lofree-hyzen67-mechanical-magnetic-keyboard",
+      "instances": 1,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/hyzen.glb",
+          "bytes": 4522284,
+          "sha256": "04653225520a911a8bc1a8cd190d8c70f90e0fdf6a85d7388a6ce82e87263506",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.9912970662117004,
+                -0.15006780624389648,
+                -0.4597397744655609
+              ],
+              [
+                0.9476799368858337,
+                0.10447137802839279,
+                0.4249357283115387
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "2118855dc1c947aedcbac15c463c994ac4d1ca0af8da829a09caf3c11334407b",
+          "source_bytes": 4522272,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "wrist",
+      "name": "LOFREE Hyzen용 팜레스트 · 스페이스 그레이",
+      "url": "https://shelter.shop/products/lofree-hyzen-prism-wrist-rest",
+      "instances": 1,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/wrist.glb",
+          "bytes": 2970100,
+          "sha256": "d3d1629b7e5afb46dd038c24f590a88a584d8e999791ce345a4bd7453983eb42",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.2104104608297348,
+                -0.05164702236652374,
+                -0.9459216594696045
+              ],
+              [
+                0.17614056169986725,
+                0.0264532882720232,
+                0.9485769271850586
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "b980786e9f7d5625028e31ad15b5adf962f3e3f547780313eb13473dc20ab004",
+          "source_bytes": 2970088,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "pad",
+      "name": "ARTISAN NINJA FX ZERO · 블랙",
+      "url": "https://artisan-jp.com/global/fx-zero",
+      "instances": 1,
+      "source_kind": "manual_photo_textured",
+      "files": [
+        {
+          "file": "products/pad.glb",
+          "bytes": 603876,
+          "sha256": "8d048db09b93f86e337b6a8b393d5c6275c87c0541228972a7335455cf5f3a2d",
+          "side": null,
+          "faces": 768,
+          "images": 1,
+          "accessor_bounds": [
+            [
+              [
+                -0.5,
+                -0.0010000000474974513,
+                -0.38877755403518677
+              ],
+              [
+                0.5,
+                0.0010000000474974513,
+                0.38877755403518677
+              ]
+            ],
+            [
+              [
+                -0.5,
+                -0.0010000000474974513,
+                -0.38877755403518677
+              ],
+              [
+                0.5,
+                0.0010000000474974513,
+                0.38877755403518677
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "8d048db09b93f86e337b6a8b393d5c6275c87c0541228972a7335455cf5f3a2d",
+          "source_bytes": 603876,
+          "web_faces": 768,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": false
+        }
+      ],
+      "source_note": "사용자 요청: 둥근 모서리 · 두께 2mm · 기존 사진 재질",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님",
+      "thickness_mm": 2,
+      "footprint_calibrated": false
+    },
+    {
+      "id": "infinity",
+      "name": "Angry Miao AM INFINITY MOUSE .97",
+      "url": null,
+      "instances": 1,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/infinity.glb",
+          "bytes": 6433112,
+          "sha256": "df357a9dded2ea6a3cfe2b3727b3b095a9a8e153a55bef8b436f908afb2ca6eb",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.6336197853088379,
+                -0.34075266122817993,
+                -0.9992370009422302
+              ],
+              [
+                0.5974278450012207,
+                0.32558923959732056,
+                0.965492308139801
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "fa2eb8f41cdece11181b35d0f4efba262855dd35a0a3551c4035904c63ebb2c7",
+          "source_bytes": 6433100,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "scyrox",
+      "name": "SCYROX V8",
+      "url": null,
+      "instances": 1,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/scyrox.glb",
+          "bytes": 2975648,
+          "sha256": "29c90c1a24cd984af4ad895aeaf7b794deeb3263a47d4425e5439a9960403a42",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.5355184674263,
+                -0.3063157796859741,
+                -0.998950183391571
+              ],
+              [
+                0.5714103579521179,
+                0.27715039253234863,
+                0.9637213349342346
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "b0b089532328f606428a963ec1e6f737143db785ca911276b024f5f3ec8cd8b2",
+          "source_bytes": 2975636,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "lift",
+      "name": "Logitech Lift",
+      "url": null,
+      "instances": 1,
+      "source_kind": "user_provided",
+      "files": [
+        {
+          "file": "products/lift.glb",
+          "bytes": 7183264,
+          "sha256": "53ba660306517600471113bc70abc88ca7114fe6a56cff0df437a99c9d31757c",
+          "side": null,
+          "faces": 1930149,
+          "images": 3,
+          "accessor_bounds": [
+            [
+              [
+                -0.3470611572265625,
+                0,
+                -0.49005126953125
+              ],
+              [
+                0.3470611572265625,
+                0.694915771484375,
+                0.49005126953125
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "d3de401c37e42f5b5909554d86a25cf6c44573e49344b9fdead0bee4ab52b43c",
+          "source_bytes": 59892048,
+          "web_faces": 80000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": false
+        }
+      ],
+      "source_note": "사용자 제공 GLB와 좌우 반사본",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "supermix",
+      "name": "SIMGOT SuperMix 4 이어폰",
+      "url": "https://www.linsoul.com/products/simgot-supermix-4",
+      "instances": 1,
+      "source_kind": "user_provided",
+      "files": [
+        {
+          "file": "products/supermix-R.glb",
+          "bytes": 8279368,
+          "sha256": "1a4fa5931076047ef977ef335f4e0226146cfc081820d6a9833ebedc56c6fec2",
+          "side": "right",
+          "faces": 1980394,
+          "images": 3,
+          "accessor_bounds": [
+            [
+              [
+                -0.4681853950023651,
+                0,
+                -0.489410400390625
+              ],
+              [
+                0.4681853950023651,
+                0.857940673828125,
+                0.489410400390625
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "827ec661ff6c2ca3b9abd38951100053682a201244ef8412542de25ac2654001",
+          "source_bytes": 62368332,
+          "web_faces": 80000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": false
+        },
+        {
+          "file": "products/supermix-L.glb",
+          "bytes": 8263128,
+          "sha256": "135362704e60ea72e4358c503a655ad9c49b65693dbd8e462738ed58b14a21bc",
+          "side": "left",
+          "faces": 1980394,
+          "images": 3,
+          "accessor_bounds": [
+            [
+              [
+                -0.4681853950023651,
+                0,
+                -0.489410400390625
+              ],
+              [
+                0.4681853950023651,
+                0.857940673828125,
+                0.489410400390625
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "977716c3ef0f1fec76504e23fdd451494edb85608c0f5d2d6cd2273b876e7ea0",
+          "source_bytes": 62368504,
+          "web_faces": 80000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": false
+        }
+      ],
+      "source_note": "사용자 제공 GLB와 좌우 반사본",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "p600s",
+      "name": "Phanteks Eclipse P600S",
+      "url": null,
+      "instances": 1,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/p600s.glb",
+          "bytes": 5110144,
+          "sha256": "b2a589a33b29709650f146938d5a02f8d47db33b02f73de5af0bcc46ad0f64f7",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.5084466338157654,
+                -1.0011348724365234,
+                -0.9845485687255859
+              ],
+              [
+                0.4729406237602234,
+                0.9638252258300781,
+                0.9637854099273682
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "f9d006c6a8dad325e419960f77b323b34ad5a6943ddd3a14eeb5caf0e5aba216",
+          "source_bytes": 5110132,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "cpu",
+      "name": "Intel Core i7-12700KF",
+      "url": "https://www.ebay.com/itm/267538106192",
+      "instances": 1,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/cpu.glb",
+          "bytes": 6167036,
+          "sha256": "7788c56c5d3d2e404eac7dbdd8476463f88bb8b06a4c02a7a18398a2c6d64883",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.8303008675575256,
+                -0.9910520911216736,
+                -0.18091484904289246
+              ],
+              [
+                0.7870596051216125,
+                0.9536659121513367,
+                0.14829835295677185
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "9a639647b0acdeb25dc03d0d38eb0b6706f0583f7ecb316d25fa0acbf90d9f9c",
+          "source_bytes": 6167024,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "board",
+      "name": "MSI MAG Z690 TOMAHAWK WIFI DDR4",
+      "url": null,
+      "instances": 1,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/board.glb",
+          "bytes": 5782492,
+          "sha256": "a24ceee1ec3661849e3081f1d23067e4855f83eb50ce552f40140cff3bb6d283",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.4869699478149414,
+                -0.04952773451805115,
+                -0.4987441897392273
+              ],
+              [
+                0.4615219831466675,
+                0.05284678190946579,
+                0.5009768605232239
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "54d8c9c52747a9b70bd76755280323d2dfab58911779b725fcd3430d209a249c",
+          "source_bytes": 5782480,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "ram",
+      "name": "G.SKILL Trident Z RGB 16GB × 2",
+      "url": null,
+      "instances": 2,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/ram.glb",
+          "bytes": 4806776,
+          "sha256": "804fe8458b3fefdbabe16ecbf4a8cbc50f7958043bd93d4b704606b95a39fb27",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.4988866448402405,
+                -0.1613445281982422,
+                -0.010305325500667095
+              ],
+              [
+                0.49957090616226196,
+                0.1593334674835205,
+                0.010982531122863293
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "1b5904410b71ecefbaded6f59bb01d0557bcfed6e5e4066f9713d8af885e22a3",
+          "source_bytes": 4806764,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "gpu",
+      "name": "GIGABYTE RTX 3090 Ti GAMING OC",
+      "url": null,
+      "instances": 1,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/gpu.glb",
+          "bytes": 2978584,
+          "sha256": "87e2eb052864f08e9a2b133bce51bc11f9b45306730d7ef2d1866e6092a03dec",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.9980226159095764,
+                -0.2396974414587021,
+                -0.47892123460769653
+              ],
+              [
+                0.963967502117157,
+                0.2305074781179428,
+                0.508669376373291
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "232054ffc34be91015414c7e40e882c0ce5696919e91707e96a720d7e0daf82a",
+          "source_bytes": 2978572,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "ssd980250",
+      "name": "Samsung SSD 980 250GB",
+      "url": null,
+      "instances": 1,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/ssd980250.glb",
+          "bytes": 4951908,
+          "sha256": "280eaf9660e8d1428a123dd6f99a2e141da04e8ee059f00bd99df609fdf61018",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.9953927993774414,
+                -0.28406909108161926,
+                -0.03955297917127609
+              ],
+              [
+                0.9484171867370605,
+                0.24650099873542786,
+                0.008929194882512093
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "be3754084fc39944936161b815ca091cf6dcc3d1f375bdc00c651c4ecf509438",
+          "source_bytes": 4951896,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "ssd9801",
+      "name": "Samsung SSD 980 1TB",
+      "url": null,
+      "instances": 1,
+      "source_kind": "geometry_reuse_photo_textured",
+      "files": [
+        {
+          "file": "products/ssd9801.glb",
+          "bytes": 1391504,
+          "sha256": "e469a90c56d316dcd54e5432477e8917e77b8efe1f43073f31176eadeca225c4",
+          "side": null,
+          "faces": 299960,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.9994033575057983,
+                -0.2879714071750641,
+                -0.03742717579007149
+              ],
+              [
+                0.9636827111244202,
+                0.2523144483566284,
+                0.00511128967627883
+              ]
+            ],
+            [
+              [
+                -0.9994033575057983,
+                -0.2879714071750641,
+                -0.03742717579007149
+              ],
+              [
+                0.9636827111244202,
+                0.2523144483566284,
+                0.00511128967627883
+              ]
+            ],
+            [
+              [
+                -0.9994033575057983,
+                -0.2879714071750641,
+                -0.03742717579007149
+              ],
+              [
+                0.9636827111244202,
+                0.2523144483566284,
+                0.00511128967627883
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "d1040813cf8248562adb63c3a17a82eeec1e7097688ea8a529f751b402a0c9ca",
+          "source_bytes": 10073556,
+          "web_faces": 39995,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": false
+        }
+      ],
+      "source_note": "980 250GB 기본 형상 재사용 · 1TB 실제 사진",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "ssd9901",
+      "name": "Samsung SSD 990 PRO 1TB",
+      "url": null,
+      "instances": 1,
+      "source_kind": "photo_textured",
+      "files": [
+        {
+          "file": "products/ssd9901.glb",
+          "bytes": 6252236,
+          "sha256": "a556c47952dd69623319495c41f04c0da76d8bb4e8faad968c0820c3017deff5",
+          "side": null,
+          "faces": 1295348,
+          "images": 1,
+          "accessor_bounds": [
+            [
+              [
+                -0.9916667342185974,
+                -0.2861992120742798,
+                -0.041413813829422
+              ],
+              [
+                0.9517506957054138,
+                0.2506410777568817,
+                0.012149866670370102
+              ]
+            ],
+            [
+              [
+                -0.9916667342185974,
+                -0.2861992120742798,
+                -0.041413813829422
+              ],
+              [
+                0.9517506957054138,
+                0.2506410777568817,
+                0.012149866670370102
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "7090a9600657a803a2e6d2f700d6e364a88081c7341d5b2d3022a215326912e6",
+          "source_bytes": 41527864,
+          "web_faces": 39995,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": false
+        }
+      ],
+      "source_note": "기존 정제 형상에 실제 정면 사진 적용",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "ssd9902",
+      "name": "Samsung SSD 990 PRO 2TB",
+      "url": null,
+      "instances": 1,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/ssd9902.glb",
+          "bytes": 3774228,
+          "sha256": "31fc6a9731f0819b39c630b27687d5b12f0a6ea7180cf475dc33a7f612ccdbce",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.05234748497605324,
+                -0.28721630573272705,
+                -0.9983516931533813
+              ],
+              [
+                0.011451225727796555,
+                0.2527881860733032,
+                0.9504469633102417
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "e13febb5d14875121f58c9387147d5a6c550083ce97c7aa701d96e5c45ef5718",
+          "source_bytes": 3774216,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "hdd",
+      "name": "Seagate ST2000DM008 2TB",
+      "url": null,
+      "instances": 1,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/hdd.glb",
+          "bytes": 6578812,
+          "sha256": "516bcc8ca9369243a5ac3ea7bb5dd1e1efa45f0d9491d379202c8ea799cec7df",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.7070227861404419,
+                -0.9950088262557983,
+                -0.19184204936027527
+              ],
+              [
+                0.6711078882217407,
+                0.9572432041168213,
+                0.15516701340675354
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "e7388b4698345f68eab5909f8934d86e972f2e91c03e57dabedc74c6ae9a9b26",
+          "source_bytes": 6578800,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "orin",
+      "name": "NVIDIA Jetson AGX Orin 개발 키트",
+      "url": null,
+      "instances": 1,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/orin.glb",
+          "bytes": 3926500,
+          "sha256": "2f83552b55922c3acb615582c8935497e1bd13a5d87da7eeac3c0e19b01e7417",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.23492282629013062,
+                -0.1390487551689148,
+                -0.2397981584072113
+              ],
+              [
+                0.2287445068359375,
+                0.1361585259437561,
+                0.24555334448814392
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "231aef59fc67d8df850bea59f9bf980d7966cd0c5a7fb99b75aa9a0cd300e057",
+          "source_bytes": 3926488,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "aoc",
+      "name": "AOC Q27G4S",
+      "url": null,
+      "instances": 1,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/aoc.glb",
+          "bytes": 4838492,
+          "sha256": "1489d3809e63908336fa8fc4215fa7a1ad9f37e67b7c3079857a0ad7e0dc28a3",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.9999949932098389,
+                -0.9021683931350708,
+                -0.4476444125175476
+              ],
+              [
+                0.9638032913208008,
+                0.866052508354187,
+                0.41396063566207886
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "9d0c4a90c6ddaac82964beb6b3fd6ea874a28019890d70c6eed3c1da26c6d300",
+          "source_bytes": 4838480,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "s61b",
+      "name": "Samsung S61B · LS27B61x",
+      "url": null,
+      "instances": 1,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/s61b.glb",
+          "bytes": 4360928,
+          "sha256": "bfdc3fbc74c6617bacbe4380c06df8b68c30601b26e8ea4c07ce76cfcafaa948",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.999090850353241,
+                -0.8852840662002563,
+                -0.28870928287506104
+              ],
+              [
+                0.9638287425041199,
+                0.8436471223831177,
+                0.22703514993190765
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "c13cb402d82a269646892158afcc96bd73eaf6ba88b73925168b13532349a380",
+          "source_bytes": 4360916,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "q2775ce",
+      "name": "래안텍 PANTHEON Q2775CE",
+      "url": null,
+      "instances": 1,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/q2775ce.glb",
+          "bytes": 5425484,
+          "sha256": "52b57ed7c5ce5b6f77d13817cbf284b0630a284c6df87bb3af095156ddf18db8",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.9873025417327881,
+                -0.7494275569915771,
+                -0.42617321014404297
+              ],
+              [
+                0.950326681137085,
+                0.7105841636657715,
+                0.3863452672958374
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "86856c77c9974a15f434502f9188ebed40cd68f505e7203b8a253a3690fbe8b4",
+          "source_bytes": 5425472,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "rift-head",
+      "name": "Oculus Rift CV1 헤드셋",
+      "url": null,
+      "instances": 1,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/rift-head.glb",
+          "bytes": 3594772,
+          "sha256": "138566b6adc8c4ee239bb847440bf865c238b29e38891d690822b8424102b905",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.7492750883102417,
+                -0.5964977741241455,
+                -0.897046685218811
+              ],
+              [
+                0.7118438482284546,
+                0.5602149963378906,
+                0.9524868726730347
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "ca921821e71abf1da254088ba440cc010a6241a2454375513eac6687a949acb4",
+          "source_bytes": 3594760,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "rift-sense",
+      "name": "Oculus Rift CV1 스탠드 센서",
+      "url": null,
+      "instances": 2,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/rift-sense.glb",
+          "bytes": 2925208,
+          "sha256": "73f7789eec5331d39e03571e9ce66956c5bf9629adf99a8180b499443d74cb53",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.4214804768562317,
+                -0.9918169975280762,
+                -0.5776479840278625
+              ],
+              [
+                0.3835039734840393,
+                0.8582541942596436,
+                0.5420250296592712
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "ff15be05b3e6858df1bc70f6a65c740689d2258f1cb56deeaf418f1b82910219",
+          "source_bytes": 2925196,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "touch-L",
+      "name": "Oculus Touch CV1 왼손",
+      "url": null,
+      "instances": 1,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/touch-L.glb",
+          "bytes": 4197740,
+          "sha256": "d03e41e48731a7fead9b235e50a7da04f22864e5020860618d6d059340874ce6",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.7800904512405396,
+                -0.836629331111908,
+                -0.9905656576156616
+              ],
+              [
+                0.7401750087738037,
+                0.797596275806427,
+                0.9519189596176147
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "e8131892a2ef8c8f88769711e4c6afaea394132a76e0f78cb8b164f830637c46",
+          "source_bytes": 4197728,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "touch-R",
+      "name": "Oculus Touch CV1 오른손",
+      "url": null,
+      "instances": 1,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/touch-R.glb",
+          "bytes": 3289284,
+          "sha256": "aa59c8544642ceb8c77dac2bed3816fc81cbfb98358744c8d4c5c0c8a23ad086",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.9938381910324097,
+                -0.8742566108703613,
+                -0.8044110536575317
+              ],
+              [
+                0.9529076814651489,
+                0.8421759605407715,
+                0.7655880451202393
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "8a84cef065bbd590374351a45359320977b16cbf26ca1e5f4d8eb5b0524c1ec4",
+          "source_bytes": 3289272,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    },
+    {
+      "id": "x73",
+      "name": "NZXT Kraken X73",
+      "url": null,
+      "instances": 1,
+      "source_kind": "hunyuan_pbr",
+      "files": [
+        {
+          "file": "products/x73.glb",
+          "bytes": 2912600,
+          "sha256": "883f4e7910bcda1d8bb805490725cd074fed7eaf755b5f0cda3b080dda30e1b0",
+          "side": null,
+          "faces": 40000,
+          "images": 2,
+          "accessor_bounds": [
+            [
+              [
+                -0.9930963516235352,
+                -0.277760773897171,
+                -0.6120219230651855
+              ],
+              [
+                0.9521831274032593,
+                0.24700555205345154,
+                0.573786735534668
+              ]
+            ]
+          ],
+          "node_transforms": [],
+          "source_sha256": "7a05100d712fd0096c6e17a6aa58b0e6b587439f2fa38684706854bbc4b88207",
+          "source_bytes": 2912588,
+          "web_faces": 40000,
+          "texture_image_bytes_preserved": true,
+          "opaque_hardware_material": true
+        }
+      ],
+      "source_note": "AI PBR 텍스처 추정 · 형상·로고 검수 대기",
+      "accuracy_note": "AI 생성·사진 재질 또는 사용자 제공 모델; 정밀 실측 CAD 아님"
+    }
+  ],
+  "product_count": 32,
+  "file_count": 33
+}

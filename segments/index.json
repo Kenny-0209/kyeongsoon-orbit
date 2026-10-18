@@ -1,0 +1,77 @@
+{
+  "image": "segments/panorama.jpg",
+  "width": 2048,
+  "height": 1024,
+  "masks": [
+    {
+      "id": "shoring",
+      "label": "동바리",
+      "file": "segments/shoring.png",
+      "color": "#ff6ec7",
+      "note": "실제 연구 RGB 추출본의 검정 배경에서 복구한 표시용 경계 근사입니다. 원래 이진 마스크와 같다고 보장하지 않습니다. 원본 Pipe 프롬프트가 대상으로 잡은 수직 가설 지지대이며, 당시 연구 메모에서 temporary support pole/동바리로의 명명 변경이 확인됩니다.",
+      "alphaCoverage": 0.022202
+    },
+    {
+      "id": "wall",
+      "label": "벽면",
+      "file": "segments/wall.png",
+      "color": "#60d6e3",
+      "note": "실제 연구 RGB 추출본의 검정 배경에서 복구한 표시용 경계 근사입니다. 원래 이진 마스크와 같다고 보장하지 않습니다.",
+      "alphaCoverage": 0.223785
+    },
+    {
+      "id": "window",
+      "label": "창문",
+      "file": "segments/window.png",
+      "color": "#ffcc66",
+      "note": "실제 연구 RGB 추출본의 검정 배경에서 복구한 표시용 경계 근사입니다. 원래 이진 마스크와 같다고 보장하지 않습니다.",
+      "alphaCoverage": 0.0552
+    },
+    {
+      "id": "floor",
+      "label": "바닥",
+      "file": "segments/floor.png",
+      "color": "#b695ff",
+      "note": "실제 연구 RGB 추출본의 검정 배경에서 복구한 표시용 경계 근사입니다. 원래 이진 마스크와 같다고 보장하지 않습니다.",
+      "alphaCoverage": 0.180186
+    },
+    {
+      "id": "ceiling",
+      "label": "천장",
+      "file": "segments/ceiling.png",
+      "color": "#70aaff",
+      "note": "실제 연구 RGB 추출본의 검정 배경에서 복구한 표시용 경계 근사입니다. 원래 이진 마스크와 같다고 보장하지 않습니다.",
+      "alphaCoverage": 0.334369
+    }
+  ],
+  "note": "동일한 frame_000150 파노라마를 계속 사용합니다. 다섯 오버레이는 실제 클래스별 RGB 추출본에서 검정 배경을 제거해 복구한 경계 근사이며 새 추론·수동 영역 작성이 아닙니다. 아주 어두운 픽셀·JPEG 경계에는 원래 이진 마스크와 차이가 있을 수 있습니다.",
+  "coordinateSystem": {
+    "origin": "top-left",
+    "x": "right",
+    "y": "down",
+    "uv": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "rect": [
+      0,
+      0,
+      2048,
+      1024
+    ],
+    "sourceSize": [
+      5760,
+      2880
+    ],
+    "resize": "full-frame scale only; no crop, rotation, longitude shift or projection change",
+    "projection": "equirectangular panorama; 2:1 aspect ratio"
+  },
+  "display": {
+    "fillOpacity": 0.5490196078431373,
+    "innerEdgeOpacity": 0.803921568627451,
+    "blend": "normal source-over",
+    "fit": "contain; all layers share exactly the same image rectangle"
+  }
+}

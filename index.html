@@ -6,22 +6,31 @@
  <meta name="description" content="연구하고, 세계를 만들고, 도구를 완성합니다. 김경순의 연구·게임·소프트웨어를 탐색하는 3D 작업석.">
  <meta name="theme-color" content="#060910">
  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23060910'/%3E%3Cellipse cx='32' cy='32' rx='24' ry='12' transform='rotate(-35 32 32)' fill='none' stroke='%2358f6f1' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='6' fill='%239b78ff'/%3E%3C/svg%3E">
- <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="spatial.css">
+ <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="spatial.css"><link rel="stylesheet" href="rig.css?v=caseButton1">
  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
  <script src="vendor/d3.min.js" defer></script>
- <script type="module" src="entry.js"></script>
+ <script type="module" src="entry.js?v=caseButton1"></script>
 </head>
 <body>
  <div id="scene" aria-hidden="true"></div><div class="scene-vignette" aria-hidden="true"></div>
  <header class="topbar">
   <a class="brand" href="#" aria-label="ORBIT 홈"><span class="brand-orbit" aria-hidden="true"></span><span>ORBIT<span class="brand-sub">KYEONGSOON KIM</span></span></a>
-  <nav class="theme-nav" aria-label="세 가지 테마"><button data-theme="lab" aria-pressed="false">연구실 활동</button><button data-theme="research" aria-pressed="false">연구 활동</button><button data-theme="personal" aria-pressed="false">개인 작업</button></nav>
+  <nav class="theme-nav" aria-label="작업과 작업 환경"><button data-theme="lab" aria-pressed="false">연구실 활동</button><button data-theme="research" aria-pressed="false">연구 활동</button><button data-theme="personal" aria-pressed="false">개인 작업</button><button data-rig aria-pressed="false">THE RIG <span>↗</span></button></nav>
   <button id="index-button" class="index-button"><span class="grid-icon" aria-hidden="true"></span><span>전체 기록</span></button>
  </header>
  <main id="main">
   <div class="stage-heading"><span class="eyebrow"><span class="status-dot"></span> THE MAESTRO'S DESK</span><h1 id="stage-title">당신 앞에 펼쳐지는 <em>나의 궤도.</em></h1><p id="stage-subtitle">세 개의 테마에서, 내가 만들고 경험한 것들을 만나보세요.</p></div>
-  <div id="theme-labels"><button class="theme-label" data-theme="lab"><span class="theme-code">01 / TOGETHER</span><strong>연구실 활동</strong><small>함께 보낸 계절과 현장 밖의 기록</small><span class="theme-enter">이 궤도 열기 ↗</span></button><button class="theme-label" data-theme="research"><span class="theme-code">02 / DISCOVERY</span><strong>연구 활동</strong><small>실제 점군, 공간 복원, 현장과 성과</small><span class="theme-enter">이 궤도 열기 ↗</span></button><button class="theme-label" data-theme="personal"><span class="theme-code">03 / CREATION</span><strong>개인 작업</strong><small>만든 세계와 도구, 그리고 나의 장비</small><span class="theme-enter">이 궤도 열기 ↗</span></button></div>
+  <div id="theme-labels"><button class="theme-label" data-theme="lab"><span class="theme-code">01 / TOGETHER</span><strong>연구실 활동</strong><small>함께 보낸 계절과 현장 밖의 기록</small><span class="theme-enter">이 궤도 열기 ↗</span></button><button class="theme-label" data-theme="research"><span class="theme-code">02 / DISCOVERY</span><strong>연구 활동</strong><small>실제 점군, 공간 복원, 현장과 성과</small><span class="theme-enter">이 궤도 열기 ↗</span></button><button class="theme-label" data-theme="personal"><span class="theme-code">03 / CREATION</span><strong>개인 작업</strong><small>직접 만든 게임과 웹, 일상의 도구</small><span class="theme-enter">이 궤도 열기 ↗</span></button></div>
+  <button id="rig-gateway" data-rig><span class="rig-gateway-icon">⌘</span><span><small>BEHIND THE WORK</small><strong>THE RIG</strong></span><span class="rig-gateway-sub">나의 작업 환경</span><span>↗</span></button>
+  <section id="rig-ui" aria-label="나의 작업 환경" hidden>
+   <div class="rig-topline"><span class="rig-badge"><i></i> THE RIG / 32 PRODUCTS</span><button id="rig-list-toggle" aria-expanded="false" aria-controls="rig-inventory">장비 목록 <span>＋</span></button></div>
+   <div id="rig-inventory" hidden><div class="rig-inventory-head"><span>ON MY DESK</span><button id="rig-list-close" aria-label="장비 목록 닫기">×</button></div><div id="rig-items"></div></div>
+   <div id="rig-caption"><span class="eyebrow">MY DAILY SETUP</span><button id="rig-current">생각을 현실로 만드는 자리 <span>↗</span></button><p id="rig-description">장비를 눌러 제품과 부품을 살펴보세요.</p></div>
+   <div id="rig-assets-status" role="status" aria-live="polite">제품 모델 준비 중</div><div id="rig-part-labels" aria-hidden="true"></div><button id="rig-return" hidden>← 데스크로 돌아가기</button><button id="rig-explode" aria-pressed="false" hidden>본체 분해하기</button><div id="rig-presets" aria-label="데스크 시점"></div>
+   <button id="rig-home">← 테마 선택</button>
+  </section>
   <div id="collection-bar" aria-label="테마 안의 분류" hidden></div>
+  <section id="variant-controls" aria-label="중앙 모형의 표현 방식" hidden><div class="variant-line"><span id="variant-kind"></span><button id="variant-prev" aria-label="이전 표현 방식">↑</button><div id="variant-options"></div><button id="variant-next" aria-label="다음 표현 방식">↓</button><button id="mask-play" aria-pressed="true" hidden>마스크 순환</button></div><p id="variant-note"></p></section>
   <div id="floating-labels" aria-hidden="true"></div>
   <aside class="orbit-side"><span>RESEARCH / PLAY / BUILD</span><span class="side-line"></span><span>SEOUL, KR</span></aside>
   <section class="orbit-controls" aria-label="3D 모형 탐색" hidden>

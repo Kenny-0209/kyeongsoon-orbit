@@ -257,6 +257,19 @@ function monitorScreen(THREE, spec) {
   if (typeof document === 'undefined') return null;
   const c = document.createElement('canvas'); c.width = 1024; c.height = 576;
   const x = c.getContext('2d'); if (!x) return null;
+  if(spec.portrait){
+    // The display group is physically rotated. Draw a counter-rotated portrait
+    // workspace so the content is upright while the bezel remains portrait.
+    x.translate(1024,0);x.rotate(Math.PI/2);
+    const bg=x.createLinearGradient(0,0,576,1024);bg.addColorStop(0,'#153141');bg.addColorStop(1,'#272039');x.fillStyle=bg;x.fillRect(0,0,576,1024);
+    x.fillStyle='#73ddd9';x.font='600 22px system-ui';x.fillText('RESEARCH / NOTES',40,66);
+    x.fillStyle='#e1edef';x.font='500 36px system-ui';x.fillText('ORBIT',40,126);
+    for(const [i,label]of ['PANORAMA → BIM','SPATIAL DATA','IDEAS TO BUILD'].entries()){
+      const y=195+i*250;x.fillStyle='#172f40';x.fillRect(40,y,496,215);x.strokeStyle='#4c7588';x.strokeRect(40,y,496,215);x.fillStyle='#a8d4de';x.font='22px system-ui';x.fillText(label,58,y+39);
+      for(let j=0;j<4;j++){x.fillStyle=j===0?'#508e9d':'#355366';x.fillRect(58,y+66+j*29,370-j*47,7);}
+    }
+    const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;return t;
+  }
   const gradient = x.createLinearGradient(0, 0, 1024, 576); gradient.addColorStop(0, '#102e44'); gradient.addColorStop(.55, '#101a31'); gradient.addColorStop(1, '#392042');
   x.fillStyle = gradient; x.fillRect(0, 0, 1024, 576);
   x.strokeStyle = '#39616e'; x.lineWidth = 1;

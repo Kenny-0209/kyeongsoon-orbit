@@ -1,19 +1,15 @@
 import * as THREE from 'three';
-import {createWorkstation,createJetson,createMonitor} from './gear-pc.js';
-import {createMouse,createKeyboard,createRiftKit} from './gear-input.js';
 import {korea,verified} from './details.js';
 import {places} from './content.js';
+import {groupClouds} from './variants.js';
+import {createSegmentation} from './segments.js';
 
 export const themes={
  lab:{name:'연구실 활동',english:'TOGETHER, BEYOND THE LAB',subtitle:'함께 보낸 계절을, 작은 입체 기록으로.',color:'#dba9ff',filters:[['all','전체'],['2025','2025'],['2026','2026']]},
  research:{name:'연구 활동',english:'FROM THE SITE TO THE MODEL',subtitle:'내가 복원한 실제 점군과 공간. 현장에서 시작한 연구의 궤도.',color:'#58f6f1',filters:[['all','전체'],['잠실','잠실'],['마곡1','마곡1'],['마곡2','마곡2'],['process','연구 과정'],['records','현장 · 성과']]},
- personal:{name:'개인 작업',english:'THE THINGS I BUILD WITH',subtitle:'내가 만든 세계, 나의 도구, 그리고 그것을 움직이는 장비.',color:'#ffbd79',filters:[['all','전체'],['creations','만든 것들'],['pc','컴퓨터 · 모니터'],['inputs','마우스 · 키보드'],['vr','VR']]}
+ personal:{name:'개인 작업',english:'THE THINGS I BUILD',subtitle:'내가 만든 세계와, 일상을 움직이는 작은 도구들.',color:'#ffbd79',filters:[['all','전체'],['creations','만든 것들']]}
 };
-export const monitorSpecs=[
- {name:'AOC Q27G4S',brand:'AOC',productUrl:'https://www.aoc.com/nz/gaming/monitors/q27g4s',diagonalInches:27},
- {name:'Samsung LS27B61x',brand:'SAMSUNG',productUrl:'https://www.samsung.com/au/business/monitors/high-resolution/s61b-27-inch-ips-qhd-1440p-ls27b610eqexxy/',diagonalInches:27},
- {name:'Q2775CE',brand:'Q2775CE',productUrl:'https://www.raeantech.co.kr/raeantech',diagonalInches:27}
-];
+export {monitorSpecs} from './rig-data.js';
 const M=(color,metalness=.35,roughness=.48,extra={})=>new THREE.MeshStandardMaterial({color,metalness,roughness,...extra});
 const palette={dark:M('#172331'),black:M('#0c1119'),steel:M('#9baab4',.85,.28),cyan:M('#61dedb',.25,.35,{emissive:'#1c8d96',emissiveIntensity:.4}),purple:M('#a47ed6'),orange:M('#ea9b48'),ivory:M('#e2e2cf')};
 function group(name){const g=new THREE.Group();g.name=name;return g;}
@@ -64,30 +60,25 @@ export function makeCafe(){const g=group('voxel-cafe');box(g,[6,.25,4.6],[0,0,0]
 export function makeTyping(){const g=group('little-light');box(g,[6,2.7,.28],[0,1.6,0],palette.black);const map=texLoader.load('assets/app-typing.png');map.colorSpace=THREE.SRGBColorSpace;const screen=new THREE.Mesh(new THREE.PlaneGeometry(5.75,2.42),new THREE.MeshBasicMaterial({map,toneMapped:false}));screen.position.set(0,1.6,.16);g.add(screen);cylinder(g,.11,.45,[0,.22,0],palette.steel);box(g,[2.1,.1,.9],[0,0,0],palette.dark);torus(g,.13,.025,[2.7,.4,.17],palette.cyan);return g;}
 export function makeHub(){const g=group('lifehub-modules');const ps=[[-2,1,0],[0,2,-1],[2,1,0],[-1,0,1.7],[1,0,1.7]];ps.forEach((p,i)=>{const mesh=box(g,[1.3,.85,1.0],p,i%2?palette.purple:palette.cyan);const path=new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0,1,0),new THREE.Vector3(...p)]),new THREE.LineBasicMaterial({color:'#9bc9db'}));g.add(path);});const c=new THREE.Mesh(new THREE.IcosahedronGeometry(.8,1),M('#cce6dd',.4,.2));c.position.set(0,.8,.7);g.add(c);return g;}
 
-export async function loadCloud(item){const res=await fetch(item.file);if(!res.ok)throw Error('점군 자료를 불러오지 못했습니다.');const buffer=await res.arrayBuffer();const positions=new Float32Array(buffer,item.positionByteOffset||0,item.count*3);const colors=new Uint8Array(buffer,item.colorByteOffset,item.count*3);const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.BufferAttribute(positions,3));geometry.setAttribute('color',new THREE.Uint8BufferAttribute(colors,3,true));const b=item.displayBounds||item.bounds;const extent=Math.max(...b.max.map((v,i)=>v-b.min[i]));const g=group(item.id);const material=new THREE.PointsMaterial({size:extent*(item.methodId==='sfm'?.006:.0035),vertexColors:true,sizeAttenuation:true,transparent:true,opacity:item.methodId==='voxel'?.4:1,toneMapped:false});const points=new THREE.Points(geometry,material);g.add(points);g.userData.fitBounds=b;g.userData.cloud=item;g.userData.baseRotation=[.18,.35,0];g.userData.gearPart={name:item.site+' · '+item.method,description:`${item.note||'직접 복원한 현장 데이터의 웹용 표본'} · ${item.colorNote||''}. 원본 ${Number(item.sourcePointCount).toLocaleString()}${item.methodId==='voxel'?'복셀':'점'}, 웹 표시 ${Number(item.count).toLocaleString()}개.`};
+export async function loadCloud(item){const res=await fetch(item.file);if(!res.ok)throw Error('점군 자료를 불러오지 못했습니다.');const buffer=await res.arrayBuffer();const positions=new Float32Array(buffer,item.positionByteOffset||0,item.count*3);const colors=new Uint8Array(buffer,item.colorByteOffset,item.count*3);const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.BufferAttribute(positions,3));geometry.setAttribute('color',new THREE.Uint8BufferAttribute(colors,3,true));const b=item.alignment?.fitBounds||item.displayBounds||item.bounds;const extent=Math.max(...b.max.map((v,i)=>v-b.min[i]));const g=group(item.id);const material=new THREE.PointsMaterial({size:extent*(item.methodId==='sfm'?.006:.0035),vertexColors:true,sizeAttenuation:true,transparent:true,opacity:item.methodId==='voxel'?.4:1,toneMapped:false});const points=new THREE.Points(geometry,material);g.add(points);g.userData.fitBounds=b;g.userData.cloud=item;g.userData.baseRotation=[.18,.35,0];g.userData.gearPart={name:item.site+' · '+item.method,description:`${item.note||'직접 복원한 현장 데이터의 웹용 표본'} · ${item.colorNote||''}. 원본 ${Number(item.sourcePointCount).toLocaleString()}${item.methodId==='voxel'?'복셀':'점'}, 웹 표시 ${Number(item.count).toLocaleString()}개.`};
  if(item.methodId==='voxel'&&item.voxelCubeSample){const v=item.voxelCubeSample;const file=typeof v==='string'?v:v.file;const rr=await fetch(file);if(rr.ok){const buf=await rr.arrayBuffer();const count=v.count||6000;const xyz=new Float32Array(buf,v.positionByteOffset||0,count*3);const rgb=new Uint8Array(buf,v.colorByteOffset||count*12,count*3);const side=extent*.009;const mesh=new THREE.InstancedMesh(new THREE.BoxGeometry(side,side,side),new THREE.MeshStandardMaterial({roughness:.7,metalness:.1}),count);const m=new THREE.Matrix4(),color=new THREE.Color();for(let i=0;i<count;i++){m.makeTranslation(xyz[i*3],xyz[i*3+1],xyz[i*3+2]);mesh.setMatrixAt(i,m);color.setRGB(rgb[i*3]/255,rgb[i*3+1]/255,rgb[i*3+2]/255);mesh.setColorAt(i,color);}mesh.userData.gearPart={name:item.site+' · 복셀',description:'실제 복셀 중심의 웹용 표본입니다. 형상을 읽기 쉽도록 표시 크기를 조정했습니다.'};g.add(mesh);}}
+ if(item.alignment){const holder=new THREE.Group();for(const child of [...g.children])holder.add(child);g.add(holder);holder.scale.setScalar(item.alignment.scale);holder.position.set(...item.alignment.translation);g.userData.fitBounds=item.alignment.fitBounds;}
  return g;}
 
 export function makeHosting(){const g=group('bim-local-hosting');box(g,[6,.18,3.8],[0,0,0],palette.dark);box(g,[1.7,3,1.4],[-1.8,1.6,-.15],palette.black);for(let i=0;i<4;i++){const y=.55+i*.63;box(g,[1.5,.48,.12],[-1.8,y,.61],palette.dark);for(let j=0;j<6;j++)box(g,[.035,.21,.025],[-2.35+j*.13,y,.69],palette.steel);const led=new THREE.Mesh(new THREE.SphereGeometry(.045,8,6),palette.cyan);led.position.set(-1.25,y,.71);g.add(led);}const bim=makeStructure();bim.scale.setScalar(.53);bim.position.set(1.0,.25,0);g.add(bim);tube(g,[[-.9,.2,.9],[-.25,.22,1.25],[1,.22,1.25],[1,.3,.8]],.025,palette.cyan);g.userData.gearPart={name:'BIM 시공감리 웹사이트 · 로컬 호스팅',description:'BIM 활용을 위한 시공감리 웹사이트를 개인 컴퓨터의 로컬 서버에서 호스팅하고 운영합니다. 모형은 BIM 활용과 로컬 호스팅을 표현한 개념 모형입니다.'};return g;}
 
-export async function getGallery(){let clouds={items:[]};try{const r=await fetch('./clouds/index.json');if(r.ok)clouds=await r.json();}catch{}
-const research=(clouds.items||[]).map(c=>({id:c.id,theme:'research',collection:c.site,title:`${c.site} · ${c.method}`,type:c.methodId==='voxel'?'실제 복셀 표본':'실제 점군',subtitle:`${c.colorNote||'연구 데이터'} · ${Number(c.count).toLocaleString()}개 웹용 표본`,description:'건설 현장 데이터셋으로 직접 수행한 공간 복원의 실제 결과입니다. 원본의 형상을 유지하며 웹에서 탐색할 수 있는 표본으로 준비했습니다.',detailProject:'reconstruction',cloud:c,factory:()=>loadCloud(c)}));
+export async function getGallery(){let clouds={items:[]},segments=null;try{const r=await fetch('./clouds/index.json');if(r.ok)clouds=await r.json();const s=await fetch('./segments/index.json');if(s.ok)segments=await s.json();}catch{}
+ const research=groupClouds(clouds.items||[]).map(site=>{const variants=site.variants.map(v=>({...v,subtitle:`${v.cloud.colorNote} · ${Number(v.cloud.count).toLocaleString()}개 웹용 표본`,factory:()=>loadCloud(v.cloud)}));return {id:site.id,theme:'research',collection:site.site,title:site.site,type:'현장별 3D 복원',subtitle:'↑↓ SfM · MVS · 복셀 전환',description:'직접 복원한 같은 현장을 SfM·MVS·복셀로 살펴봅니다. 중앙 위치와 회전 상태를 유지하며 표현 방식만 전환합니다.',detailProject:'reconstruction',variantKind:'cloud',variants,unavailable:site.unavailable,factory:variants[0].factory};});
  research.push(...[
   ['panorama','파노라마로 기록한 현장',makeCamera,'현장 촬영을 표현한 3D 모형','panorama'],
-  ['segmentation','객체 세그멘테이션',()=>makeStructure(true),'연구 과정을 표현한 3D 개념 모형','segmentation'],
+  ['segmentation','객체 세그멘테이션',()=>createSegmentation(segments),'하나의 파노라마 위에서 다섯 객체 마스크 순환','segmentation'],
   ['surfaces','벽·바닥·천장으로',()=>makeStructure(false),'평면 복원 흐름을 표현한 3D 개념 모형','surfaces'],
   ['mesh','평면 너머의 형상',makeProps,'동바리와 비평면 객체의 개념 모형','mesh'],
   ['field','현장으로 이어지는 지도',makeKorea,'일곱 지역의 현장 방문','field'],
   ['awards','연구가 남긴 성과',()=>makeAwards(false),'네 개의 실제 수상 기록','awards'],
   ['patent','현장의 안전을 위한 발명',()=>makeAwards(true),'영상 기반 거리 측정 방법 · 특허 출원','patent']
- ].map(([id,title,factory,subtitle,detailProject])=>({id,theme:'research',collection:['field','awards','patent'].includes(id)?'records':'process',title,factory,subtitle,detailProject,type:'RESEARCH OBJECT'})));
+ ].map(([id,title,factory,subtitle,detailProject])=>({id,theme:'research',collection:['field','awards','patent'].includes(id)?'records':'process',title,factory,subtitle,detailProject,type:'RESEARCH OBJECT',...(id==='segmentation'?{variantKind:'mask',variants:segments?.masks.map(m=>({...m,subtitle:m.note||segments.note}))||[],autoRotate:false,displayScale:1.32}:{} )})));
  const personal=[
-  {id:'workstation',title:'나의 워크스테이션',subtitle:'Phanteks P600S · NZXT Kraken · RTX 3090 Ti',collection:'pc',factory:()=>createWorkstation(THREE),detailProject:'workstation',type:'PART BY PART',explodable:true},
-  {id:'jetson',title:'Jetson AGX Orin',subtitle:'NVIDIA 엣지 컴퓨팅 장치 · 부품을 눌러 살펴보세요',collection:'pc',factory:()=>createJetson(THREE),detailProject:'jetson',type:'EDGE COMPUTING'},
-  ...monitorSpecs.map((spec,i)=>({id:'monitor-'+i,title:spec.name,subtitle:i===1?'27형 · S61B 계열 · 연결 장치 식별 정보 기준':i===2?'27형 · 연결 장치에서 읽은 제품명 기준':'27형 QHD 게이밍 모니터',collection:'pc',factory:()=>createMonitor(THREE,spec),productUrl:spec.productUrl,type:'DISPLAY'})),
-  ...[['infinity','AM INFINITY MOUSE .97','ANGRY MIAO'],['scyrox','Scyrox V8','SCYROX'],['lift','Logitech Lift','LOGITECH']].map(([kind,title,brand])=>({id:'mouse-'+kind,title,subtitle:brand+' · 실제 제품 사진을 참고한 형태',collection:'inputs',factory:()=>createMouse(kind),viewRotation:[.32,Math.PI+.35,0],type:'MOUSE'})),
-  ...[['loomi','SPM PN06 LOOMI','88키 TKL'],['vm87','VARO VM87 HE','87키 · 자석축'],['hyzen','LOFREE Hyzen','67키 · 65% 배열']].map(([kind,title,sub])=>({id:'keyboard-'+kind,title,subtitle:sub+' · 실제 제품 사진 기준',collection:'inputs',factory:()=>createKeyboard(kind),viewRotation:[.5,.15,0],type:'KEYBOARD'})),
-  {id:'rift',title:'Oculus Rift',subtitle:'헤드셋 · 스탠드형 센서 2대 · 좌우 Touch 컨트롤러',collection:'vr',factory:()=>createRiftKit(),viewRotation:[0,Math.PI+.35,0],detailProject:'vr',type:'VR EXPERIENCE'},
   {id:'bim-hosting',title:'BIM 시공감리 웹사이트',subtitle:'BIM 활용을 위한 시공감리 웹사이트 로컬 호스팅',collection:'creations',factory:makeHosting,detailProject:'bim-hosting',type:'LOCAL HOSTING'},
   {id:'voxel-game',title:'커피 팔아 건물주',subtitle:'내가 만들고 있는 복셀 카페 타이쿤',collection:'creations',factory:makeCafe,detailProject:'voxel-game',type:'PLAY'},
   {id:'typing',title:'작은빛',subtitle:'내가 만든 LED 매트릭스 플로팅 위젯',collection:'creations',factory:makeTyping,detailProject:'typing',type:'TOOL'},

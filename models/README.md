@@ -1,6 +1,6 @@
 # ORBIT 장비 모델
 
-2026-10-16 개인 소개 웹사이트의 장비를 다른 3D 도구에서도 열어 볼 수 있도록 저장한 GLB 자산 폴더입니다. 전부 사진과 제품 규격을 참고해 직접 작성한 근사 모델이며 정밀 실측 CAD 또는 제조사가 제공한 원본 3D 모델이 아닙니다. 제품 이름은 소유 장비의 소개와 제품 계열 설명에 사용합니다.
+2026-10-17 갱신한 개인 소개 웹사이트의 장비를 다른 3D 도구에서도 열어 볼 수 있도록 저장한 GLB 자산 폴더입니다. 전부 사진과 제품 규격을 참고해 직접 작성한 근사 모델이며 정밀 실측 CAD 또는 제조사가 제공한 원본 3D 모델이 아닙니다. 제품 이름은 소유 장비의 소개와 제품 계열 설명에 사용합니다.
 
 ## 구성
 
@@ -8,13 +8,13 @@
 - pc-*.glb: 전체 PC를 구성하는 9개 의미 단위(케이스, 보드, CPU, 쿨러, RAM, GPU, 저장장치, 팬, 전원 구역). 각 파일을 XZ 중심과 Y=0 바닥에 정렬했습니다.
 - jetson.glb: NVIDIA 공식 개발 키트 사진을 참고한 Jetson AGX Orin 외형.
 - monitor-*.glb: 장치 EDID로 확인한 AOC Q27G4S, Samsung LS27B61x/S61B 계열, Q2775CE. 실제 책상의 좌우 배치와 받침 상태까지 확인한 것은 아닙니다.
-- mouse-*.glb / keyboard-*.glb: 사용자가 요청한 주변기기 제품 계열. 실제 소유 제품의 색상이 확인되지 않아 대표 제품색으로 제작했습니다.
+- mouse-*.glb / keyboard-*.glb: 사용자가 요청한 주변기기 제품 계열. SPM PN06 LOOMI는 사용자 확인 네이비 실버, LOFREE Hyzen은 사용자 확인 스페이스 그레이를 2026-10-17 반영했습니다. VM87 HE와 마우스의 소유 색상은 미확인으로 대표 제품색을 사용합니다.
 - rift-kit.glb / rift-*.glb: Rift CV1 헤드셋, 외부 센서 두 개, 좌우 Touch를 묶은 세트 및 각 구성품.
 - catalog.json: 각 파일의 이름, 설명, 바이트 크기, SHA-256, mesh/triangle 수, bounding box, 부품 메타데이터와 GLB 구조 검증 결과.
 
 ## 형태와 색상 근거
 
-PC의 검은 케이스 및 RGB 메모리·원형 수랭 링은 사용자가 제공한 실물 사진을 따릅니다. 케이스명 P600S와 Kraken 제품군은 사용자가 확인했으며, Kraken 세부 SKU와 GIGABYTE GPU의 세부 GAMING/OC SKU는 확인하지 않았습니다. 전원 공급 장치의 제품명·정격 출력도 미확인입니다. Jetson은 은색·검은색 공식 개발 키트 형태를 참고했습니다. 주변기기의 대표색은 catalog.json 각 항목 colorNote에 기록하며 실제 소유 제품의 색상으로 주장하지 않습니다. Q2775CE는 EDID 모델명을 우선합니다.
+PC의 검은 케이스 및 RGB 메모리·원형 수랭 링은 사용자가 제공한 실물 사진을 따릅니다. 케이스명 P600S와 Kraken 제품군은 사용자가 확인했으며, Kraken 세부 SKU와 GIGABYTE GPU의 세부 GAMING/OC SKU는 확인하지 않았습니다. 전원 공급 장치의 제품명·정격 출력도 미확인입니다. Jetson은 은색·검은색 공식 개발 키트 형태를 참고했습니다. LOOMI 네이비 실버와 Hyzen 스페이스 그레이는 2026-10-17 사용자 확인 색상입니다. 다른 주변기기의 대표색과 미확인 범위는 catalog.json 각 항목 colorNote에 기록하며 확인되지 않은 소유 색상을 단정하지 않습니다. Q2775CE는 EDID 모델명을 우선합니다.
 
 ## 좌표와 호환
 
@@ -28,4 +28,4 @@ orbit 폴더에서 Node로 다음을 실행합니다.
 
     node --experimental-loader ./tools/three-loader.mjs ./tools/exportgear.mjs
 
-tools/three-loader.mjs는 bare import three를 같은 vendor 버전으로 연결합니다. tools/exportgear.mjs는 FileReader의 Blob 읽기만 최소 보완하여 모델을 하나씩 순차 생성·저장합니다. 다른 채팅의 GPU 작업을 방해하지 않도록 GPU 렌더링과 추론을 실행하지 않습니다. GLB 헤더·JSON·바이너리 범위·참조·좌표 유한성을 확인하고 catalog.json에 결과를 기록합니다.
+tools/three-loader.mjs는 bare import three를 같은 vendor 버전으로 연결합니다. tools/exportgear.mjs와 glbutil.mjs는 FileReader의 Blob 읽기만 최소 보완하여 모델을 하나씩 순차 생성·저장합니다. 다른 채팅의 GPU 작업을 방해하지 않도록 GPU 렌더링과 추론을 실행하지 않습니다. 모든 Mesh의 gearPart metadata, 바닥 정렬·XZ 중심 bounds, GLB 헤더·JSON·바이너리 범위·참조·실제 float accessor 값의 유한성을 확인하고 저장된 파일을 다시 읽어 catalog.json에 검증 결과를 기록합니다. 추가 가구·액세서리 6개는 형제 rigmodels 폴더에 따로 보관합니다.

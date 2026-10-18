@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 
-// Reference-derived display models. Y up, front -Z; representative colours,
-// not an assertion of the colour of the owner's individual unit. No remote textures.
+// Reference-derived display models. Y up, front -Z. Confirmed owner colours are
+// recorded per model; other products use representative colours. No remote textures.
 const URL = {
   infinity: 'https://store.angrymiao.com/products/am-infinity-97-wireless-gaming-mouse',
   scyrox: 'https://scyrox.com/products/scyrox-v8',
@@ -143,11 +143,16 @@ function legend(parent,value,w,d,a,y,part) {
   for(let n=0;n<uv.count;n++)uv.setXY(n,(col+uv.getX(n))/16,1-(row+1-uv.getY(n))/8);
   mesh(parent,geo,a.material,part,[0,y,0],[-Math.PI/2,0,0]);
 }
-export function createKeyboard(kind='loomi') {
+export function createKeyboard(kind='loomi',options={}) {
   if(!['loomi','vm87','hyzen'].includes(kind))throw new Error(`Unknown keyboard kind: ${kind}`);
   const isHyzen=kind==='hyzen',loomi=kind==='loomi',width=7,units=isHyzen?16.15:18.55,pitch=(width-.46)/units,depth=isHyzen?2.63:2.76;
   const g=group(kind,NAME[kind],isHyzen?'65% 배열과 우측 상단의 두 물리 컨트롤':'독립된 기능열·편집키·방향키를 갖춘 텐키리스 배열');
-  const body=loomi?material('#192c39',.65,.35):isHyzen?silver:material('#26272c',.2,.48),trim=loomi?gold:isHyzen?material('#747f90',.85,.31):material('#11161d');
+  const color=options.color||(loomi?'navy-silver':isHyzen?'space-gray':'representative');
+  const navySilver=loomi&&color==='navy-silver',spaceGray=isHyzen&&color==='space-gray';
+  if(loomi&&!['navy-silver','navy-gold'].includes(color))throw new Error(`Unknown LOOMI colour: ${color}`);
+  if(isHyzen&&!['space-gray','silver'].includes(color))throw new Error(`Unknown Hyzen colour: ${color}`);
+  const hyzenMetal=spaceGray?material('#454a51',.8,.36):silver;
+  const body=loomi?material('#192c39',.65,.35):isHyzen?hyzenMetal:material('#26272c',.2,.48),trim=loomi?(navySilver?silver:gold):isHyzen?material(spaceGray?'#34383e':'#747f90',.85,.31):material('#11161d');
   const p=info(kind,'하우징',loomi?'네이비 상부·금속 하부의 이중색 CNC 알루미늄 하우징':isHyzen?'넓은 상단 컨트롤 띠와 경사진 알루미늄 하우징':'모서리를 둥글린 TKL 하우징과 분리된 편집키 구역');
   rb(g,width,.17,depth,.13,trim,p,[0,.025,0]);
   const housing=rounded(width-.05,.25,depth-.04,.11),position=housing.getAttribute('position');
@@ -169,8 +174,8 @@ export function createKeyboard(kind='loomi') {
     cursor=0;bottom.forEach(([label,w])=>{add(label,cursor,startZ+4*pitch,w);cursor+=w;});
     for(const [i,label] of ['Del','PgUp','PgDn'].entries())add(label,15.0,startZ+i*pitch);
   }
-  const caps=loomi?material('#e9e6db',0,.56):material(isHyzen?'#20242c':'#747980',0,.56),mod=loomi?material('#dfddcf'):material('#343941',0,.55);
-  const a=atlas(layout.map(k=>k.label),!loomi);
+  const caps=loomi?material(navySilver?'#303740':'#e9e6db',0,.56):material(isHyzen?(spaceGray?'#33383d':'#e9e9e4'):'#747980',0,.56),mod=loomi?material(navySilver?'#252f3c':'#dfddcf'):material(isHyzen&&!spaceGray?'#d8dbe0':'#343941',0,.55);
+  const a=atlas(layout.map(k=>k.label),loomi?navySilver:isHyzen?spaceGray:true);
   layout.forEach(({label,u,z,w})=>{
     const x=startX+(u+w/2)*pitch,kw=w*pitch-.045,kd=pitch-.045;
     const k=group(kind,`key-${label}`,`${label} 키`);k.userData.gearPart=info(kind,`${label} 키`,label==='Space'?'길게 이어진 스페이스바':`실물 배열에 놓인 ${label} 키`);k.position.set(x,top(z),z);g.add(k);
@@ -180,7 +185,7 @@ export function createKeyboard(kind='loomi') {
   });
   for(const x of [-2.9,2.9])for(const z of [-1.05,1.05])rb(g,.32,.03,.13,.025,rubber,info(kind,'하부 미끄럼 방지 패드','바닥면을 지지하는 고무 패드'),[x,.005,z]);
   if(loomi){
-    for(let i=0;i<7;i++)rb(g,6.55,.007,.012,.004,material('#9d6848',.6,.4),info(kind,'하부 가공 라인','제품 뒷면 금속 웨이트의 평행 가공선을 표현한 디테일'),[0,.006,.62+i*.047]);
+    for(let i=0;i<7;i++)rb(g,6.55,.007,.012,.004,material(navySilver?'#7f8a99':'#9d6848',.6,.4),info(kind,'하부 가공 라인','제품 뒷면 금속 웨이트의 평행 가공선을 표현한 디테일'),[0,.006,.62+i*.047]);
     rb(g,.2,.06,.03,.02,black,info(kind,'측면 연결·모드 스위치','하우징 측면의 연결·모드 전환부'),[0,.25,-depth/2-.015]);
   }
   if(kind==='vm87'){
@@ -188,8 +193,8 @@ export function createKeyboard(kind='loomi') {
     const mark=new THREE.Shape();mark.moveTo(-.09,-.045);mark.lineTo(.065,-.045);mark.lineTo(-.02,.07);mark.closePath();mesh(g,new THREE.ShapeGeometry(mark),material('#d8a4c8'),info(kind,'VARO 표시','방향키 위 제품의 작은 브랜드 표시'),[2.78,top(.38)+.01,.38],[-Math.PI/2,0,0]);
   }
   if(isHyzen){
-    rb(g,6.9,.045,.39,.025,silver,info(kind,'상단 컨트롤 띠','키 배열 위로 넓게 확장된 금속 컨트롤 영역'),[0,.62,-1.04]);
-    const dial=info(kind,'볼륨 다이얼','오른쪽 상단의 큰 원형 볼륨 조절 노브');cylinder(g,.225,.14,black,dial,[2.75,.78,-1.05]);cylinder(g,.206,.022,silver,dial,[2.75,.86,-1.05]);
+    rb(g,6.9,.045,.39,.025,hyzenMetal,info(kind,'상단 컨트롤 띠','키 배열 위로 넓게 확장된 금속 컨트롤 영역'),[0,.62,-1.04]);
+    const dial=info(kind,'볼륨 다이얼','오른쪽 상단의 큰 원형 볼륨 조절 노브');cylinder(g,.225,.14,black,dial,[2.75,.78,-1.05]);cylinder(g,.206,.022,hyzenMetal,dial,[2.75,.86,-1.05]);
     const mode=info(kind,'연결·기능 모드 다이얼','볼륨 노브 왼쪽의 작은 레버형 모드 셀렉터');cylinder(g,.12,.03,dark,mode,[1.86,.72,-1.05]);rb(g,.04,.11,.16,.012,black,mode,[1.86,.73,-1.05]);
     const led=material('#72bdbf',.2,.28);led.emissive=new THREE.Color('#1b8b9e');led.emissiveIntensity=.5;
     rb(g,6.65,.025,.04,.008,led,info(kind,'하단 LED 라이트바','하부 전체 폭을 가로지르는 확산 LED 스트립'),[0,.16,depth/2+.025]);
@@ -197,7 +202,12 @@ export function createKeyboard(kind='loomi') {
   }
   g.userData.keyCount=layout.length;g.userData.layout=isHyzen?'65% · 67 keys':loomi?'TKL · 88 keys':'TKL · 87 keys';
   g.userData.layoutNote='배열과 주요 컨트롤은 제품 사진을 참고했습니다. 작은 키캡 각인·레이어별 매핑·접점 내부는 단순화했습니다.';
-  return finish(g,kind,loomi?'Navy Gold · 밝은 키캡':isHyzen?'Silver · 어두운 키캡':'검정 하우징 · 회색 키캡');
+  finish(g,kind,loomi?(navySilver?'Navy Silver · 어두운 키캡':'Navy Gold · 밝은 키캡'):isHyzen?(spaceGray?'Space Gray · 어두운 키캡':'Silver · 밝은 키캡'):'검정 하우징 · 회색 키캡');
+  g.userData.colorId=color;
+  if(navySilver||spaceGray){g.userData.colorNote=`사용자 확인 색상: ${navySilver?'네이비 실버 (Navy Silver)':'스페이스 그레이 (Space Gray)'}.`;g.userData.colorSource='user-confirmed';g.userData.colorConfirmedOn='2026-10-17';}
+  const b=new THREE.Box3().setFromObject(g),c=b.getCenter(new THREE.Vector3());
+  for(const child of g.children)child.position.sub(new THREE.Vector3(c.x,b.min.y,c.z));
+  return g;
 }
 
 function sensor(side) {
@@ -221,9 +231,8 @@ function touch(side) {
   rb(g,.08,.24,.18,.06,dark,info('rift','그립 트리거','그립 안쪽의 손가락 입력'),[-s*.19,.78,.03]);
   tube(g,[[0,.15,.22],[s*.13,.08,.33],[s*.28,.025,.7],[s*.1,.02,.8]],.016,rubber,info('rift','손목 스트랩','손에서 컨트롤러가 빠지는 것을 줄이는 얇은 스트랩'),false,20);return g;
 }
-export function createRiftKit() {
-  const g=group('rift',NAME.rift,'Rift CV1 헤드셋, 외부 스탠드 센서 두 개, 좌우 Touch 컨트롤러의 구성');
-  const h=group('rift','headset','CV1의 둥근 사각 전면·패브릭 측면·헤드밴드·일체형 이어폰');h.userData.gearPart=info('rift','Oculus Rift CV1 헤드셋','검정 전면 패널과 머리를 둘러싸는 스트랩, 일체형 이어폰을 가진 PC 연결 VR 헤드셋');g.add(h);
+function headset() {
+  const h=group('rift','headset','CV1의 둥근 사각 전면·패브릭 측면·헤드밴드·일체형 이어폰');h.userData.gearPart=info('rift','Oculus Rift CV1 헤드셋','검정 전면 패널과 머리를 둘러싸는 스트랩, 일체형 이어폰을 가진 PC 연결 VR 헤드셋');
   const fabric=material('#27292d',0,.96),edge=material('#15181c',.1,.44);
   const visor=new THREE.ExtrudeGeometry(roundedShape(3.85,1.83,.42),{depth:.85,bevelEnabled:true,bevelSize:.2,bevelThickness:.2,bevelSegments:5,curveSegments:10});
   mesh(h,visor,fabric,info('rift','헤드셋 패브릭 하우징','전면에서 측면으로 이어지는 곡면 사각 실루엣과 패브릭 둘레'),[0,1.16,-.45]);
@@ -243,6 +252,21 @@ export function createRiftKit() {
   }
   ribbon(h,[[0,2.14,-.05],[0,2.74,.55],[0,2.83,1.35],[0,2.34,2.38],[0,1.78,2.59]],.43,.065,edge,info('rift','상단 스트랩','정수리를 지나 뒤쪽 밴드에 연결되는 넓은 상단 스트랩'));
   tube(h,[[-1.9,1.85,.12],[-2.13,1.86,.67],[-1.88,1.9,1.8],[-1.63,1.48,2.8],[-2.26,.15,3.2],[-3.1,.04,3.5]],.031,rubber,info('rift','PC 연결 케이블','헤드셋 뒤에서 PC로 이어지는 CV1의 유선 케이블'),false,30);
+  return h;
+}
+export function createRiftPart(kind='headset') {
+  const factories={headset,'sensor-left':()=>sensor('left'),'sensor-right':()=>sensor('right'),'touch-left':()=>touch('left'),'touch-right':()=>touch('right')};
+  if(!factories[kind])throw new Error(`Unknown Rift part: ${kind}`);
+  const g=factories[kind]();g.name=kind;
+  const b=new THREE.Box3().setFromObject(g),c=b.getCenter(new THREE.Vector3());
+  for(const child of g.children)child.position.sub(new THREE.Vector3(c.x,b.min.y,c.z));
+  finish(g,'rift','Black · CV1 세대');g.userData.riftPart=kind;
+  g.userData.placementNote='Y-up, 바닥 Y0, XZ 바운딩박스 중심이 원점. 앞쪽은 -Z. 케이블을 포함한 경량 외형입니다.';
+  return g;
+}
+export function createRiftKit() {
+  const g=group('rift',NAME.rift,'Rift CV1 헤드셋, 외부 스탠드 센서 두 개, 좌우 Touch 컨트롤러의 구성');
+  g.add(headset());
   const left=sensor('left');left.position.set(-3.2,0,-.85);left.rotation.y=-.16;g.add(left);const right=sensor('right');right.position.set(3.2,0,-.85);right.rotation.y=.16;g.add(right);
   const tl=touch('left');tl.position.set(-2.4,0,2.15);tl.rotation.y=-.35;g.add(tl);const tr=touch('right');tr.position.set(2.4,0,2.15);tr.rotation.y=.35;g.add(tr);
   g.userData.setContents={headset:1,sensors:2,touchControllers:2};return finish(g,'rift','Black · CV1 세대');
