@@ -5,7 +5,7 @@ function matteMaterial(source){
  if(matteCache.has(source))return matteCache.get(source);
  if(source.isShaderMaterial||source.isRawShaderMaterial)return source;
  if(source.isMeshBasicMaterial&&!source.map){const material=source.clone();material.side=THREE.DoubleSide;material.forceSinglePass=true;material.depthWrite=!material.transparent;material.userData={...source.userData,displayFinish:'matte-unlit'};matteCache.set(source,material);return material;}
- const material=new THREE.MeshPhysicalMaterial({name:source.name,color:source.color?.clone()||new THREE.Color('white'),map:source.map||null,alphaMap:source.alphaMap||null,vertexColors:source.vertexColors,transparent:source.transparent,opacity:source.opacity,alphaTest:source.alphaTest,side:THREE.DoubleSide,depthTest:true,depthWrite:!source.transparent,emissive:0,metalness:0,roughness:1,specularIntensity:0,clearcoat:0,envMapIntensity:.35});
+ const material=new THREE.MeshPhysicalMaterial({name:source.name,color:source.color?.clone()||new THREE.Color('white'),map:source.map||null,alphaMap:source.alphaMap||null,vertexColors:source.vertexColors,flatShading:!!source.flatShading,transparent:source.transparent,opacity:source.opacity,alphaTest:source.alphaTest,side:THREE.DoubleSide,depthTest:true,depthWrite:!source.transparent,emissive:0,metalness:0,roughness:1,specularIntensity:0,clearcoat:0,envMapIntensity:.35});
  // Metallic source textures often encode almost-black paint and rely on sharp
  // reflections to reveal it. Lift only the diffuse black point for readable
  // matte surfaces; the original texture, its details and all UVs stay intact.

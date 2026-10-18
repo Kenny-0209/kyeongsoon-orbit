@@ -1,7 +1,7 @@
-import {OrbitStage} from './stage.js?v=caseButton1';
-import {getGallery,themes} from './gallery.js';
+import {OrbitStage} from './stage.js?v=surfaces1';
+import {getGallery,themes} from './gallery.js?v=surfaces1';
 import {openDetail} from './details.js';
-import {cloudMethods} from './variants.js';
+import {reconstructionMethods} from './variants.js?v=surfaces1';
 import {rigPresets,rigGroups,rigNote} from './rig-data.js?v=slotsMatte7';
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -31,8 +31,9 @@ function hidePart(){$('#part-inspector').hidden=true;}
 function showCurrent(){
  if(!currentItem)return;
  if(stage.mode==='rig'){showPart({name:currentItem.title,description:currentItem.subtitle,productUrl:currentItem.productUrl,fields:[...currentItem.fields,['모형',rigNote]]});return;}
- const raw=stage.selectedEntry?.raw,v=activeVariant(),cloud=v?.cloud;
- if(cloud)showPart({name:currentItem.title+' · '+v.label,description:currentItem.description,fields:[['방식',cloud.method],['원본 '+(cloud.methodId==='voxel'?'복셀 수':'점 수'),Number(cloud.sourcePointCount).toLocaleString()],['웹용 표본',Number(cloud.count).toLocaleString()+'개'],['색상',cloud.colorNote],['시점','같은 현장 좌표·중앙 위치·회전 상태 유지'],['표현',cloud.methodId==='voxel'?'실제 복셀 중심 표본 · 표시용 크기 조정':'실제 복원 점군의 형상과 RGB 표본']]});
+ const raw=stage.selectedEntry?.raw,v=activeVariant(),cloud=v?.cloud,surface=v?.surface;
+ if(surface)showPart({name:currentItem.title+' · '+surface.method,description:surface.note,fields:[['방식',surface.method],['삼각형',Number(surface.triangles).toLocaleString()+'개 · 원본 전체 보존'],['꼭짓점',Number(surface.vertices).toLocaleString()+'개'],['색상',surface.colorNote],['시점','MVS와 같은 현장 좌표·중앙 위치·회전 상태 유지']],downloads:[{label:surface.method+' GLB',url:surface.file}]});
+ else if(cloud)showPart({name:currentItem.title+' · '+v.label,description:currentItem.description,fields:[['방식',cloud.method],['원본 '+(cloud.methodId==='voxel'?'복셀 수':'점 수'),Number(cloud.sourcePointCount).toLocaleString()],['웹용 표본',Number(cloud.count).toLocaleString()+'개'],['색상',cloud.colorNote],['시점','같은 현장 좌표·중앙 위치·회전 상태 유지'],['표현',cloud.methodId==='voxel'?'실제 복셀 중심 표본 · 표시용 크기 조정':'실제 복원 점군의 형상과 RGB 표본']]});
  else if(currentItem.variantKind==='mask')showPart({name:'객체 세그멘테이션 · '+(v?.label||''),description:raw?.userData.segmentation?.note||currentItem.subtitle,fields:[['현재 마스크',v?.label],['자료',v?.note||'같은 파노라마의 객체 추출 결과'],['조작','↑↓ 마스크 전환 · 순환 재생/정지']]});
  else if(raw?.userData.gearPart){const p={...raw.userData.gearPart};p.fields=[['모형',modelFiles[currentItem.id]?'실제 사진과 제품 규격을 참고한 근사 모형':'활동과 작업을 표현하는 3D 모형']];if(raw.userData.colorNote)p.fields.push(['색상',raw.userData.colorNote]);showPart(p);}
  else showPart({name:currentItem.title,description:currentItem.subtitle,productUrl:currentItem.productUrl,fields:modelFiles[currentItem.id]?[['모형','실제 사진과 제품 규격을 참고한 근사 모형']]:[]});
@@ -43,7 +44,7 @@ function renderVariants(){
  if(!variants.length)return;
  const index=entry?.variantIndex||0,ready=!!entry?.raw,isMask=item.variantKind==='mask';
  $('#variant-kind').textContent=isMask?'OBJECT MASK':'3D METHOD';
- const options=isMask?variants.map((v,i)=>({...v,index:i})):cloudMethods.map(([id,label])=>({id,label,index:variants.findIndex(v=>v.id===id)}));
+ const options=isMask?variants.map((v,i)=>({...v,index:i})):reconstructionMethods.map(([id,label])=>({id,label,index:variants.findIndex(v=>v.id===id)}));
  $('#variant-options').innerHTML=options.map(v=>'<button data-variant="'+v.index+'" aria-pressed="'+(v.index===index)+'"'+(!ready||v.index<0?' disabled':'')+(v.index<0?' title="원본 미확인"':'')+'>'+esc(v.label)+(v.index<0?' <small>미보유</small>':'')+'</button>').join('');
  $('#variant-prev').disabled=!ready||variants.length<2;$('#variant-next').disabled=!ready||variants.length<2;
  $('#mask-play').hidden=!isMask;$('#mask-play').disabled=reduced;
@@ -55,9 +56,9 @@ function renderVariants(){
 function syncCurrent(){
  if(!currentItem)return;
  const v=activeVariant(),raw=stage?.selectedEntry?.raw;
- $('#current-category').textContent=v?.cloud?(v.id==='voxel'?'실제 복셀 표본':'실제 점군'):currentItem.type;
+ $('#current-category').textContent=v?.surface?'실제 '+v.surface.method:v?.cloud?(v.id==='voxel'?'실제 복셀 표본':'실제 점군'):currentItem.type;
  $('#open-current').innerHTML=esc(currentItem.title+(v?' · '+v.label:''))+' <span>↗</span>';
- $('#current-description').textContent=v?.cloud?v.subtitle:currentItem.variantKind==='mask'?'동일 파노라마 · '+(v?.label||'')+' 마스크':currentItem.subtitle+(raw?.userData.colorNote?' · 대표 제품색':'');
+ $('#current-description').textContent=v?.cloud||v?.surface?v.subtitle:currentItem.variantKind==='mask'?'동일 파노라마 · '+(v?.label||'')+' 마스크':currentItem.subtitle+(raw?.userData.colorNote?' · 대표 제품색':'');
  $('#auto-rotate').hidden=currentItem.autoRotate===false;
  $('#scene').dataset.activeModel=currentItem.id;$('#scene').dataset.activeVariant=v?.id||'';
  $('#scene').dataset.modelType=currentItem.variantKind||'mesh';

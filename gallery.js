@@ -1,7 +1,8 @@
 import * as THREE from 'three';
 import {korea,verified} from './details.js';
 import {places} from './content.js';
-import {groupClouds} from './variants.js';
+import {groupClouds} from './variants.js?v=surfaces1';
+import {loadSurface} from './surfaces.js?v=surfaces1';
 import {createSegmentation} from './segments.js';
 
 export const themes={
@@ -67,8 +68,8 @@ export async function loadCloud(item){const res=await fetch(item.file);if(!res.o
 
 export function makeHosting(){const g=group('bim-local-hosting');box(g,[6,.18,3.8],[0,0,0],palette.dark);box(g,[1.7,3,1.4],[-1.8,1.6,-.15],palette.black);for(let i=0;i<4;i++){const y=.55+i*.63;box(g,[1.5,.48,.12],[-1.8,y,.61],palette.dark);for(let j=0;j<6;j++)box(g,[.035,.21,.025],[-2.35+j*.13,y,.69],palette.steel);const led=new THREE.Mesh(new THREE.SphereGeometry(.045,8,6),palette.cyan);led.position.set(-1.25,y,.71);g.add(led);}const bim=makeStructure();bim.scale.setScalar(.53);bim.position.set(1.0,.25,0);g.add(bim);tube(g,[[-.9,.2,.9],[-.25,.22,1.25],[1,.22,1.25],[1,.3,.8]],.025,palette.cyan);g.userData.gearPart={name:'BIM 시공감리 웹사이트 · 로컬 호스팅',description:'BIM 활용을 위한 시공감리 웹사이트를 개인 컴퓨터의 로컬 서버에서 호스팅하고 운영합니다. 모형은 BIM 활용과 로컬 호스팅을 표현한 개념 모형입니다.'};return g;}
 
-export async function getGallery(){let clouds={items:[]},segments=null;try{const r=await fetch('./clouds/index.json');if(r.ok)clouds=await r.json();const s=await fetch('./segments/index.json');if(s.ok)segments=await s.json();}catch{}
- const research=groupClouds(clouds.items||[]).map(site=>{const variants=site.variants.map(v=>({...v,subtitle:`${v.cloud.colorNote} · ${Number(v.cloud.count).toLocaleString()}개 웹용 표본`,factory:()=>loadCloud(v.cloud)}));return {id:site.id,theme:'research',collection:site.site,title:site.site,type:'현장별 3D 복원',subtitle:'↑↓ SfM · MVS · 복셀 전환',description:'직접 복원한 같은 현장을 SfM·MVS·복셀로 살펴봅니다. 중앙 위치와 회전 상태를 유지하며 표현 방식만 전환합니다.',detailProject:'reconstruction',variantKind:'cloud',variants,unavailable:site.unavailable,factory:variants[0].factory};});
+export async function getGallery(){let clouds={items:[]},surfaces={items:[]},segments=null;try{const r=await fetch('./clouds/index.json');if(r.ok)clouds=await r.json();const s=await fetch('./segments/index.json');if(s.ok)segments=await s.json();const m=await fetch('./surfaces/index.json?v=surfaces1');if(m.ok)surfaces=await m.json();}catch{}
+ const research=groupClouds(clouds.items||[],surfaces.items||[]).map(site=>{const variants=site.variants.map(v=>({...v,subtitle:v.surface?`${v.surface.colorNote} · ${Number(v.surface.triangles).toLocaleString()}개 삼각형`:`${v.cloud.colorNote} · ${Number(v.cloud.count).toLocaleString()}개 웹용 표본`,factory:()=>v.surface?loadSurface(v.surface):loadCloud(v.cloud)}));return {id:site.id,theme:'research',collection:site.site,title:site.site,type:'현장별 3D 복원',subtitle:'↑↓ SfM · MVS · 복셀 · 벽면 · 바닥 전환',description:'직접 복원한 같은 현장을 SfM·MVS·복셀과 실제 벽면·바닥 메시로 살펴봅니다. 중앙 위치와 회전 상태를 유지하며 표현 방식만 전환합니다.',detailProject:'reconstruction',variantKind:'cloud',variants,unavailable:site.unavailable,factory:variants[0].factory};});
  research.push(...[
   ['panorama','파노라마로 기록한 현장',makeCamera,'현장 촬영을 표현한 3D 모형','panorama'],
   ['segmentation','객체 세그멘테이션',()=>createSegmentation(segments),'하나의 파노라마 위에서 다섯 객체 마스크 순환','segmentation'],

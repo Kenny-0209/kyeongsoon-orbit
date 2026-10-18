@@ -11,11 +11,13 @@
 - 원본 제품 텍스처를 유지하면서 반짝이는 반사 하이라이트를 제거하고, 부드러운 표면과 케이스 안쪽 면을 표시합니다.
 - GPU·RAM·M.2 배치는 공식 설명서를 참고한 전시용 근사입니다. 소프트웨어로 확인되지 않은 SSD 슬롯 번호는 상세 설명에서 추정으로 구분합니다.
 - 검정 키보드 루프는 반투명이며, ARTISAN FX ZERO 패드는 데스크 비례 기준 2mm 두께입니다.
-- 잠실·마곡 현장의 실제 점군·복셀 표본과 연구 기록, 개인 작업을 함께 볼 수 있습니다.
+- 잠실·마곡1·마곡2는 ↑↓ 화살표로 SfM → MVS → 복셀 → 벽면 → 바닥을 순환합니다. 마곡2의 SfM은 원본 미보유로 비활성화됩니다.
+- 기존 연구 결과의 실제 벽·바닥 메시 6개를 사용합니다. 모든 삼각형을 보존하고, 같은 위치·크기·회전 상태로 전환합니다. 색상은 원본의 객체 분류색이며 사진 텍스처가 아닙니다.
+- 메인 화면 하단에서 건축 ICT 연구실(CONICT) 소속 김경순의 연구·작업·활동을 소개합니다.
 
 ## 파일
 
-이 저장소의 최상위가 GitHub Pages 배포 루트입니다. `index.html`과 `entry.js`가 화면을 시작하고, `stage.js`는 링 전시, `rig.js`·`rig-assembly.js`는 작업 환경, `product-models.js`·`product-surface.js`·`cooler-model.js`는 제품 표시를 담당합니다. `products/`에 현재 제품 GLB와 해시 목록, `clouds/`에 경량화한 연구 표본, `assets/`에 소개 이미지가 있습니다. `models/`와 `rigmodels/`는 기존 근사 모형 및 이전 기록입니다. `vendor/`의 제3자 라이브러리 라이선스는 함께 보존합니다.
+이 저장소의 최상위가 GitHub Pages 배포 루트입니다. `index.html`과 `entry.js`가 화면을 시작하고, `stage.js`는 링 전시, `rig.js`·`rig-assembly.js`는 작업 환경, `product-models.js`·`product-surface.js`·`cooler-model.js`는 제품 표시를 담당합니다. `products/`에 현재 제품 GLB와 해시 목록, `clouds/`에 경량화한 연구 표본, `surfaces/`에 실제 벽·바닥 GLB와 검증 목록, `assets/`에 소개 이미지가 있습니다. `models/`와 `rigmodels/`는 기존 근사 모형 및 이전 기록입니다. `vendor/`의 제3자 라이브러리 라이선스는 함께 보존합니다.
 
 로컬에서는 저장소에서 `python -m http.server 4176 --bind 127.0.0.1`을 실행해 확인할 수 있습니다. 별도 빌드 없이 `main` 브랜치의 루트에서 GitHub Pages로 게시합니다. 비공개 운영 자료·인증 정보·전체 연구 원본은 포함하지 않습니다.
 

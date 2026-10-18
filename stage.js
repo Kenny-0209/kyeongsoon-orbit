@@ -1,8 +1,9 @@
 import * as THREE from 'three';
 import {createProduct,createTexturedWorkstation} from './product-models.js?v=slotsMatte7';
 import {RoomEnvironment} from './vendor/RoomEnvironment.js';
-import {matteProducts} from './product-surface.js?v=slotsMatte7';
-import {makeWater,makeStructure,makeCafe} from './gallery.js';
+import {matteProducts} from './product-surface.js?v=surfaces1';
+import {makeWater,makeStructure,makeCafe} from './gallery.js?v=surfaces1';
+import {blendLayer} from './variants.js?v=surfaces1';
 import {monitorSpecs} from './rig-data.js?v=slotsMatte7';
 import {DeskRig} from './rig.js?v=caseButton1';
 
@@ -54,7 +55,7 @@ export class OrbitStage {
   const promise=(async()=>{const definition=entry.item.variantKind==='cloud'?entry.item.variants[index]:entry.item;
    const raw=await definition.factory();matteProducts(raw);const n=normalize(raw);
    const layer={raw,unit:n.unit,height:n.height,mix:0,target:0,materials:[]};
-   if(entry.item.variantKind==='cloud'){const unique=new Set();raw.traverse(o=>{for(const m of (Array.isArray(o.material)?o.material:o.material?[o.material]:[]))unique.add(m);});for(const material of unique){layer.materials.push({material,opacity:material.opacity});material.transparent=true;material.depthWrite=false;material.needsUpdate=true;material.opacity=0;}}
+   if(entry.item.variantKind==='cloud'){const unique=new Set();raw.traverse(o=>{for(const m of (Array.isArray(o.material)?o.material:o.material?[o.material]:[]))unique.add(m);});for(const material of unique){layer.materials.push({material,opacity:material.opacity,transparent:material.transparent,depthWrite:raw.userData.surface?material.depthWrite:false});}blendLayer(layer);}
    n.unit.visible=false;entry.asset.add(n.unit);entry.layers.set(index,layer);
    if(raw.userData.partGroups)for(const part of raw.userData.partGroups)part.userData.basePosition=part.position.clone();
    return layer;
@@ -63,7 +64,7 @@ export class OrbitStage {
  }
  activateVariant(entry,index,animate=true){
   const layer=entry.layers.get(index);if(!layer)return;
-  for(const [i,l]of entry.layers){l.target=i===index?1:0;if(!animate||this.reduced)l.mix=l.target;l.unit.visible=l.mix>.001||l.target>0;for(const f of l.materials)f.material.opacity=f.opacity*l.mix;}
+  for(const [i,l]of entry.layers){l.target=i===index?1:0;if(!animate||this.reduced)l.mix=l.target;l.unit.visible=l.mix>.001||l.target>0;blendLayer(l);}
   entry.raw=layer.raw;entry.height=layer.height;entry.variantIndex=index;entry.requestedVariant=index;
   entry.baseRotation=entry.item.viewRotation||layer.raw.userData.baseRotation||[0,.35,0];
   if(entry.item.variantKind==='mask')layer.raw.userData.setVariant?.(index,!animate||this.reduced);
@@ -95,7 +96,7 @@ export class OrbitStage {
  frame(time){requestAnimationFrame(t=>this.frame(t));if(document.hidden||time-this.lastFrame<32)return;const dt=Math.min(.08,(time-this.lastFrame)/1000);this.lastFrame=time;if(this.mode==='rig'){this.rig.update(dt,time,this.reduced);this.renderer.render(this.rig.scene,this.rig.camera);return;}if(this.mode==='home'){const positions=[];for(let i=0;i<this.portals.length;i++){const portal=this.portals[i];if(this.portalMobile){portal.root.position.x=(i-1)*6.1;portal.root.position.z=-3-Math.abs(i-1)*.5;}else portal.root.position.x=(i-1)*7.25;if(!this.reduced)portal.model.rotation.y+=dt*.11;const world=portal.root.localToWorld(portal.labelPoint.clone());positions.push({id:portal.id,...this.project(world)});}this.callbacks.onPortalPositions?.(positions);}else{const ease=this.reduced?1:1-Math.exp(-dt*8);this.position+=(this.target-this.position)*ease;const count=this.items.length,labels=[];let occluder=null;for(const e of this.cache.values()){const idx=this.items.findIndex(p=>p.id===e.item.id);if(idx<0||!e.raw){e.root.visible=false;continue;}let delta=idx-this.position;while(delta>count/2)delta-=count;while(delta<-count/2)delta+=count;e.root.visible=Math.abs(delta)<3.45;if(!e.root.visible)continue;const a=delta*TAU/Math.max(count,3);const ringPosition=this.ringPoint(a);const focus=Math.exp(-Math.pow(delta*1.6,2));const size=(1.9+focus*4.5)*(this.portalMobile?Math.min(1,e.item.displayScale||1):(e.item.displayScale||1));const centerY=ringPosition.y+.9+focus*.5;e.root.position.set(ringPosition.x,centerY+(this.reduced?0:Math.sin(time*.00065+idx)*.035),ringPosition.z);
  if(!e.normalScale)e.normalScale=e.asset.userData.normalScale||e.asset.scale.x/size;e.asset.scale.setScalar(size*e.normalScale);
  if(Math.abs(delta)<.4&&this.autoRotate&&e.item.autoRotate!==false&&!this.reduced&&!this.drag&&performance.now()>(this.pauseUntil||0))e.spin+=dt*.17;
- for(const layer of e.layers?.values()||[]){layer.mix+=(layer.target-layer.mix)*(this.reduced?1:1-Math.exp(-dt*7));layer.unit.visible=layer.mix>.002||layer.target>0;for(const f of layer.materials)f.material.opacity=f.opacity*layer.mix;}e.raw?.userData.update?.(dt);
+ for(const layer of e.layers?.values()||[]){layer.mix+=(layer.target-layer.mix)*(this.reduced?1:1-Math.exp(-dt*7));layer.unit.visible=layer.mix>.002||layer.target>0;blendLayer(layer);}e.raw?.userData.update?.(dt);
  const selected=e.item.id===this.selected?.id;e.asset.rotation.set(e.baseRotation[0]+(selected?this.userPitch:0),e.baseRotation[1]+e.spin+(selected?this.userYaw:0),e.baseRotation[2]);
  if(e.raw?.userData.partGroups){for(const pg of e.raw.userData.partGroups){const base=pg.userData.basePosition||new THREE.Vector3();const exp=selected&&this.exploded?pg.userData.explode||[0,0,0]:[0,0,0];const desired=base.clone().add(new THREE.Vector3(...exp));pg.position.lerp(desired,1-Math.exp(-dt*7));}}
  if(selected&&e.item.variantKind==='mask'){const b=e.raw.userData.fitBounds;const corners=[[b.min[0],b.min[1]],[b.min[0],b.max[1]],[b.max[0],b.min[1]],[b.max[0],b.max[1]]].map(([x,y])=>this.project(e.raw.localToWorld(new THREE.Vector3(x,y,0))));occluder={left:Math.min(...corners.map(p=>p.x)),right:Math.max(...corners.map(p=>p.x)),top:Math.min(...corners.map(p=>p.y)),bottom:Math.max(...corners.map(p=>p.y))};}

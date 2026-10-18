@@ -6,10 +6,10 @@
  <meta name="description" content="연구하고, 세계를 만들고, 도구를 완성합니다. 김경순의 연구·게임·소프트웨어를 탐색하는 3D 작업석.">
  <meta name="theme-color" content="#060910">
  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23060910'/%3E%3Cellipse cx='32' cy='32' rx='24' ry='12' transform='rotate(-35 32 32)' fill='none' stroke='%2358f6f1' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='6' fill='%239b78ff'/%3E%3C/svg%3E">
- <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="spatial.css"><link rel="stylesheet" href="rig.css?v=caseButton1">
+ <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="spatial.css?v=surfaces1"><link rel="stylesheet" href="rig.css?v=caseButton1">
  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
  <script src="vendor/d3.min.js" defer></script>
- <script type="module" src="entry.js?v=caseButton1"></script>
+ <script type="module" src="entry.js?v=surfaces1"></script>
 </head>
 <body>
  <div id="scene" aria-hidden="true"></div><div class="scene-vignette" aria-hidden="true"></div>
@@ -38,6 +38,7 @@
    <div class="carousel-navigation"><button id="prev" class="round-button" aria-label="이전 작업">←</button><div class="position"><span id="current-number">01</span><span class="position-line"></span><span id="total-number">16</span></div><button id="next" class="round-button" aria-label="다음 작업">→</button></div>
   </section>
   <div class="model-actions" hidden><button id="home-button">테마 선택</button><button id="auto-rotate" aria-pressed="true">자동 회전</button><button id="explode-button" aria-pressed="false" hidden>부품 분해</button><button id="reset-model">시점 초기화</button></div>
+  <p id="home-intro">안녕하세요. <span>건축 ICT 연구실(CONICT) 소속</span> <strong>김경순</strong>입니다.<small>이곳에 저의 연구와 작업, 함께한 순간들을 담았습니다.</small></p>
   <div class="gesture-hint"><span class="drag-icon" aria-hidden="true">↔</span><span id="gesture-text">테마 패널을 선택해 궤도를 여세요</span></div>
   <div class="desk-label"><span class="tiny-square"></span> PERSONAL WORKSPACE <span class="muted">/ RESEARCH · PLAY · BUILD</span></div>
   <button id="motion-toggle" class="motion-toggle" aria-pressed="false" aria-label="배경 움직임 줄이기">움직임 줄이기</button>
