@@ -6,20 +6,20 @@
  <meta name="description" content="연구하고, 세계를 만들고, 도구를 완성합니다. 김경순의 연구·게임·소프트웨어를 탐색하는 3D 작업석.">
  <meta name="theme-color" content="#060910">
  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23060910'/%3E%3Cellipse cx='32' cy='32' rx='24' ry='12' transform='rotate(-35 32 32)' fill='none' stroke='%2358f6f1' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='6' fill='%239b78ff'/%3E%3C/svg%3E">
- <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="spatial.css?v=surfaces1"><link rel="stylesheet" href="rig.css?v=caseButton1">
+ <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="spatial.css?v=intro1"><link rel="stylesheet" href="rig.css?v=caseButton1">
  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
  <script src="vendor/d3.min.js" defer></script>
- <script type="module" src="entry.js?v=surfaces2"></script>
+ <script type="module" src="entry.js?v=intro1"></script>
 </head>
 <body>
  <div id="scene" aria-hidden="true"></div><div class="scene-vignette" aria-hidden="true"></div>
  <header class="topbar">
-  <a class="brand" href="#" aria-label="ORBIT 홈"><span class="brand-orbit" aria-hidden="true"></span><span>ORBIT<span class="brand-sub">KYEONGSOON KIM</span></span></a>
+  <a class="brand" href="#" aria-label="김경순의 ORBIT 홈"><span class="brand-orbit" aria-hidden="true"></span><span>ORBIT<span class="brand-sub">김경순 · CONICT</span></span></a>
   <nav class="theme-nav" aria-label="작업과 작업 환경"><button data-theme="lab" aria-pressed="false">연구실 활동</button><button data-theme="research" aria-pressed="false">연구 활동</button><button data-theme="personal" aria-pressed="false">개인 작업</button><button data-rig aria-pressed="false">THE RIG <span>↗</span></button></nav>
   <button id="index-button" class="index-button"><span class="grid-icon" aria-hidden="true"></span><span>전체 기록</span></button>
  </header>
  <main id="main">
-  <div class="stage-heading"><span class="eyebrow"><span class="status-dot"></span> THE MAESTRO'S DESK</span><h1 id="stage-title">당신 앞에 펼쳐지는 <em>나의 궤도.</em></h1><p id="stage-subtitle">세 개의 테마에서, 내가 만들고 경험한 것들을 만나보세요.</p></div>
+  <div class="stage-heading"><span class="eyebrow"><span class="status-dot"></span> KYEONGSOON KIM / ORBIT</span><h1 id="stage-title"><span class="home-greeting">안녕하세요,</span><em>김경순</em>입니다.</h1><p id="stage-subtitle">건축 ICT 연구실(CONICT) 소속</p></div>
   <div id="theme-labels"><button class="theme-label" data-theme="lab"><span class="theme-code">01 / TOGETHER</span><strong>연구실 활동</strong><small>함께 보낸 계절과 현장 밖의 기록</small><span class="theme-enter">이 궤도 열기 ↗</span></button><button class="theme-label" data-theme="research"><span class="theme-code">02 / DISCOVERY</span><strong>연구 활동</strong><small>실제 점군, 공간 복원, 현장과 성과</small><span class="theme-enter">이 궤도 열기 ↗</span></button><button class="theme-label" data-theme="personal"><span class="theme-code">03 / CREATION</span><strong>개인 작업</strong><small>직접 만든 게임과 웹, 일상의 도구</small><span class="theme-enter">이 궤도 열기 ↗</span></button></div>
   <button id="rig-gateway" data-rig><span class="rig-gateway-icon">⌘</span><span><small>BEHIND THE WORK</small><strong>THE RIG</strong></span><span class="rig-gateway-sub">나의 작업 환경</span><span>↗</span></button>
   <section id="rig-ui" aria-label="나의 작업 환경" hidden>
@@ -38,7 +38,7 @@
    <div class="carousel-navigation"><button id="prev" class="round-button" aria-label="이전 작업">←</button><div class="position"><span id="current-number">01</span><span class="position-line"></span><span id="total-number">16</span></div><button id="next" class="round-button" aria-label="다음 작업">→</button></div>
   </section>
   <div class="model-actions" hidden><button id="home-button">테마 선택</button><button id="auto-rotate" aria-pressed="true">자동 회전</button><button id="explode-button" aria-pressed="false" hidden>부품 분해</button><button id="reset-model">시점 초기화</button></div>
-  <p id="home-intro">안녕하세요. <span>건축 ICT 연구실(CONICT) 소속</span> <strong>김경순</strong>입니다.<small>이곳에 저의 연구와 작업, 함께한 순간들을 담았습니다.</small></p>
+  <p id="home-intro">저의 <strong>연구와 작업, 함께한 순간들</strong>을 소개합니다.</p>
   <div class="gesture-hint"><span class="drag-icon" aria-hidden="true">↔</span><span id="gesture-text">테마 패널을 선택해 궤도를 여세요</span></div>
   <div class="desk-label"><span class="tiny-square"></span> PERSONAL WORKSPACE <span class="muted">/ RESEARCH · PLAY · BUILD</span></div>
   <button id="motion-toggle" class="motion-toggle" aria-pressed="false" aria-label="배경 움직임 줄이기">움직임 줄이기</button>
