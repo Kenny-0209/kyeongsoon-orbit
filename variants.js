@@ -20,6 +20,11 @@ export function groupClouds(items,surfaces=[]){
 
 export function wrapVariant(index,count){return count?((index%count)+count)%count:0;}
 
+export function intersectVariants(raycaster,entries){
+ const active=[...entries].filter(e=>e.root.visible&&e.raw).map(e=>e.raw);
+ return raycaster.intersectObjects(active,true);
+}
+
 // Opaque surfaces must write depth again after their transition finishes.
 // Point clouds retain their original transparent rendering throughout.
 export function blendLayer(layer){

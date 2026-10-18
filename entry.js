@@ -1,4 +1,4 @@
-import {OrbitStage} from './stage.js?v=surfaces1';
+import {OrbitStage} from './stage.js?v=surfaces2';
 import {getGallery,themes} from './gallery.js?v=surfaces1';
 import {openDetail} from './details.js';
 import {reconstructionMethods} from './variants.js?v=surfaces1';
