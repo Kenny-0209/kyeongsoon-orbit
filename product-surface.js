@@ -14,7 +14,12 @@ function matteMaterial(source){
  material.forceSinglePass=true;material.userData={...source.userData,displayFinish:'matte-diffuse',sourceMaterialType:source.type};
  if(material.map)material.map.anisotropy=4;matteCache.set(source,material);return material;
 }
-export function matteProducts(root){root.traverse(mesh=>{if(mesh.isMesh)mesh.material=Array.isArray(mesh.material)?mesh.material.map(matteMaterial):matteMaterial(mesh.material);});return root;}
+export function matteProducts(root){
+ // Segmentation animates these exact unlit overlay materials. Replacing them
+ // leaves the controller updating detached materials and freezes the picture.
+ if(root.userData.segmentation)return root;
+ root.traverse(mesh=>{if(mesh.isMesh)mesh.material=Array.isArray(mesh.material)?mesh.material.map(matteMaterial):matteMaterial(mesh.material);});return root;
+}
 
 // Rebuild only the shading normals. Positions, UV seams and triangle count stay
 // intact; hard corners keep their crease rather than rounding the hardware.

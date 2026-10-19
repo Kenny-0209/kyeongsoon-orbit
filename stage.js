@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import {createProduct,createTexturedWorkstation} from './product-models.js?v=slotsMatte7';
 import {RoomEnvironment} from './vendor/RoomEnvironment.js';
-import {matteProducts} from './product-surface.js?v=surfaces1';
+import {matteProducts} from './product-surface.js?v=segPlay1';
 import {makeWater,makeStructure,makeCafe} from './gallery.js?v=surfaces1';
 import {blendLayer,intersectVariants} from './variants.js?v=surfaces2';
 import {monitorSpecs} from './rig-data.js?v=slotsMatte7';
